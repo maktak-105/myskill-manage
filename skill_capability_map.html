@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>半年間のスキル習得＆ケイパビリティ（できること）マップ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(22, 30, 49, 0.7);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #6366f1;
+      --primary-glow: rgba(99, 102, 241, 0.25);
+      --cyan: #06b6d4;
+      --emerald: #10b981;
+      --amber: #f59e0b;
+      --rose: #f43f5e;
+      --violet: #8b5cf6;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 25%, rgba(6, 182, 212, 0.10) 0%, transparent 40%),
+        radial-gradient(circle at 50% 80%, rgba(139, 92, 246, 0.12) 0%, transparent 50%);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      line-height: 1.6;
+      padding: 40px 24px;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* Stats Banner */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      backdrop-filter: blur(12px);
+      text-align: center;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-number {
+      font-family: 'Outfit', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #818cf8 0%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    /* Navigation Tabs */
+    .tabs-container {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .tab-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .tab-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 20px var(--primary-glow);
+    }
+
+    /* Capability Cards Grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+      gap: 24px;
+      margin-bottom: 48px;
+    }
+
+    .cap-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      backdrop-filter: blur(16px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cap-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--card-accent, #6366f1), transparent);
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .cap-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5);
+    }
+
+    .cap-card:hover::before {
+      opacity: 1;
+    }
+
+    .cap-header {
+      margin-bottom: 16px;
+    }
+
+    .cap-category {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--card-accent, #818cf8);
+      margin-bottom: 8px;
+    }
+
+    .cap-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .cap-desc {
+      font-size: 14px;
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .cap-tech-section {
+      margin-top: auto;
+    }
+
+    .tech-title {
+      font-size: 11px;
+      font-weight: 600;
+      color: #64748b;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .tech-tag {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #e2e8f0;
+    }
+
+    .project-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 4px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    /* Timeline Section */
+    .timeline-section {
+      margin-top: 64px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 40px;
+      backdrop-filter: blur(16px);
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+    }
+
+    .timeline-list::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      bottom: 10px;
+      left: 19px;
+      width: 2px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      position: relative;
+    }
+
+    .timeline-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: #1e293b;
+      border: 2px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .timeline-content {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 20px 24px;
+      flex-grow: 1;
+    }
+
+    .timeline-month {
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #818cf8;
+      margin-bottom: 6px;
+    }
+
+    .timeline-headline {
+      font-size: 15px;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 10px;
+    }
+
+    .timeline-desc {
+      font-size: 13px;
+      color: #94a3b8;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="badge-pill">
+        <span>⚡ 2026.05 - 2026.10 成長の軌跡</span>
+      </div>
+      <h1>スキル習得＆ケイパビリティ（できること）マップ</h1>
+      <p class="subtitle">
+        Excel・VBA依存の現場課題からスタートし、Webフルスタック、低レイヤC++高速化、WindowsネイティブGUI、オンプレDBサーバー構築、AIエージェントまで自力で実装可能になった半年間の能力マップです。
+      </p>
+    </header>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">43</div>
+        <div class="stat-label">開発プロジェクト数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">6+</div>
+        <div class="stat-label">習得・駆使したプログラミング言語</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1,000+</div>
+        <div class="stat-label">総Gitコミット数</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5</div>
+        <div class="stat-label">獲得した中核ケイパビリティ領域</div>
+      </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="tabs-container">
+      <button class="tab-btn active" onclick="filterCards('all', this)">✨ すべて表示</button>
+      <button class="tab-btn" onclick="filterCards('dx', this)">🏢 業務基盤DX・EDI・DB</button>
+      <button class="tab-btn" onclick="filterCards('native', this)">⚡ 超高速C++/C#・低レイヤ</button>
+      <button class="tab-btn" onclick="filterCards('web', this)">🌐 モダンWeb・SaaS</button>
+      <button class="tab-btn" onclick="filterCards('ai', this)">🤖 AIエージェント・MCP</button>
+      <button class="tab-btn" onclick="filterCards('rpa', this)">🚀 脱商用RPA・自動化</button>
+    </div>
+
+    <!-- Capability Cards Grid -->
+    <div class="cards-grid" id="cardsGrid">
+
+      <!-- Card 1 -->
+      <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
+        <div class="cap-header">
+          <div class="cap-category">業務基盤DX・基幹内製化</div>
+          <h2 class="cap-title">Excel/VBA見積業務のWebシステム化</h2>
+          <p class="cap-desc">属人化・ブラックボックス化していた原価見積マクロを完全脱却。誰でもWebブラウザからセキュアに入力・承認・履歴追跡できるデータベース連動システムを構築。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">FastAPI</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          <span class="project-pill">📁 shisaku-system</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
+        <div class="cap-header">
+          <div class="cap-category">業務基盤DX・基幹内製化</div>
+          <h2 class="cap-title">得意先ユニーク調達EDI固定長電文の自動解析</h2>
+          <p class="cap-desc">Shift_JIS固定長テキスト電文を自動パース。ミッションクリティカルな受発注データを正規化しPostgreSQLへ格納する高信頼バッチ基盤。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Python (バイナリ/文字コード)</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">FastAPI</span>
+          </div>
+          <span class="project-pill">📁 chumonsho-2seikan</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
+        <div class="cap-header">
+          <div class="cap-category">業務基盤DX・基幹内製化</div>
+          <h2 class="cap-title">部内専用PostgreSQLサーバー自動構築</h2>
+          <p class="cap-desc">PowerShellによる無人セットアップ、ロール・権限分離、Power Automate連携、IT部門向け申請手順まで完備した部内データ基盤のプロビジョニング。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">PowerShell</span>
+            <span class="tech-tag">PostgreSQL管理</span>
+            <span class="tech-tag">セキュリティ設計</span>
+          </div>
+          <span class="project-pill">📁 bunai-server</span>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
+        <div class="cap-header">
+          <div class="cap-category">業務基盤DX・基幹内製化</div>
+          <h2 class="cap-title">Active Directory連携・人事マスタ自動同期</h2>
+          <p class="cap-desc">社内Active Directory (AD) から社員・組織マスタを自動巡回取得。VBAから脱却し、最新の組織情報をReact＋FastAPI画面で瞬時に検索可能に。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">AD/LDAP連携</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">FastAPI</span>
+          </div>
+          <span class="project-pill">📁 jinji-db</span>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
+        <div class="cap-header">
+          <div class="cap-category">超高速ネイティブ・低レイヤ</div>
+          <h2 class="cap-title">重厚処理のC++移植・数十倍高速化</h2>
+          <p class="cap-desc">Pythonで作ったPDF透かし・電子捺印ツールの速度限界を検証し、C++ネイティブコードへ完全ポーティング。大容量PDFの処理時間を圧倒的に短縮。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">メモリ管理</span>
+            <span class="tech-tag">CMake</span>
+            <span class="tech-tag">ポインタ制御</span>
+          </div>
+          <span class="project-pill">📁 QuickMarkPDF</span>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
+        <div class="cap-header">
+          <div class="cap-category">超高速ネイティブ・低レイヤ</div>
+          <h2 class="cap-title">Win32 APIを直接叩く極限NTFS走査</h2>
+          <p class="cap-desc">OS標準のエクスプローラーでは待たされる数十万ファイル・フォルダの容量集計を、Win32 APIによる直接走査で瞬時に集計・ツリー可視化。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">Win32 API</span>
+            <span class="tech-tag">マルチスレッド</span>
+          </div>
+          <span class="project-pill">📁 QuickFolderSize</span>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
+        <div class="cap-header">
+          <div class="cap-category">超高速ネイティブ・低レイヤ</div>
+          <h2 class="cap-title">Qt 6 / QMLによるGPU支援画像ビューア</h2>
+          <p class="cap-desc">Qt 6とQMLを組み合わせ、ハードウェアアクセラレーションを効かせた超軽量・軽快なWindowsデスクトップ画像ビューア＆編集ソフトを開発。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Qt 6</span>
+            <span class="tech-tag">QML</span>
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">CMake</span>
+          </div>
+          <span class="project-pill">📁 QuickImageView</span>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
+        <div class="cap-header">
+          <div class="cap-category">超高速ネイティブ・低レイヤ</div>
+          <h2 class="cap-title">C# (.NET 10) による常駐ランチャー</h2>
+          <p class="cap-desc">画面端へのマグネット吸着、半透明枠なしウィンドウ、D&D登録を備えたWindowsネイティブ常駐ランチャーを最新.NET 10 / WPF / WinFormsで開発。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">.NET 10</span>
+            <span class="tech-tag">WPF</span>
+            <span class="tech-tag">WinForms</span>
+          </div>
+          <span class="project-pill">📁 QuickDock</span>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
+        <div class="cap-header">
+          <div class="cap-category">超高速ネイティブ・低レイヤ</div>
+          <h2 class="cap-title">マウント不能ドライブからのRAW救出</h2>
+          <p class="cap-desc">ファイルシステムが破損しWindowsが認識しないディスクから、セクタ単位で安全にディレクトリ構造を読み取り、元ドライブを一切傷つけずにサルベージ。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">C++</span>
+            <span class="tech-tag">低レベルディスクI/O</span>
+            <span class="tech-tag">RAWバイナリ解析</span>
+          </div>
+          <span class="project-pill">📁 QuickDiskRescue</span>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="cap-card" data-category="web" style="--card-accent: #8b5cf6;">
+        <div class="cap-header">
+          <div class="cap-category">モダンWeb・SaaS開発</div>
+          <h2 class="cap-title">Next.js + Supabaseの商用級モダンWeb</h2>
+          <p class="cap-desc">Next.js App Router、Tailwind CSS、Supabase（Auth / RLS / PostgreSQL）を組み合わせ、美しく堅牢なクラウドWebサービスを一人で短期間立ち上げ。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Tailwind CSS</span>
+            <span class="tech-tag">Supabase</span>
+          </div>
+          <span class="project-pill">📁 myDB / suuri-chat</span>
+        </div>
+      </div>
+
+      <!-- Card 11 -->
+      <div class="cap-card" data-category="ai" style="--card-accent: #10b981;">
+        <div class="cap-header">
+          <div class="cap-category">AIエージェント・次世代連携</div>
+          <h2 class="cap-title">MCP (Model Context Protocol) ツール自作</h2>
+          <p class="cap-desc">Anthropic提唱のオープン標準規格「MCP」サーバーを独自実装。AIエージェントがMicrosoft Fabric Lakehouseやnote等の外部サービスを自律操作可能に。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">MCP</span>
+            <span class="tech-tag">Node.js (ESM)</span>
+            <span class="tech-tag">Microsoft Fabric</span>
+            <span class="tech-tag">OneLake</span>
+          </div>
+          <span class="project-pill">📁 fabric / note</span>
+        </div>
+      </div>
+
+      <!-- Card 12 -->
+      <div class="cap-card" data-category="ai" style="--card-accent: #10b981;">
+        <div class="cap-header">
+          <div class="cap-category">AIエージェント・次世代連携</div>
+          <h2 class="cap-title">ローカルLLM環境最適化＆機能ハック</h2>
+          <p class="cap-desc">OllamaやComfyUI環境の運用に加え、VSCode拡張「Continue」の内部スタイル崩れをCSSインジェクションとPowerShellパッチで自力修復する高度なハック力。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Ollama / ローカルLLM</span>
+            <span class="tech-tag">CSS Injection</span>
+            <span class="tech-tag">PowerShell</span>
+          </div>
+          <span class="project-pill">📁 project-LLM / LLM-manage</span>
+        </div>
+      </div>
+
+      <!-- Card 13 -->
+      <div class="cap-card" data-category="rpa" style="--card-accent: #f59e0b;">
+        <div class="cap-header">
+          <div class="cap-category">脱商用RPA・ハイパー自動化</div>
+          <h2 class="cap-title">pywinauto × Playwright ハイブリッドRPA</h2>
+          <p class="cap-desc">年間ライセンス費数百万円の商用RPAを排除。Windowsデスクトップ画面のボタン押し・値入力とブラウザ自動操作をシームレスに連携した完全内製RPA。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">pywinauto</span>
+            <span class="tech-tag">Playwright</span>
+            <span class="tech-tag">pywebview</span>
+            <span class="tech-tag">Windows UIA</span>
+          </div>
+          <span class="project-pill">📁 auto-window / Auto-X</span>
+        </div>
+      </div>
+
+      <!-- Card 14 -->
+      <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
+        <div class="cap-header">
+          <div class="cap-category">業務基盤DX・基幹内製化</div>
+          <h2 class="cap-title">数理最適化（MILP）による設備負荷平準化</h2>
+          <p class="cap-desc">混合整数線形計画法アルゴリズムを用い、多階層BOMと工場の稼働制約から最適な生産スケジュールを自動計算。Rust言語によるバックエンド高速化も実装。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">数理最適化 (MILP)</span>
+            <span class="tech-tag">Python (PuLP)</span>
+            <span class="tech-tag">Rust (Cargo)</span>
+          </div>
+          <span class="project-pill">📁 myerp</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Timeline Journey -->
+    <div class="timeline-section">
+      <div class="section-title">
+        <span>📈 半年間の進化の歩み（Timeline Journey）</span>
+      </div>
+      <div class="timeline-list">
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🌱</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 3月〜4月：黎明期</div>
+            <div class="timeline-headline">数理最適化とモダンWeb（Next.js / Supabase）の基礎確立</div>
+            <div class="timeline-desc">
+              製造業の設備負荷平準化（MILP）を行う「myerp」や、Gemini AIアシスタント連動の「myDB」に着手。Python/FastAPIとNext.js/Supabaseの基礎を完全に固める。
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">⚡</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 5月：本格始動期</div>
+            <div class="timeline-headline">C++による低レイヤWin32制御への進出 ＆ Quickシリーズ始動</div>
+            <div class="timeline-desc">
+              「QuickFolderSize」を開発し、Win32 APIを直接叩く超高速ファイル走査を体得。ここから独自のネイティブ高速化ユーティリティ「Quick」ブランドがスタート。
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🚀</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 6月：展開期</div>
+            <div class="timeline-headline">PythonからC++への高速化ポーティング成功 ＆ Webフルスタック展開</div>
+            <div class="timeline-desc">
+              「QuickMarkPDF」においてPythonプロトタイプの限界を超え、C++移植で劇的パフォーマンスアップを達成。同時にStreamlitやNext.jsで「udon-db」「suuri-chat」をリリース。
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🏢</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 7月：基幹DX期</div>
+            <div class="timeline-headline">現場Excel業務の内製Web化 ＆ 170コミットの大規模自動化基盤</div>
+            <div class="timeline-desc">
+              試作部の原価見積ExcelをFastAPI＋PostgreSQLへ刷新（shisaku-system）。さらに170コミットに及ぶ大規模自動化基盤（Auto-X）やMicrosoft Fabric向けMCPツールを開発。
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">💎</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 8月：ネイティブ深化期</div>
+            <div class="timeline-headline">Qt 6 / QMLによるGPU画像ビューア ＆ C++高速ユーティリティ連作</div>
+            <div class="timeline-desc">
+              Qt 6 / QMLによる本格画像ビューア（QuickImageView）を完成。QuickFileCopy、QuickDiskBench、Quick7Zipなど、市販品を超える高速ネイティブツール群を次々とリリース。
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">🔥</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 9月：先端スタック期</div>
+            <div class="timeline-headline">C# (.NET 10) デスクトップ常駐 ＆ 脱商用RPA ＆ 関数型Gleam検証</div>
+            <div class="timeline-desc">
+              C#最新.NET 10でフローティングドック（QuickDock）を構築。pywinauto＋Playwrightで完全内製RPA（auto-window）を実現。関数型言語GleamやローカルLLM環境の最適化を推進。
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot">👑</div>
+          <div class="timeline-content">
+            <div class="timeline-month">2026年 10月：統合・インフラ期</div>
+            <div class="timeline-headline">得意先固有EDI電文解析 ＆ AD人事マスタ同期 ＆ 部内DBサーバー構築</div>
+            <div class="timeline-desc">
+              得意先ユニーク調達EDI固定長Shift_JIS電文の自動パース（chumonsho-2seikan）、社内AD連携人事DB（jinji-db）、そして部内専用PostgreSQLサーバーの自動構築（bunai-server）まで完遂。インフラから基幹業務まで一気通貫で解決できるエンジニアへ到達。
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function filterCards(cat, btn) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.cap-card');
+      cards.forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

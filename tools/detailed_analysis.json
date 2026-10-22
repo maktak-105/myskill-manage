@@ -1,0 +1,809 @@
+[
+  {
+    "name": "myerp",
+    "start_month": "2026-03",
+    "earliest_date": "2026-03-02",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 13,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI",
+      "LLM API (OpenAI/Claude/Gemini)"
+    ],
+    "database": [
+      "SQLite",
+      "SQLite (ローカルDBファイル)"
+    ],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)",
+      "Pandas"
+    ],
+    "readme": "# myERP - 次世代生産計画最適化 & 製造管理ERPシステム  `myERP` は、数理最適化（MILP）を用いた製造ラインの設備負荷平準化、AIアシスタントによる計画調整、多階層BOM（部品構成）管理、および柔軟なマスタ・トランザクションデータ管理を実現する生産管理ERPシステムです。  ---  ## 目次  1. [システムアーキテクチャ](#システムアーキテクチャ) 2. [技術ス"
+  },
+  {
+    "name": "myDB",
+    "start_month": "2026-04",
+    "earliest_date": "2026-04-06",
+    "last_month": "2026-07",
+    "latest_date": "2026-07-30",
+    "commit_count": 28,
+    "languages": [
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "LLM API (OpenAI/Claude/Gemini)"
+    ],
+    "database": [
+      "Supabase"
+    ],
+    "tools_infra": [],
+    "readme": "# Tents AI Manager  Supabase（PostgreSQL）に保存されたテントのデータベースを管理・閲覧し、Google Gemini AIを搭載したチャットアシスタントから自律的にデータを検索・UI操作の提案を行えるNext.jsフルスタックWebアプリケーションです。  ## 技術スタック - **フレームワーク**: Next.js (App Router, v16.2."
+  },
+  {
+    "name": "mail_manage",
+    "start_month": "2026-04",
+    "earliest_date": "2026-04-23",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 2,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)"
+    ],
+    "readme": "# Outlook DM仕分けルール管理 Webアプリ  ## 概要  過去数か月の受信メールを分析し、**ドメイン＆キーワード両方**をOutlook受信ルール（InboxRule）に同期させるローカルWebアプリ。  メール件名と送信元ドメインの**AND条件**で自動仕分けを実現し、DM・広告メールを特定フォルダへ移動。  ブラウザUIで完結。既存のPowerShellスクリプト群（`by_"
+  },
+  {
+    "name": "FieldStyle2026",
+    "start_month": "2026-05",
+    "earliest_date": "2026-05-02",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-18",
+    "commit_count": 53,
+    "languages": [
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Lucide Icons",
+      "React",
+      "Vite"
+    ],
+    "backend": [
+      "LLM API (OpenAI/Claude/Gemini)"
+    ],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# 🧭 FieldStyle Japan 2026 Navigator (PWA版)  > [!CAUTION] > **AI（Antigravity）への重要指示** > 1. ユーザーからの明示的な指示がない限り、AIは `git` コマンドや `vercel` コマンドを勝手に実行してはいけません。 > 2. **UIデザインの変更禁止**: 本ドキュメント末尾の「🎨 UI Baseline"
+  },
+  {
+    "name": "map_maker_cl",
+    "start_month": "2026-05",
+    "earliest_date": "2026-05-26",
+    "last_month": "2026-07",
+    "latest_date": "2026-07-06",
+    "commit_count": 15,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# map_maker_2 map maker for FieldStyle Navi"
+  },
+  {
+    "name": "QuickFolderSize",
+    "start_month": "2026-05",
+    "earliest_date": "2026-05-29",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-20",
+    "commit_count": 43,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickFolderSize  <p align=\"center\">   <img src=\"assets/quickfoldersize-gui-en.png\" alt=\"QuickFolderSize English GUI\" width=\"720\"> </p>  Windows desktop app that shows how much space folders and file"
+  },
+  {
+    "name": "QuickMarkPDF",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-01",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-15",
+    "commit_count": 122,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickMarkPDF  <p align=\"center\">   <img src=\"assets/quickmarkpdf-gui-en.png\" alt=\"QuickMarkPDF GUI\" width=\"720\"> </p>  A simple Windows desktop PDF page editor — free, no ads, no donation requests, "
+  },
+  {
+    "name": "note",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-03",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-22",
+    "commit_count": 26,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# note投稿管理プロジェクト  ## 概要  じゅーご（元・炒飯15）のnote.com投稿を管理するプロジェクト  ---  ## マガジン  ### 「2ch伝説の炒飯15が語る、「勝てる炒飯を作る」」  2002年に2ちゃんねるニュー速板に何かの手違いで立った「うまい炒飯を作るスレ」に彗星のごとく登場した「炒飯15」本人による2026年版、炒飯総合エンターテインメントマガジン  **コン"
+  },
+  {
+    "name": "suuri-chat",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-09",
+    "last_month": "2026-07",
+    "latest_date": "2026-07-30",
+    "commit_count": 42,
+    "languages": [
+      "TypeScript"
+    ],
+    "frontend": [
+      "Lucide Icons",
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# 数織先生の美しい言葉  数学者の知性と詩人の心を持つ人生相談チャットアプリ。ユーザーの悩みや想いに、数学的な視点と京都の奥ゆかしさを持つ「数織（すうり）先生」が静かに寄り添う。  ---  ## 概要  - **キャラクター**：数織（すうり）先生 — 数学者の思考と詩人の感性を持つ人生相談の先生 - **UI構成**：左カラム（世界観・コンセプト 40%）＋ 右カラム（チャット 60%） -"
+  },
+  {
+    "name": "AI_mensetsu",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-17",
+    "last_month": "2026-06",
+    "latest_date": "2026-06-22",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "seikan_2",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-22",
+    "last_month": "2026-07",
+    "latest_date": "2026-07-17",
+    "commit_count": 3,
+    "languages": [
+      "C#",
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [
+      "SQLite",
+      "SQLite (ローカルDBファイル)"
+    ],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)"
+    ],
+    "readme": ""
+  },
+  {
+    "name": "powerapps",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-25",
+    "last_month": "2026-06",
+    "latest_date": "2026-06-26",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "SNS Management",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-25",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 16,
+    "languages": [
+      "C++",
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "backend": [],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [],
+    "readme": "# SNS Management  作業ディレクトリ: `C:\\Users\\makta\\source\\SNS_management`  ## 概要  旧 `SNS-Handler` と旧 `instagram-manager`（Instagram管理機能）を、この1フォルダに統合したNext.jsアプリです。2026-09-24にSupabaseを廃止し、認証は共通パスワード、DBは自宅NASのP"
+  },
+  {
+    "name": "udon-db",
+    "start_month": "2026-06",
+    "earliest_date": "2026-06-26",
+    "last_month": "2026-08",
+    "latest_date": "2026-08-26",
+    "commit_count": 145,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "Streamlit"
+    ],
+    "backend": [
+      "LLM API (OpenAI/Claude/Gemini)"
+    ],
+    "database": [
+      "Supabase"
+    ],
+    "tools_infra": [],
+    "readme": "# うどん店DB  香川うどんツアーの記録を管理するデータベースプロジェクト。  ## 概要  - **DB**: Supabase (PostgreSQL) — プロジェクトID: `zjevyovhiwqlmwzkkbvb`（東京リージョン） - **データソース**: NotebookLM の `うどんDB.csv` ＋ Obsidian メモ（`C:\\Users\\0120025-Z100\\"
+  },
+  {
+    "name": "shisaku-system",
+    "start_month": "2026-07",
+    "earliest_date": "2026-07-07",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-16",
+    "commit_count": 19,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# 試作部 原価見積システム  試作部の原価見積業務を、現行のExcel＋VBAマクロから内製システムへ移行するための作業リポジトリ。  **最終ゴール**: ユニットNoと見積基準日を指定すると、ShisakuDBおよび購入部品履歴DBから構成・部品・工程・単価を取得し、**採用したデータと計算根拠を追跡できる**原価見積結果を出力する。単に金額を返す計算機ではなく、どの単価をどの出典から何を根"
+  },
+  {
+    "name": "Auto-X",
+    "start_month": "2026-07",
+    "earliest_date": "2026-07-23",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 170,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Playwright"
+    ],
+    "readme": "# auto-X: X自動投稿・原稿発行・メトリクス分析システム 仕様書 (System Specification)  > **Version**: 3.0.0   > **Target Environment**: QNAP NAS (Container Station), Cloudflare Zero Trust   > **Last Updated**: 2026-09-17    ユー"
+  },
+  {
+    "name": "shokaku-2026",
+    "start_month": "2026-07",
+    "earliest_date": "2026-07-30",
+    "last_month": "2026-08",
+    "latest_date": "2026-08-05",
+    "commit_count": 1,
+    "languages": [
+      "C#",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)"
+    ],
+    "readme": "# 昇格指導プログラム  ## 1. 目的  2027年9月の昇格面接本番に向けて、対象者が職能資格基準に沿った行動を日常業務で実践し、その事実をSTAR法で具体的に説明できる状態をつくる。  資料作成そのものを目的にせず、次の順序で指導を進める。  1. 職能資格基準を理解する 2. 基準に沿った行動を日常業務で実践する 3. 行動の事実を継続的に記録する 4. 記録をSTAR形式の面接回答に仕"
+  },
+  {
+    "name": "fabric",
+    "start_month": "2026-07",
+    "earliest_date": "2026-07-31",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 6,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "camp",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-06",
+    "last_month": "2026-08",
+    "latest_date": "2026-08-07",
+    "commit_count": 2,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "QuickFileCopy",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-13",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 29,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickFileCopy [日本語版 README_jp.md](README_jp.md)  QuickFileCopy is a native high-speed file copy application for Windows 10 and 11. It focuses on a compact workflow, visible byte/file progress, safe "
+  },
+  {
+    "name": "QuickDiskBench",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-15",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-20",
+    "commit_count": 55,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickDiskBench  <p align=\"center\">   <img src=\"assets/quickdiskbench-gui-en.png\" alt=\"QuickDiskBench English GUI\" width=\"720\"> </p>  QuickDiskBench is a Windows SSD / HDD / NVMe benchmark tool. It m"
+  },
+  {
+    "name": "___appli-template",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-18",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-23",
+    "commit_count": 21,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# Quick系アプリ 共通テンプレート  **バージョン: v2.0.1** **作成日: 2026-08-18**  新規アプリを作るときに、このフォルダを **まるごと参照させる** ためのテンプレート集です。 Claude Code / Codex 等に「`___appli-template` を見て基本構成を作って」と渡せば、 QuickDiskBench / QuickFolderSi"
+  },
+  {
+    "name": "Quick7Zip",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-19",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-23",
+    "commit_count": 37,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# Quick7Zip  Quick7Zip is an adaptive Windows frontend for an existing 7-Zip installation. It analyzes storage type, CPU, memory, file count, total size, and file composition before selecting practica"
+  },
+  {
+    "name": "_rules",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-21",
+    "last_month": "2026-08",
+    "latest_date": "2026-08-21",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "QuickImageView",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-21",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 55,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickImageView  QuickImageView is a lightweight Windows image viewer and editor built with Qt 6 (Qt Quick / QML) and C++17. It opens, edits, and converts images, and switches between Japanese and En"
+  },
+  {
+    "name": "project_me",
+    "start_month": "2026-08",
+    "earliest_date": "2026-08-24",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 3,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# project_me  じゅーごの**残りの人生の下調べ**。   `personel_reserch`（分析）・`mytarent`（言動）・`mybusiness`（人生）を1リポジトリに統合した。  日常の入口は [`いま.md`](いま.md)。憲章は [`CHARTER.md`](CHARTER.md)。  ## 構成  ```text project_me/ ├── いま.md  "
+  },
+  {
+    "name": "ap-drill",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-01",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-12",
+    "commit_count": 10,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "Supabase"
+    ],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "shadowing-lab",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-01",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-12",
+    "commit_count": 15,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI",
+      "LLM API (OpenAI/Claude/Gemini)"
+    ],
+    "database": [
+      "SQLite (ローカルDBファイル)",
+      "Supabase"
+    ],
+    "tools_infra": [],
+    "readme": "# Shadowing Lab  英語のリンキング（連結）・リダクション（弱形）・同化の聞き取り練習用Webアプリ。  本番: <https://shadowing-lab-eight.vercel.app>  ## できること  1. カテゴリ（リンキング / リダクション / 同化）を選ぶ 2. 音声が自動再生される（速度は0.7x / 0.85x / 1.0x、声は男性/女性で変更可） 3."
+  },
+  {
+    "name": "auto-window",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-04",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-08",
+    "commit_count": 13,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "pywebview"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Playwright",
+      "pywinauto"
+    ],
+    "readme": "# auto-window  A tool for automating Windows applications. Instead of relying on commercial RPA products (Power Automate Desktop, UiPath, etc.) or coordinate/image-based clicking (as used by AI comput"
+  },
+  {
+    "name": "mont-simu",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-07",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-23",
+    "commit_count": 205,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)",
+      "Pandas"
+    ],
+    "readme": "# OPRISM 店舗力学エンジン  **OPRISM**（オプリズム、Operations × Prism の造語。英語表記: *OPRISM — Stochastic Operations Intelligence*）は、飲食店オペレーションのモンテカルロシミュレーターです。  **第1版完成（SPEC.md 全64節を独立監査済み）。** 確率・時間・財務・スタッフ勤怠・来客と席待ち行列、8"
+  },
+  {
+    "name": "QuickRightClick",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-07",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-07",
+    "commit_count": 1,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickRightClick  <p align=\"center\">   <img src=\"assets/QuickRightClick-gui-en.png\" alt=\"QuickRightClick English GUI\" width=\"720\"> </p>  The application icon source files and `assets/maktak105-V04-01"
+  },
+  {
+    "name": "QuickDiskRescue",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-09",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-23",
+    "commit_count": 9,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickDiskRescue  Recover folders from disks Windows will not mount. The source is never written.  Version: **v1.0.2**  Implementation: **C++17 + WebView2**. No Python in the shipped app.  ## Using t"
+  },
+  {
+    "name": "QuickDock",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-16",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-24",
+    "commit_count": 11,
+    "languages": [
+      "C#",
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "WPF (Desktop)",
+      "WinForms (Desktop)"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# QuickDock  A borderless floating dock for Windows (WinForms / .NET 10). Drop shortcuts onto it, hover to expand, click to launch.  Version: **1.1.0**  ## Using the binary  Code signing: Free code si"
+  },
+  {
+    "name": "shinsa-2026",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-16",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-17",
+    "commit_count": 0,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)",
+      "pywinauto"
+    ],
+    "readme": "# shinsa-2026  生技本部昇格審査のフィードバックシート（xlsx）を集計するスクリプト。  `〇FBシート`フォルダ配下の全xlsxの「事務局集計用」シートから、受験者・評価者の情報と評価内容を1つのブックにまとめる。  ## 前提  - Python 3系、`openpyxl`（`pip install openpyxl`）、`pywin32`（`pip install pywin"
+  },
+  {
+    "name": "gleam",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-21",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-06",
+    "commit_count": 5,
+    "languages": [],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [
+      "SQLite (ローカルDBファイル)"
+    ],
+    "tools_infra": [],
+    "readme": "# BEAM Watch  Gleam と BEAM の並行処理を試すための、複数 URL の死活監視 CLI です。  ## 動作  URL ごとに軽量な BEAM プロセスを起動します。各ワーカーは HTTP リクエストを行い、結果をメインプロセスへ型付きメッセージで返します。そのため、遅い URL がほかの URL の結果表示を止めません。  ```text URL 1 ──> BEAM ワ"
+  },
+  {
+    "name": "project-LLM",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-28",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-28",
+    "commit_count": 2,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# project-LLM  VS Code + Continue で、ローカルLLM（自宅 Mac の Ollama・Qwen3-Coder-30B）を使うための設定と修正手順をまとめたフォルダ。 2026-09-28 に行った対応の成果物を保管している。  ## 構成  ``` project-LLM/ ├─ README.md ├─ AI_WORK_LOG.md               "
+  },
+  {
+    "name": "LLM-manage",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-29",
+    "last_month": "2026-09",
+    "latest_date": "2026-09-30",
+    "commit_count": 7,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "panzer-front",
+    "start_month": "2026-09",
+    "earliest_date": "2026-09-29",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-20",
+    "commit_count": 2,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "supplier-manage",
+    "start_month": "2026-10",
+    "earliest_date": "2026-10-01",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-05",
+    "commit_count": 2,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel操作(openpyxl/xlwings)"
+    ],
+    "readme": ""
+  },
+  {
+    "name": "bunai-server",
+    "start_month": "2026-10",
+    "earliest_date": "2026-10-06",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-21",
+    "commit_count": 1,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  },
+  {
+    "name": "jinji-db",
+    "start_month": "2026-10",
+    "earliest_date": "2026-10-07",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-09",
+    "commit_count": 3,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# 試作部 人事DB  試作部の人事リスト(`excel/試作部人事リスト 1.xlsm` の VBA が作っていたもの)を、AD から取得して PostgreSQL に蓄積し、Web で閲覧する。  - VBA の解析結果: [docs/vba-analysis.md](docs/vba-analysis.md) - 計画書・結果書: [plans/](plans/)  ## 構成  | 層 |"
+  },
+  {
+    "name": "chumonsho-2seikan",
+    "start_month": "2026-10",
+    "earliest_date": "2026-10-12",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-21",
+    "commit_count": 17,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML/CSS/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": "# W-IPS 次世代調達EDIデータ取込＆ビューアシステム  トヨタ次世代調達EDI形式（TMCPack）の固定長Shift_JISテキストファイルを自動解析（パース）し、PostgreSQLデータベースへ正規化格納するとともに、Webブラウザ上で直感的に検索・詳細確認ができる統合ビューアシステムです。  本システムは、**本番サーバー環境（常駐自動運用）** と **ローカル環境（開発・テスト"
+  },
+  {
+    "name": "ikusei-taikei-2026",
+    "start_month": "2026-10",
+    "earliest_date": "2026-10-13",
+    "last_month": "2026-10",
+    "latest_date": "2026-10-22",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "readme": ""
+  }
+]

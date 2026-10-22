@@ -1,0 +1,839 @@
+[
+  {
+    "name": "gleam",
+    "start_month": "1970-01",
+    "start_date": "1970-01-01",
+    "commit_count": 5,
+    "languages": [
+      "Gleam",
+      "JavaScript"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [
+      "SQLite"
+    ],
+    "tools_infra": [],
+    "desc": "Gleam と BEAM の並行処理を試すための、複数 URL の死活監視 CLI です。"
+  },
+  {
+    "name": "QuickImageView",
+    "start_month": "2014-03",
+    "start_date": "2014-03-11",
+    "commit_count": 55,
+    "languages": [
+      "C++",
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Qt 6（Qt Quick / QML）とC++17で作ったWindows向けの軽量画像ビューアー・画像編集アプリです。画像の表示、編集、別形式保存ができ、日本語と英語を切り替えられます。"
+  },
+  {
+    "name": "QuickMarkPDF",
+    "start_month": "2018-05",
+    "start_date": "2018-05-15",
+    "commit_count": 122,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": "<p align=\"center\">"
+  },
+  {
+    "name": "shisaku-system",
+    "start_month": "2023-10",
+    "start_date": "2023-10-20",
+    "commit_count": 19,
+    "languages": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携"
+    ],
+    "desc": "試作部の原価見積業務を、現行のExcel＋VBAマクロから内製システムへ移行するための作業リポジトリ。"
+  },
+  {
+    "name": "shokaku-2026",
+    "start_month": "2024-06",
+    "start_date": "2024-06-12",
+    "commit_count": 1,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel/VBA連携"
+    ],
+    "desc": "2027年9月の昇格面接本番に向けて、対象者が職能資格基準に沿った行動を日常業務で実践し、その事実をSTAR法で具体的に説明できる状態をつくる。"
+  },
+  {
+    "name": "myerp",
+    "start_month": "2026-02",
+    "start_date": "2026-02-25",
+    "commit_count": 13,
+    "languages": [
+      "Python",
+      "Rust",
+      "SQL",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React"
+    ],
+    "backend": [
+      "FastAPI",
+      "Rust Backend (Cargo)"
+    ],
+    "database": [
+      "PostgreSQL",
+      "SQLite",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "`myERP` は、数理最適化（MILP）を用いた製造ラインの設備負荷平準化、AIアシスタントによる計画調整、多階層BOM（部品構成）管理、および柔軟なマスタ・トランザクションデータ管理を実現する生産"
+  },
+  {
+    "name": "note",
+    "start_month": "2026-03",
+    "start_date": "2026-03-16",
+    "commit_count": 26,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "じゅーご（元・炒飯15）のnote.com投稿を管理するプロジェクト"
+  },
+  {
+    "name": "myDB",
+    "start_month": "2026-04",
+    "start_date": "2026-04-06",
+    "commit_count": 28,
+    "languages": [
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Express",
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "Supabase（PostgreSQL）に保存されたテントのデータベースを管理・閲覧し、Google Gemini AIを搭載したチャットアシスタントから自律的にデータを検索・UI操作の提案を行えるN"
+  },
+  {
+    "name": "mail_manage",
+    "start_month": "2026-04",
+    "start_date": "2026-04-23",
+    "commit_count": 2,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "SQLite"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)",
+      "Win32 API / Windows Native"
+    ],
+    "desc": "過去数か月の受信メールを分析し、**ドメイン＆キーワード両方**をOutlook受信ルール（InboxRule）に同期させるローカルWebアプリ。"
+  },
+  {
+    "name": "FieldStyle2026",
+    "start_month": "2026-05",
+    "start_date": "2026-05-02",
+    "commit_count": 53,
+    "languages": [
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React",
+      "Vite"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": "> [!CAUTION]"
+  },
+  {
+    "name": "map_maker_cl",
+    "start_month": "2026-05",
+    "start_date": "2026-05-06",
+    "commit_count": 15,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "map maker for FieldStyle Navi"
+  },
+  {
+    "name": "QuickDiskRescue",
+    "start_month": "2026-05",
+    "start_date": "2026-05-19",
+    "commit_count": 9,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Windows がマウントできないディスクから、フォルダ構造を保って別ドライブへ救出するツールです。ソースへは書き込みません。"
+  },
+  {
+    "name": "udon-db",
+    "start_month": "2026-05",
+    "start_date": "2026-05-19",
+    "commit_count": 145,
+    "languages": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "Streamlit"
+    ],
+    "backend": [],
+    "database": [
+      "PostgreSQL",
+      "SQLite",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "香川うどんツアーの記録を管理するデータベースプロジェクト。"
+  },
+  {
+    "name": "QuickFolderSize",
+    "start_month": "2026-05",
+    "start_date": "2026-05-29",
+    "commit_count": 43,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)",
+      "Win32 API / Windows Native"
+    ],
+    "desc": "<p align=\"center\">"
+  },
+  {
+    "name": "suuri-chat",
+    "start_month": "2026-06",
+    "start_date": "2026-06-09",
+    "commit_count": 42,
+    "languages": [
+      "TypeScript"
+    ],
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "数学者の知性と詩人の心を持つ人生相談チャットアプリ。ユーザーの悩みや想いに、数学的な視点と京都の奥ゆかしさを持つ「数織（すうり）先生」が静かに寄り添う。"
+  },
+  {
+    "name": "AI_mensetsu",
+    "start_month": "2026-06",
+    "start_date": "2026-06-17",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": ""
+  },
+  {
+    "name": "seikan_2",
+    "start_month": "2026-06",
+    "start_date": "2026-06-22",
+    "commit_count": 3,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [
+      "PostgreSQL",
+      "SQLite"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "SNS Management",
+    "start_month": "2026-06",
+    "start_date": "2026-06-25",
+    "commit_count": 16,
+    "languages": [
+      "Python",
+      "SQL",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    "backend": [],
+    "database": [
+      "PostgreSQL",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "作業ディレクトリ: `C:\\Users\\makta\\source\\SNS_management`"
+  },
+  {
+    "name": "powerapps",
+    "start_month": "2026-06",
+    "start_date": "2026-06-26",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": ""
+  },
+  {
+    "name": "project_me",
+    "start_month": "2026-07",
+    "start_date": "2026-07-02",
+    "commit_count": 3,
+    "languages": [
+      "JavaScript"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "じゅーごの**残りの人生の下調べ**。"
+  },
+  {
+    "name": "Auto-X",
+    "start_month": "2026-07",
+    "start_date": "2026-07-23",
+    "commit_count": 170,
+    "languages": [
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "Playwright (Web RPA)"
+    ],
+    "desc": "> **Version**: 3.0.0"
+  },
+  {
+    "name": "fabric",
+    "start_month": "2026-07",
+    "start_date": "2026-07-31",
+    "commit_count": 6,
+    "languages": [
+      "JavaScript",
+      "SQL"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "camp",
+    "start_month": "2026-08",
+    "start_date": "2026-08-05",
+    "commit_count": 2,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "QuickFileCopy",
+    "start_month": "2026-08",
+    "start_date": "2026-08-13",
+    "commit_count": 29,
+    "languages": [
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "QuickFileCopyはWindows 10/11向けのネイティブ高速ファイルコピーアプリです。簡潔な操作、容量とファイル件数の分かる進捗、安全な置換、Windows固有メタデータの保持を重視し、"
+  },
+  {
+    "name": "QuickDiskBench",
+    "start_month": "2026-08",
+    "start_date": "2026-08-15",
+    "commit_count": 55,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Express",
+      "FastAPI"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "<p align=\"center\">"
+  },
+  {
+    "name": "Quick7Zip",
+    "start_month": "2026-08",
+    "start_date": "2026-08-19",
+    "commit_count": 37,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Quick7Zipは、インストール済みの7-Zipを利用するWindows向け自動最適化フロントエンドです。ストレージ種別、CPU、メモリ、ファイル数、合計サイズ、ファイル構成を分析してから、実用的な"
+  },
+  {
+    "name": "ap-drill",
+    "start_month": "2026-09",
+    "start_date": "2026-09-01",
+    "commit_count": 10,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "shadowing-lab",
+    "start_month": "2026-09",
+    "start_date": "2026-09-01",
+    "commit_count": 15,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL",
+      "SQLite",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "英語のリンキング（連結）・リダクション（弱形）・同化の聞き取り練習用Webアプリ。"
+  },
+  {
+    "name": "auto-window",
+    "start_month": "2026-09",
+    "start_date": "2026-09-04",
+    "commit_count": 13,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "pywebview (Desktop GUI)"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "Playwright (Web RPA)",
+      "Win32 API / Windows Native",
+      "pywinauto (Windows RPA)"
+    ],
+    "desc": "Windowsアプリを自動操作するためのツール。既存の商用RPA(Power Automate Desktop / UiPath等)や、"
+  },
+  {
+    "name": "mont-simu",
+    "start_month": "2026-09",
+    "start_date": "2026-09-07",
+    "commit_count": 205,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "**OPRISM**（オプリズム、Operations × Prism の造語。英語表記: *OPRISM — Stochastic Operations Intelligence*）は、飲食店オペレ"
+  },
+  {
+    "name": "QuickRightClick",
+    "start_month": "2026-09",
+    "start_date": "2026-09-07",
+    "commit_count": 1,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "<p align=\"center\">"
+  },
+  {
+    "name": "shinsa-2026",
+    "start_month": "2026-09",
+    "start_date": "2026-09-16",
+    "commit_count": 0,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "Win32 API / Windows Native",
+      "pywinauto (Windows RPA)"
+    ],
+    "desc": "生技本部昇格審査のフィードバックシート（xlsx）を集計するスクリプト。"
+  },
+  {
+    "name": "QuickDock",
+    "start_month": "2026-09",
+    "start_date": "2026-09-20",
+    "commit_count": 11,
+    "languages": [
+      "C#",
+      "C++",
+      "Python"
+    ],
+    "frontend": [
+      "WPF (Desktop)",
+      "WinForms (Desktop)"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [],
+    "desc": "Windows 用の枠なしフローティングドック。ショートカットをドロップして格納し、ホバーで展開、クリックで起動する。"
+  },
+  {
+    "name": "project-LLM",
+    "start_month": "2026-09",
+    "start_date": "2026-09-28",
+    "commit_count": 2,
+    "languages": [
+      "PowerShell"
+    ],
+    "frontend": [
+      "Tailwind CSS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "Win32 API / Windows Native"
+    ],
+    "desc": "VS Code + Continue で、ローカルLLM（自宅 Mac の Ollama・Qwen3-Coder-30B）を使うための設定と修正手順をまとめたフォルダ。"
+  },
+  {
+    "name": "LLM-manage",
+    "start_month": "2026-09",
+    "start_date": "2026-09-29",
+    "commit_count": 7,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "panzer-front",
+    "start_month": "2026-09",
+    "start_date": "2026-09-29",
+    "commit_count": 2,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": ""
+  },
+  {
+    "name": "supplier-manage",
+    "start_month": "2026-10",
+    "start_date": "2026-10-01",
+    "commit_count": 2,
+    "languages": [
+      "Python",
+      "SQL"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "bunai-server",
+    "start_month": "2026-10",
+    "start_date": "2026-10-06",
+    "commit_count": 1,
+    "languages": [
+      "PowerShell"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "Win32 API / Windows Native"
+    ],
+    "desc": ""
+  },
+  {
+    "name": "jinji-db",
+    "start_month": "2026-10",
+    "start_date": "2026-10-07",
+    "commit_count": 3,
+    "languages": [
+      "Python",
+      "SQL",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    "backend": [
+      "Express",
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "Win32 API / Windows Native"
+    ],
+    "desc": "試作部の人事リスト(`excel/試作部人事リスト 1.xlsm` の VBA が作っていたもの)を、AD から取得して PostgreSQL に蓄積し、Web で閲覧する。"
+  },
+  {
+    "name": "chumonsho-2seikan",
+    "start_month": "2026-10",
+    "start_date": "2026-10-12",
+    "commit_count": 17,
+    "languages": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "トヨタ次世代調達EDI形式（TMCPack）の固定長Shift_JISテキストファイルを自動解析（パース）し、PostgreSQLデータベースへ正規化格納するとともに、Webブラウザ上で直感的に検索・"
+  },
+  {
+    "name": "ikusei-taikei-2026",
+    "start_month": "2026-10",
+    "start_date": "2026-10-13",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": ""
+  }
+]
