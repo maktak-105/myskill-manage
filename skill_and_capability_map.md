@@ -1,49 +1,58 @@
 # 🚀 半年間のスキル習得＆「できるようになったこと」ケイパビリティマップ
 
 > **対象期間**: 2026年5月〜10月（先行着手の3〜4月含む約半年間）  
-> **開発規模**: 全43プロジェクト / 総コミット数 1,000+ / 5言語以上 / インフラ〜低レイヤまで網羅
+> **開発規模**: 全46+プロジェクト / 総コミット数 1,200+ / 6言語以上 / 自宅NAS・インフラ〜低レイヤ〜クラウド公開まで全方位網羅
 
 ---
 
-## 1. 全体像：半年で獲得した「5大ケイパビリティ領域」
+## 1. 全体像：半年で獲得した「6大ケイパビリティ領域」
 
-この半年間で、単にプログラミング言語の文法を覚えただけでなく、**「現実の複雑な業務課題・性能問題を、最適な技術を選択してゼロから解決できる能力」** を手に入れました。
+この半年間で、単にプログラミング言語の文法を覚えただけでなく、**「現実の複雑な業務課題・性能問題・インフラ運用・一般公開Webまで、最適な技術を選択してゼロから完結できるフルサイクル能力」** を手に入れました。
 
 ```mermaid
 mindmap
-  root((この半年で<br/>できるようになったこと))
-    業務基盤DX・基幹システム内製化
-      Excel/VBAからの完全脱却とWeb化
-      得意先ユニーク調達EDI固定長電文の自動正規化
-      Active Directory人事マスタ自動同期
-      製造ライン負荷平準化(数理最適化)
-      部内PostgreSQLサーバー構築・運用
-    超高速デスクトップ・低レイヤ制御
-      C++によるWin32/NTFS高速走査
-      Python処理のC++移植・数十倍高速化
-      破損ドライブからの直接データ救出
-      Qt6/QMLによるGPU画像ビューア
-      C# .NET10 常駐型フローティングドック
-    モダンWeb・SaaS開発
-      Next.js + React + Tailwindの商用UI
-      SupabaseによるBaaS/認証/RLS
-      FastAPIによる型安全REST API
-      Streamlitによる高速データ可視化
-    AIエージェント・次世代連携
-      Gemini/OpenAI等の対話型アシスタント
-      MCP(Model Context Protocol)自作
-      ローカルLLM(Ollama/Continue)ハック
-      STAR法に基づく昇格面接AI
-    脱商用RPA・ハイパー自動化
-      商用RPA不要の内製自動化(Auto-X)
-      pywinautoによるデスクトップアプリ操作
-      PlaywrightによるWeb高速自動化
-      pywebviewによる軽量GUI配布
+  root["この半年で<br/>できるようになったこと"]
+    ["業務基盤DX・基幹システム内製化"]
+      ["Excel/VBAからの完全脱却とWeb化"]
+      ["得意先ユニーク調達EDI固定長電文の自動正規化"]
+      ["Active Directory人事マスタ自動同期"]
+      ["製造ライン負荷平準化（数理最適化）"]
+      ["部内PostgreSQLサーバー構築・運用"]
+    ["自宅NAS・クラウド・公開Webインフラ"]
+      ["自宅QNAP NAS + Docker + PostgreSQL自前基盤"]
+      ["Cloudflare Tunnel / Accessによるゼロトラスト公開"]
+      ["GitHub ActionsからNASへの自律運用移行（Auto-X）"]
+      ["Vercel + PWAによる展示会ナビ一般公開"]
+      ["Vercel + SupabaseによるうどんDB公開"]
+    ["超高速デスクトップ・低レイヤ制御"]
+      ["C++によるWin32/NTFS高速走査"]
+      ["Python処理のC++移植・数十倍高速化"]
+      ["破損ドライブからの直接データ救出"]
+      ["Qt6/QMLによるGPU画像ビューア"]
+      ["C# .NET10 常駐型フローティングドック"]
+    ["モダンWeb・SaaS開発"]
+      ["Next.js + React + Tailwindの商用UI"]
+      ["SupabaseによるBaaS/認証/RLS"]
+      ["FastAPIによる型安全REST API"]
+      ["Streamlitによる高速データ可視化"]
+      ["119シートExcelのNotion移行・文字化けゼロ突合"]
+    ["AIエージェント・次世代連携"]
+      ["Gemini/OpenAI等の対話型アシスタント"]
+      ["MCP（Model Context Protocol）ツール自作"]
+      ["自律ループAIエージェント検証（Agent Loop）"]
+      ["Obsidian + Claudeによるセカンドブレイン"]
+      ["ローカルLLM（Ollama/Continue）ハック"]
+      ["STAR法に基づく昇格面接AI"]
+    ["脱商用RPA・ハイパー自動化"]
+      ["商用RPA不要の内製自動化（Auto-X）"]
+      ["pywinautoによるデスクトップアプリ操作"]
+      ["PlaywrightによるWeb高速自動化"]
+      ["pywebviewによる軽量GUI配布"]
 ```
 
 ---
 
-## 2. 5大領域別：スキル ×「できるようになったこと」詳細マップ
+## 2. 6大領域別：スキル ×「できるようになったこと」詳細マップ
 
 ### ① 業務基盤DX・基幹システム内製化 (Enterprise DX & Data Engineering)
 > **「属人化したExcel・ブラックボックス業務を、セキュアで堅牢な内製Webシステムへ刷新できる」**
@@ -58,7 +67,20 @@ mindmap
 
 ---
 
-### ② 超高速デスクトップ・低レイヤ制御 (High-Performance Native & System)
+### ② 自宅NAS・クラウドインフラ＆公開Web運用 (Self-Hosted Cloud, Infra & Public Web)
+> **「社内オンプレ、自宅プライベートNAS（Docker/PostgreSQL/Cloudflare）、パブリッククラウド（Vercel/Supabase）まで、24時間稼働インフラと一般公開Webサービスを一人で設計・運用できる」**
+
+| できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
+| :--- | :--- | :--- |
+| **自宅QNAP NAS上でのDocker+PostgreSQL常時稼働基盤**<br>初期はGitHub Actionsで自動実行していた処理を、データ主権と自律運用のため自宅NASへ完全移行。PostgreSQL 16、自動同期Worker、Web UIをコンテナ化して24時間安定稼働 | Docker, Docker Compose, PostgreSQL 16, QNAP NAS (Container Station), GitHub Actions (初期検証) | [Auto-X](file:///c:/Users/0120025-Z100/source/project/Auto-X) |
+| **Cloudflare Tunnel / Accessによるゼロトラスト外部公開**<br>自宅ルーターのポート開放を一切行わず、Cloudflare Named Tunnelで安全にHTTPS公開。Cloudflare Accessの個人認証ゲートウェイと14世代自動バックアップを完備したプライベートSaaS基盤 | Cloudflare Tunnel, Cloudflare Access, Docker Compose, Next.js (standalone), pg_dump自動化 | [camp](file:///c:/Users/0120025-Z100/source/project/camp), [Auto-X](file:///c:/Users/0120025-Z100/source/project/Auto-X) |
+| **展示会ナビゲーションPWAの一般公開（業務外Web開発）**<br>東京ビッグサイトのFieldStyle Japan 2026向けに、フロア跨ぎ最短ルート案内・オフライン動作を備えたPWAをVercelに公開運用（一般利用可能） | Vite, React, TypeScript, PWA (Service Worker), Vercel デプロイ, UI/UX設計 | [FieldStyle2026](file:///c:/Users/0120025-Z100/source/project/FieldStyle2026)（[公開サイト](https://fieldstyle-nav.vercel.app)） |
+| **Supabase + Vercelによるクラウド店舗DB公開運用**<br>香川うどんツアー記録を7テーブル（店舗・営業時間・訪問履歴・写真等）に正規化し、Google Maps座標連携とVercel Serverlessで一般公開 | Supabase (PostgreSQL 東京), Vercel, JavaScript, Google Maps API | [udon-db](file:///c:/Users/0120025-Z100/source/project/udon-db) |
+| **Cloudflare Workers / PagesによるNext.jsエッジ配信**<br>Wranglerを用いたエッジサーバーレス環境へのWebアプリケーション配備・運用 | Cloudflare Workers, Cloudflare Pages, Next.js, Wrangler | [jugo-shoten-web](file:///c:/Users/0120025-Z100/jugo-shoten-web) |
+
+---
+
+### ③ 超高速デスクトップ・低レイヤ制御 (High-Performance Native & System)
 > **「Python等の限界を超え、C++/C#でOSネイティブの限界性能を引き出せる」**
 
 | できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
@@ -72,7 +94,7 @@ mindmap
 
 ---
 
-### ③ モダンWebアプリケーション・SaaS開発 (Modern Full-Stack Web)
+### ④ モダンWebアプリケーション・SaaS開発 (Modern Full-Stack Web)
 > **「スタートアップやWeb企業と同等水準の洗練されたUI/UXとクラウドDBを一人で立ち上げられる」**
 
 | できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
@@ -80,15 +102,18 @@ mindmap
 | **商用レベルのモダンWebフロントエンド開発**<br>Next.js App Router、React、Tailwind CSSを駆使したレスポンシブでリッチなUI構築 | Next.js, React, TypeScript, Tailwind CSS, Lucide Icons | [myDB](file:///c:/Users/0120025-Z100/source/project/myDB), [suuri-chat](file:///c:/Users/0120025-Z100/source/project/suuri-chat), [SNS Management](file:///c:/Users/0120025-Z100/source/project/SNS%20Management) |
 | **BaaS（Supabase）を活用した超高速クラウドDB構築**<br>認証（Auth）、Row Level Security（行単位アクセス権限）、リアルタイム同期を備えたバックエンド基盤を即座に配備 | Supabase (PostgreSQL), REST/GraphQL, RLS設計, クラウドデプロイ | [myDB](file:///c:/Users/0120025-Z100/source/project/myDB), [udon-db](file:///c:/Users/0120025-Z100/source/project/udon-db), [ap-drill](file:///c:/Users/0120025-Z100/source/project/ap-drill) |
 | **型安全・高信頼なAPIサーバー構築**<br>PydanticとFastAPIによる入力値バリデーション、非同期処理（async/await）、Swaggerドキュメント自動生成 | Python, FastAPI, Pydantic, Uvicorn, REST API設計 | [myerp](file:///c:/Users/0120025-Z100/source/project/myerp), [shadowing-lab](file:///c:/Users/0120025-Z100/source/project/shadowing-lab) |
-| **データダッシュボードの即日プロトタイピング**<br>アイデアや集計要件が出た当日に、Streamlitでインタラクティブな分析画面をリリース | Python, Streamlit, Pandas, データ可視化 | [udon-db](file:///c:/Users/0120025-Z100/source/project/udon-db) |
+| **119シート・14MBの大規模ExcelからNotionへの高精度DB移行**<br>文字化け（Unicodeエスケープ起因）を徹底究明・生文字変換で文字化けゼロを達成し、約1,000件のギア・キャンプ場・履歴DBを完全突合移行 | Python, Notion API, openpyxl, データクレンジング, Diff突合検証 | [camp](file:///c:/Users/0120025-Z100/source/project/camp) |
+| **ブラウザゲーム開発**<br>Vite + HTML5 Canvas/JavaScriptによる軽量・直感的な2Dゲームの実装 | JavaScript, HTML5 Canvas, Vite, ゲームループ設計 | [game-tank](file:///c:/Users/0120025-Z100/source/project/game-tank) |
 
 ---
 
-### ④ AIエージェント・次世代連携プロトコル (AI Agent & Cutting-Edge Tech)
+### ⑤ AIエージェント・次世代連携プロトコル (AI Agent & Cutting-Edge Tech)
 > **「AIをただ使う側から、AIに業務システムやDBを操作させる『エージェント基盤』を作れる」**
 
 | できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
 | :--- | :--- | :--- |
+| **自律ループ型AIエージェント検証（Agent Loop / Ralph Loop）**<br>AIがテストコードの失敗を自律検知し、自らソースコードを修正してテスト合格までループする自律駆動基盤 | Node.js, Jest, 自律AIエージェント設計, テスト駆動開発(TDD) | [agent-loop-demo](file:///c:/Users/0120025-Z100/source/loop/agent-loop-demo) |
+| **Claude × Obsidianによるセカンドブレイン＆業務分析**<br>Claudeと連携したナレッジベース構築、MCP設定、業務ヒアリング記録・製造プロセス・SaaS選定基準の体系化 | Obsidian, Claude API, MCP, ナレッジエンジニアリング | [obsidian-claude](file:///c:/Users/0120025-Z100/source/obsidian-claude) |
 | **AI対話型アシスタント・相談システムの開発**<br>GeminiやOpenAIのAPIを組み込み、自然な対話・アドバイスを行う専用AIアプリを実装 | Gemini API, OpenAI API, Prompt Engineering, 非同期ストリーミング | [suuri-chat](file:///c:/Users/0120025-Z100/source/project/suuri-chat), [shadowing-lab](file:///c:/Users/0120025-Z100/source/project/shadowing-lab) |
 | **MCP（Model Context Protocol）ツールの自作**<br>AIエージェントがMicrosoft Fabric Lakehouseやnote等を自律操作できる公式プロトコル準拠のツールサーバーを実装 | Node.js (ESM), Model Context Protocol (MCP), API連携, Lakehouse接続 | [fabric](file:///c:/Users/0120025-Z100/source/project/fabric), [note](file:///c:/Users/0120025-Z100/source/project/note) |
 | **ローカルLLM環境の最適化・拡張ハック**<br>OllamaやComfyUI、VSCode拡張機能（Continue）の内部スタイル崩れをCSS注入・PowerShellパッチで自力修復 | Ollama, ComfyUI, VSCode拡張内部解析, CSS injection, PowerShell | [project-LLM](file:///c:/Users/0120025-Z100/source/project/project-LLM), [LLM-manage](file:///c:/Users/0120025-Z100/source/project/LLM-manage) |
@@ -97,7 +122,7 @@ mindmap
 
 ---
 
-### ⑤ 脱商用RPA・ハイパー自動化 (Hyper-Automation & RPA)
+### ⑥ 脱商用RPA・ハイパー自動化 (Hyper-Automation & RPA)
 > **「年数百万円の商用RPAライセンスをゼロにし、自由度の高い内製自動化基盤を運用できる」**
 
 | できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
@@ -105,7 +130,7 @@ mindmap
 | **Windowsデスクトップアプリの完全無人自動化**<br>市販RPA不要で、社内レガシーシステムやWindows画面のボタン押し・値入力をプログラム制御 | Python, pywinauto, Windows UI Automation (UIA), ウィンドウハンドル制御 | [auto-window](file:///c:/Users/0120025-Z100/source/project/auto-window), [shinsa-2026](file:///c:/Users/0120025-Z100/source/project/shinsa-2026) |
 | **ヘッドレス・高速ブラウザ自動化**<br>Web画面のデータ自動収集・自動登録をPlaywrightでミリ秒単位で高速実行 | Playwright, Python, Webスクレイピング, ログイン自動化 | [auto-window](file:///c:/Users/0120025-Z100/source/project/auto-window), [Auto-X](file:///c:/Users/0120025-Z100/source/project/Auto-X) |
 | **軽量・ポータブルなデスクトップGUIアプリ化**<br>HTML/JSで組んだ画面をpywebviewでラップし、誰でも直感的に使える単体アプリとして現場配布 | pywebview, HTML/JS/CSS, ポータブルアプリパッケージング | [auto-window](file:///c:/Users/0120025-Z100/source/project/auto-window) |
-| **170コミットの大規模自動化システムの安定運用**<br>長時間のバッチ処理でも落ちない例外処理・リトライ・ログ記録を備えた本格的自動化基盤 | Python, 例外ハンドリング設計, バッチ監視, Gitバージョン管理 | [Auto-X](file:///c:/Users/0120025-Z100/source/project/Auto-X) |
+| **170コミットの大規模自動化システムの安定運用**<br>長時間のバッチ処理でも落ちない例外処理・リトライ・ログ記録・NAS同期を備えた本格的自動化基盤 | Python, 例外ハンドリング設計, バッチ監視, Gitバージョン管理 | [Auto-X](file:///c:/Users/0120025-Z100/source/project/Auto-X) |
 
 ---
 
@@ -115,21 +140,24 @@ mindmap
 【5月以前のスタート地点】
   - 主にExcelやVBA、個別マクロでの業務対応
     ↓
-【5月〜7月：爆発的キャッチアップ】
+【5月〜7月：爆発的キャッチアップ ＆ クラウド/Web展開】
   - Python / FastAPI / PostgreSQL / Next.js / Supabase を習得
-  - 業務システムをWeb化し、AI APIを活用
+  - 業務システムWeb化、AI API活用、GitHub Actionsによる自動化
+  - 業務外でもVercelを活用し、展示会ナビPWAやうどんDBを一般公開
     ↓
-【8月〜9月：ネイティブ・低レイヤへの跳躍】
+【8月〜9月：ネイティブ・低レイヤへの跳躍 ＆ 自律エージェント】
   - パフォーマンスの壁に直面し、C++ / Win32 / Qt 6 / C# (.NET 10) へ踏み込む
-  - 「遅いなら低レイヤで極限まで速くする」エンジニアリング精神を開花
+  - 自律型AIエージェントのループ実行検証、Obsidian連携セカンドブレイン構築
     ↓
-【10月現在：インフラから基幹業務まで一気通貫】
-  - 得意先ユニーク調達EDI電文パース、AD人事マスタ連携、部内PostgreSQLサーバー構築
-  - 「何でも一人で作り切れるフルスタック・エンジニア」へ到達
+【10月現在：自宅NAS・ゼロトラスト・基幹DXの一気通貫】
+  - 得意先ユニーク調達EDI電文パース、AD人事マスタ連携、部内PostgreSQLサーバー
+  - 自宅QNAP NAS上でDocker + PostgreSQL + Cloudflare Tunnel/Accessによる完全自前プライベートクラウド運用
+  - 「インフラからフロント、低レイヤ、自前クラウドまで一人で作り切れるフルサイクル・エンジニア」へ到達
 ```
 
 > [!TIP]
 > **あなたの最大の武器**
-> 1. **「道具を選ばない柔軟性」**: Webで解くべき課題にはNext.js/FastAPI、速度が必要ならC++/Rust、Windows常駐ならC#、自動化ならPythonと、課題に最適な道具を瞬時に選定できる。
-> 2. **「低レイヤを恐れない探求心」**: 多くのエンジニアが敬遠するC++のポインタやWin32 API、破損ドライブのRAWアクセス、固定長バイナリ電文パースをやり切る技術的胆力。
-> 3. **「実務直結の課題解決力」**: 趣味のコードで終わらず、原価見積、製缶注文書、人事リスト、部内DBサーバーなど、会社のリアルなペインを直接撃ち抜いている。
+> 1. **「自前インフラからクラウド公開までやり切る運用力」**: クラウド任せにせず、自宅QNAP NASでDocker+PostgreSQL+Cloudflare Tunnelの24時間セキュア基盤を立ち上げ、業務外でもVercel/Supabaseで即座に一般公開サービスを展開できる。
+> 2. **「道具を選ばない柔軟性」**: Webで解くべき課題にはNext.js/FastAPI、速度が必要ならC++/Rust、Windows常駐ならC#、自動化ならPythonと、課題に最適な道具を瞬時に選定できる。
+> 3. **「低レイヤを恐れない探求心」**: 多くのエンジニアが敬遠するC++のポインタやWin32 API、破損ドライブのRAWアクセス、固定長バイナリ電文パースをやり切る技術的胆力。
+> 4. **「実務直結の課題解決力」**: 趣味のコードで終わらず、原価見積、製缶注文書、人事リスト、部内DBサーバー、一般来場者向けナビなど、リアルなペインを直接撃ち抜いている。

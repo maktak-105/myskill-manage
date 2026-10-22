@@ -384,7 +384,7 @@
     <!-- Stats -->
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">43</div>
+        <div class="stat-number">46+</div>
         <div class="stat-label">開発プロジェクト数</div>
       </div>
       <div class="stat-card">
@@ -392,11 +392,11 @@
         <div class="stat-label">習得・駆使したプログラミング言語</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">1,000+</div>
+        <div class="stat-number">1,200+</div>
         <div class="stat-label">総Gitコミット数</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">5</div>
+        <div class="stat-number">6</div>
         <div class="stat-label">獲得した中核ケイパビリティ領域</div>
       </div>
     </div>
@@ -404,17 +404,96 @@
     <!-- Category Tabs -->
     <div class="tabs-container">
       <button class="tab-btn active" onclick="filterCards('all', this)">✨ すべて表示</button>
+      <button class="tab-btn" onclick="filterCards('infra', this)">🌐 自宅NAS・クラウド・公開Web</button>
       <button class="tab-btn" onclick="filterCards('dx', this)">🏢 業務基盤DX・EDI・DB</button>
       <button class="tab-btn" onclick="filterCards('native', this)">⚡ 超高速C++/C#・低レイヤ</button>
-      <button class="tab-btn" onclick="filterCards('web', this)">🌐 モダンWeb・SaaS</button>
-      <button class="tab-btn" onclick="filterCards('ai', this)">🤖 AIエージェント・MCP</button>
+      <button class="tab-btn" onclick="filterCards('web', this)">💻 モダンWeb・SaaS</button>
+      <button class="tab-btn" onclick="filterCards('ai', this)">🤖 AIエージェント・次世代連携</button>
       <button class="tab-btn" onclick="filterCards('rpa', this)">🚀 脱商用RPA・自動化</button>
     </div>
 
     <!-- Capability Cards Grid -->
     <div class="cards-grid" id="cardsGrid">
 
-      <!-- Card 1 -->
+      <!-- Card: Auto-X NAS & Infra -->
+      <div class="cap-card" data-category="infra" style="--card-accent: #06b6d4;">
+        <div class="cap-header">
+          <div class="cap-category">自宅NAS・クラウド・公開Web</div>
+          <h2 class="cap-title">自宅QNAP NAS上でのDocker+PostgreSQL常時稼働基盤</h2>
+          <p class="cap-desc">初期はGitHub Actionsで自動実行していた処理を、データ主権と自律運用のため自宅NASへ完全移行。PostgreSQL 16、自動Worker、Web UI、Cloudflare Tunnelをコンテナ化し24時間安定稼働。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">QNAP NAS</span>
+            <span class="tech-tag">Docker Compose</span>
+            <span class="tech-tag">PostgreSQL 16</span>
+            <span class="tech-tag">Cloudflare Tunnel</span>
+            <span class="tech-tag">GitHub Actions</span>
+          </div>
+          <span class="project-pill">📁 Auto-X</span>
+        </div>
+      </div>
+
+      <!-- Card: campDB -->
+      <div class="cap-card" data-category="infra" style="--card-accent: #3b82f6;">
+        <div class="cap-header">
+          <div class="cap-category">自宅NAS・クラウド・公開Web</div>
+          <h2 class="cap-title">Cloudflare Access ゼロトラスト自前SaaS運用</h2>
+          <p class="cap-desc">自宅QNAP NAS上にPostgreSQL 16、Next.js standalone、14世代自動バックアップをDocker構築。ポート開放不要のCloudflare Tunnelと個人認証Accessで完全セキュアに外部公開。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Cloudflare Access</span>
+            <span class="tech-tag">Next.js standalone</span>
+            <span class="tech-tag">pg_dump自動化</span>
+            <span class="tech-tag">Notion API</span>
+          </div>
+          <span class="project-pill">📁 camp (campDB)</span>
+        </div>
+      </div>
+
+      <!-- Card: FieldStyle2026 -->
+      <div class="cap-card" data-category="infra" style="--card-accent: #10b981;">
+        <div class="cap-header">
+          <div class="cap-category">自宅NAS・クラウド・公開Web</div>
+          <h2 class="cap-title">展示会ナビPWAの一般公開運用（業務外Web開発）</h2>
+          <p class="cap-desc">東京ビッグサイトのFieldStyle Japan 2026向けに、フロア跨ぎ最短ルート案内・オフライン動作を備えたPWAを開発しVercelに公開運用。登録不要で即起動する商用レベルUI。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Vite</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">PWA</span>
+            <span class="tech-tag">Vercel 公開</span>
+          </div>
+          <span class="project-pill">📁 FieldStyle2026 (公開中)</span>
+        </div>
+      </div>
+
+      <!-- Card: udon-db -->
+      <div class="cap-card" data-category="infra" style="--card-accent: #f59e0b;">
+        <div class="cap-header">
+          <div class="cap-category">自宅NAS・クラウド・公開Web</div>
+          <h2 class="cap-title">Supabase + Vercel による香川うどん店舗DB一般公開</h2>
+          <p class="cap-desc">香川うどんツアーの記録を7テーブル構成（店舗・営業時間・履歴・写真等）に正規化。Google Maps座標連携とVercel Serverlessを活用し、業務外でも実用サービスを本番運用。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Supabase (PostgreSQL)</span>
+            <span class="tech-tag">Vercel デプロイ</span>
+            <span class="tech-tag">Google Maps API</span>
+            <span class="tech-tag">Streamlit</span>
+          </div>
+          <span class="project-pill">📁 udon-db (公開中)</span>
+        </div>
+      </div>
+
+      <!-- Card 1 (shisaku-system) -->
       <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
         <div class="cap-header">
           <div class="cap-category">業務基盤DX・基幹内製化</div>
@@ -433,7 +512,7 @@
         </div>
       </div>
 
-      <!-- Card 2 -->
+      <!-- Card 2 (chumonsho-2seikan) -->
       <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
         <div class="cap-header">
           <div class="cap-category">業務基盤DX・基幹内製化</div>
@@ -451,7 +530,7 @@
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 3 (bunai-server) -->
       <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
         <div class="cap-header">
           <div class="cap-category">業務基盤DX・基幹内製化</div>
@@ -469,7 +548,7 @@
         </div>
       </div>
 
-      <!-- Card 4 -->
+      <!-- Card 4 (jinji-db) -->
       <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
         <div class="cap-header">
           <div class="cap-category">業務基盤DX・基幹内製化</div>
@@ -488,7 +567,7 @@
         </div>
       </div>
 
-      <!-- Card 5 -->
+      <!-- Card 5 (QuickMarkPDF) -->
       <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
         <div class="cap-header">
           <div class="cap-category">超高速ネイティブ・低レイヤ</div>
@@ -507,7 +586,7 @@
         </div>
       </div>
 
-      <!-- Card 6 -->
+      <!-- Card 6 (QuickFolderSize) -->
       <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
         <div class="cap-header">
           <div class="cap-category">超高速ネイティブ・低レイヤ</div>
@@ -525,7 +604,7 @@
         </div>
       </div>
 
-      <!-- Card 7 -->
+      <!-- Card 7 (QuickImageView) -->
       <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
         <div class="cap-header">
           <div class="cap-category">超高速ネイティブ・低レイヤ</div>
@@ -544,7 +623,7 @@
         </div>
       </div>
 
-      <!-- Card 8 -->
+      <!-- Card 8 (QuickDock) -->
       <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
         <div class="cap-header">
           <div class="cap-category">超高速ネイティブ・低レイヤ</div>
@@ -563,7 +642,7 @@
         </div>
       </div>
 
-      <!-- Card 9 -->
+      <!-- Card 9 (QuickDiskRescue) -->
       <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
         <div class="cap-header">
           <div class="cap-category">超高速ネイティブ・低レイヤ</div>
@@ -581,7 +660,7 @@
         </div>
       </div>
 
-      <!-- Card 10 -->
+      <!-- Card 10 (myDB / suuri-chat) -->
       <div class="cap-card" data-category="web" style="--card-accent: #8b5cf6;">
         <div class="cap-header">
           <div class="cap-category">モダンWeb・SaaS開発</div>
@@ -601,7 +680,45 @@
         </div>
       </div>
 
-      <!-- Card 11 -->
+      <!-- Card: agent-loop-demo -->
+      <div class="cap-card" data-category="ai" style="--card-accent: #8b5cf6;">
+        <div class="cap-header">
+          <div class="cap-category">AIエージェント・次世代連携</div>
+          <h2 class="cap-title">自律AIエージェントのループ検証 (Ralph Loop)</h2>
+          <p class="cap-desc">AIがテスト実行→FAIL検知→ソースコード自己修復→PASS達成までを完全自律でループ駆動するエージェント検証基盤を構築。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">自律AIループ</span>
+            <span class="tech-tag">TDD</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Jest</span>
+          </div>
+          <span class="project-pill">📁 agent-loop-demo</span>
+        </div>
+      </div>
+
+      <!-- Card: obsidian-claude -->
+      <div class="cap-card" data-category="ai" style="--card-accent: #ec4899;">
+        <div class="cap-header">
+          <div class="cap-category">AIエージェント・次世代連携</div>
+          <h2 class="cap-title">Claude × Obsidian セカンドブレイン＆業務分析</h2>
+          <p class="cap-desc">Claudeと連携したナレッジベース構築。現場ヒアリング、製造ライン（ステータ部品・溶接工程）、原価見積、SaaS選定基準（データ主権）を体系化。</p>
+        </div>
+        <div class="cap-tech-section">
+          <div class="tech-title">活用スキル</div>
+          <div class="tech-tags">
+            <span class="tech-tag">Obsidian</span>
+            <span class="tech-tag">Claude</span>
+            <span class="tech-tag">MCP</span>
+            <span class="tech-tag">ナレッジ分析</span>
+          </div>
+          <span class="project-pill">📁 obsidian-claude</span>
+        </div>
+      </div>
+
+      <!-- Card 11 (fabric / note) -->
       <div class="cap-card" data-category="ai" style="--card-accent: #10b981;">
         <div class="cap-header">
           <div class="cap-category">AIエージェント・次世代連携</div>
@@ -620,7 +737,7 @@
         </div>
       </div>
 
-      <!-- Card 12 -->
+      <!-- Card 12 (project-LLM) -->
       <div class="cap-card" data-category="ai" style="--card-accent: #10b981;">
         <div class="cap-header">
           <div class="cap-category">AIエージェント・次世代連携</div>
@@ -638,7 +755,7 @@
         </div>
       </div>
 
-      <!-- Card 13 -->
+      <!-- Card 13 (auto-window) -->
       <div class="cap-card" data-category="rpa" style="--card-accent: #f59e0b;">
         <div class="cap-header">
           <div class="cap-category">脱商用RPA・ハイパー自動化</div>
@@ -653,11 +770,11 @@
             <span class="tech-tag">pywebview</span>
             <span class="tech-tag">Windows UIA</span>
           </div>
-          <span class="project-pill">📁 auto-window / Auto-X</span>
+          <span class="project-pill">📁 auto-window</span>
         </div>
       </div>
 
-      <!-- Card 14 -->
+      <!-- Card 14 (myerp) -->
       <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
         <div class="cap-header">
           <div class="cap-category">業務基盤DX・基幹内製化</div>
@@ -699,9 +816,9 @@
           <div class="timeline-dot">⚡</div>
           <div class="timeline-content">
             <div class="timeline-month">2026年 5月：本格始動期</div>
-            <div class="timeline-headline">C++による低レイヤWin32制御への進出 ＆ Quickシリーズ始動</div>
+            <div class="timeline-headline">C++低レイヤWin32制御 ＆ 展示会ナビPWAの一般公開（Vercel）</div>
             <div class="timeline-desc">
-              「QuickFolderSize」を開発し、Win32 APIを直接叩く超高速ファイル走査を体得。ここから独自のネイティブ高速化ユーティリティ「Quick」ブランドがスタート。
+              「QuickFolderSize」でWin32 API直接走査を体得しQuickシリーズ始動。同時にVite+Reactで「FieldStyle2026」ナビPWAを開発しVercelに一般公開。ブラウザゲーム「game-tank」も制作。
             </div>
           </div>
         </div>
@@ -710,9 +827,9 @@
           <div class="timeline-dot">🚀</div>
           <div class="timeline-content">
             <div class="timeline-month">2026年 6月：展開期</div>
-            <div class="timeline-headline">PythonからC++への高速化ポーティング成功 ＆ Webフルスタック展開</div>
+            <div class="timeline-headline">PythonからC++への高速化ポーティング成功 ＆ うどんDB一般公開</div>
             <div class="timeline-desc">
-              「QuickMarkPDF」においてPythonプロトタイプの限界を超え、C++移植で劇的パフォーマンスアップを達成。同時にStreamlitやNext.jsで「udon-db」「suuri-chat」をリリース。
+              「QuickMarkPDF」でPythonからC++へのポーティングにより劇的ボトルネック解消。「udon-db」をSupabase＋Vercelで一般公開し、「suuri-chat」など多彩なWebサービスをリリース。
             </div>
           </div>
         </div>
@@ -720,10 +837,10 @@
         <div class="timeline-item">
           <div class="timeline-dot">🏢</div>
           <div class="timeline-content">
-            <div class="timeline-month">2026年 7月：基幹DX期</div>
-            <div class="timeline-headline">現場Excel業務の内製Web化 ＆ 170コミットの大規模自動化基盤</div>
+            <div class="timeline-month">2026年 7月：基幹DX ＆ 大規模自動化期</div>
+            <div class="timeline-headline">現場Excel業務の内製Web化 ＆ 大規模RPA（初期GitHub Actions運用）</div>
             <div class="timeline-desc">
-              試作部の原価見積ExcelをFastAPI＋PostgreSQLへ刷新（shisaku-system）。さらに170コミットに及ぶ大規模自動化基盤（Auto-X）やMicrosoft Fabric向けMCPツールを開発。
+              試作部の原価見積ExcelをFastAPI＋PostgreSQLへ刷新（shisaku-system）。さらに170コミットの大規模自動化基盤（Auto-X）に着手（初期はGitHub Actionsで自動実行）、Microsoft Fabric向けMCPツールも自作。
             </div>
           </div>
         </div>
@@ -731,10 +848,10 @@
         <div class="timeline-item">
           <div class="timeline-dot">💎</div>
           <div class="timeline-content">
-            <div class="timeline-month">2026年 8月：ネイティブ深化期</div>
-            <div class="timeline-headline">Qt 6 / QMLによるGPU画像ビューア ＆ C++高速ユーティリティ連作</div>
+            <div class="timeline-month">2026年 8月：ネイティブ深化 ＆ データクレンジング期</div>
+            <div class="timeline-headline">Qt 6 / QML画像ビューア ＆ 119シートExcelのNotion完全突合移行</div>
             <div class="timeline-desc">
-              Qt 6 / QMLによる本格画像ビューア（QuickImageView）を完成。QuickFileCopy、QuickDiskBench、Quick7Zipなど、市販品を超える高速ネイティブツール群を次々とリリース。
+              Qt 6 / QMLによるGPU画像ビューア（QuickImageView）やC++ユーティリティ連作（QuickFileCopy, Quick7Zip）を完成。「camp」では14MB・119シートのExcelから文字化けゼロでNotionへ精密突合移行。
             </div>
           </div>
         </div>
@@ -742,10 +859,10 @@
         <div class="timeline-item">
           <div class="timeline-dot">🔥</div>
           <div class="timeline-content">
-            <div class="timeline-month">2026年 9月：先端スタック期</div>
-            <div class="timeline-headline">C# (.NET 10) デスクトップ常駐 ＆ 脱商用RPA ＆ 関数型Gleam検証</div>
+            <div class="timeline-month">2026年 9月：先端スタック ＆ 自律AIループ期</div>
+            <div class="timeline-headline">C# (.NET 10) 常駐 ＆ 自律型AIループ検証 ＆ Claudeセカンドブレイン</div>
             <div class="timeline-desc">
-              C#最新.NET 10でフローティングドック（QuickDock）を構築。pywinauto＋Playwrightで完全内製RPA（auto-window）を実現。関数型言語GleamやローカルLLM環境の最適化を推進。
+              C#最新.NET 10でフローティングドック（QuickDock）を構築。AIが自律修正する「agent-loop-demo」、Claude連携ナレッジ体系化「obsidian-claude」、pywinauto＋Playwrightの完全脱商用RPA（auto-window）を実現。
             </div>
           </div>
         </div>
@@ -753,10 +870,10 @@
         <div class="timeline-item">
           <div class="timeline-dot">👑</div>
           <div class="timeline-content">
-            <div class="timeline-month">2026年 10月：統合・インフラ期</div>
-            <div class="timeline-headline">得意先固有EDI電文解析 ＆ AD人事マスタ同期 ＆ 部内DBサーバー構築</div>
+            <div class="timeline-month">2026年 10月：自宅NAS自前クラウド ＆ 基幹DX統合期</div>
+            <div class="timeline-headline">自宅QNAP NASでDocker+PostgreSQL+Cloudflare運用 ＆ EDI・部内サーバー</div>
             <div class="timeline-desc">
-              得意先ユニーク調達EDI固定長Shift_JIS電文の自動パース（chumonsho-2seikan）、社内AD連携人事DB（jinji-db）、そして部内専用PostgreSQLサーバーの自動構築（bunai-server）まで完遂。インフラから基幹業務まで一気通貫で解決できるエンジニアへ到達。
+              Auto-Xを自宅QNAP NAS（Docker+PostgreSQL+Cloudflare Tunnel）へ完全移行し24時間稼働化。campDBでもCloudflare Accessゼロトラストと自動バックアップを完備。さらにEDI固定長Shift_JIS電文パース（chumonsho-2seikan）、社内AD連携人事DB（jinji-db）、部内PostgreSQLサーバー（bunai-server）まで完遂。
             </div>
           </div>
         </div>
