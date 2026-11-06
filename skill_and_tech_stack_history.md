@@ -1,6 +1,6 @@
 # スキル・習得技術スタック 月別履歴＆層別マトリクス レポート
 
-本レポートは、`manage` ワークスペースおよび関連する全46+プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜10月（本格開始の5月以降を中心とする約半年間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
+本レポートは、`manage` ワークスペースおよび関連する全48+プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
 
 ---
 
@@ -15,7 +15,7 @@ timeline
     2026-07 : 業務DX＆大規模自動化 : 試作部内製化 : 大規模RPA(Auto-X/初期GitHub Actions) : MCPツール開発
     2026-08 : ネイティブ高速化深化 : C++ユーティリティ連作 : Qt6/QML画像処理 : 7-Zip連携
     2026-09 : 多様化＆自律AI・C# : C#(.NET10/WPF/WinForms) : pywinauto/Playwright : 自律AIループ(Ralph Loop) : Claudeセカンドブレイン
-    2026-10 : 自宅NAS自前クラウド＆基幹DX : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析 : 部内PostgreSQLサーバー
+    2026-10〜11 : 自宅NAS自前クラウド＆基幹DX深化 : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析(88+コミット) : 部内部品原価実績Fastify API : 部内PostgreSQLサーバー
 ```
 
 > [!NOTE]
@@ -52,6 +52,7 @@ timeline
 | | **pywebview / WebUI** | [auto-window](file:///c:/Users/0120025-Z100/source/project/auto-window), [QuickDiskBench](file:///c:/Users/0120025-Z100/source/project/QuickDiskBench)（HTML/CSS/JSを用いた軽量デスクトップUI） |
 | | **Streamlit** | [udon-db](file:///c:/Users/0120025-Z100/source/project/udon-db)（データ探索・管理ダッシュボード） |
 | **バックエンド** | **FastAPI** | [myerp](file:///c:/Users/0120025-Z100/source/project/myerp), [shisaku-system](file:///c:/Users/0120025-Z100/source/project/shisaku-system), [ap-drill](file:///c:/Users/0120025-Z100/source/project/ap-drill), [shadowing-lab](file:///c:/Users/0120025-Z100/source/project/shadowing-lab), [chumonsho-2seikan](file:///c:/Users/0120025-Z100/source/project/chumonsho-2seikan), [jinji-db](file:///c:/Users/0120025-Z100/source/project/jinji-db) |
+| | **Fastify (Node.js / TypeScript)** | [buhin-jisseki](file:///c:/Users/0120025-Z100/source/project/buhin-jisseki)（購入部品原価実績DB 読取専用セキュアREST APIサーバー） |
 | | **Rust Backend** | [myerp/erp-backend-rs](file:///c:/Users/0120025-Z100/source/project/myerp/erp-backend-rs) (Cargoベース) |
 | | **Express (Node.js)** | [QuickDiskBench](file:///c:/Users/0120025-Z100/source/project/QuickDiskBench), [seikan_2](file:///c:/Users/0120025-Z100/source/project/seikan_2) 等のローカルAPIサーバー |
 | **データベース** | **PostgreSQL (QNAP NAS Docker)** | [Auto-X](file:///c:/Users/0120025-Z100/source/project/Auto-X) (`autox_db`), [camp](file:///c:/Users/0120025-Z100/source/project/camp) (`camp_db` + 14世代ローテーションバックアップ) |

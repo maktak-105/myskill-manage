@@ -3,6 +3,7 @@
     "name": "gleam",
     "start_month": "1970-01",
     "start_date": "1970-01-01",
+    "latest_date": "2026-10-06",
     "commit_count": 5,
     "languages": [
       "Gleam",
@@ -22,6 +23,7 @@
     "name": "QuickImageView",
     "start_month": "2014-03",
     "start_date": "2014-03-11",
+    "latest_date": "2026-09-23",
     "commit_count": 55,
     "languages": [
       "C++",
@@ -44,6 +46,7 @@
     "name": "QuickMarkPDF",
     "start_month": "2018-05",
     "start_date": "2018-05-15",
+    "latest_date": "2026-10-15",
     "commit_count": 122,
     "languages": [
       "C++",
@@ -62,7 +65,8 @@
     "name": "shisaku-system",
     "start_month": "2023-10",
     "start_date": "2023-10-20",
-    "commit_count": 19,
+    "latest_date": "2026-11-02",
+    "commit_count": 33,
     "languages": [
       "JavaScript",
       "Python",
@@ -86,6 +90,7 @@
     "name": "shokaku-2026",
     "start_month": "2024-06",
     "start_date": "2024-06-12",
+    "latest_date": "2026-08-05",
     "commit_count": 1,
     "languages": [
       "JavaScript",
@@ -103,7 +108,8 @@
     "name": "myerp",
     "start_month": "2026-02",
     "start_date": "2026-02-25",
-    "commit_count": 13,
+    "latest_date": "2026-11-05",
+    "commit_count": 14,
     "languages": [
       "Python",
       "Rust",
@@ -132,6 +138,7 @@
     "name": "note",
     "start_month": "2026-03",
     "start_date": "2026-03-16",
+    "latest_date": "2026-09-22",
     "commit_count": 26,
     "languages": [],
     "frontend": [],
@@ -147,6 +154,7 @@
     "name": "myDB",
     "start_month": "2026-04",
     "start_date": "2026-04-06",
+    "latest_date": "2026-05-07",
     "commit_count": 28,
     "languages": [
       "Python",
@@ -175,6 +183,7 @@
     "name": "mail_manage",
     "start_month": "2026-04",
     "start_date": "2026-04-23",
+    "latest_date": "2026-07-06",
     "commit_count": 2,
     "languages": [
       "JavaScript",
@@ -201,7 +210,8 @@
     "name": "FieldStyle2026",
     "start_month": "2026-05",
     "start_date": "2026-05-02",
-    "commit_count": 53,
+    "latest_date": "2026-11-06",
+    "commit_count": 62,
     "languages": [
       "Python",
       "TypeScript"
@@ -212,18 +222,23 @@
     ],
     "backend": [],
     "database": [],
-    "tools_infra": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
     "desc": "> [!CAUTION]"
   },
   {
     "name": "map_maker_cl",
     "start_month": "2026-05",
     "start_date": "2026-05-06",
-    "commit_count": 15,
+    "latest_date": "2026-11-03",
+    "commit_count": 22,
     "languages": [
       "Python"
     ],
-    "frontend": [],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
     "backend": [],
     "database": [],
     "tools_infra": [
@@ -235,6 +250,7 @@
     "name": "QuickDiskRescue",
     "start_month": "2026-05",
     "start_date": "2026-05-19",
+    "latest_date": "2026-09-23",
     "commit_count": 9,
     "languages": [
       "C++",
@@ -244,7 +260,9 @@
     "frontend": [
       "HTML5/CSS3/Vanilla JS"
     ],
-    "backend": [],
+    "backend": [
+      "Express"
+    ],
     "database": [],
     "tools_infra": [
       "Win32 API / Windows Native"
@@ -255,6 +273,7 @@
     "name": "udon-db",
     "start_month": "2026-05",
     "start_date": "2026-05-19",
+    "latest_date": "2026-08-26",
     "commit_count": 145,
     "languages": [
       "JavaScript",
@@ -280,6 +299,7 @@
     "name": "QuickFolderSize",
     "start_month": "2026-05",
     "start_date": "2026-05-29",
+    "latest_date": "2026-09-24",
     "commit_count": 43,
     "languages": [
       "C++",
@@ -304,6 +324,7 @@
     "name": "suuri-chat",
     "start_month": "2026-06",
     "start_date": "2026-06-09",
+    "latest_date": "2026-07-17",
     "commit_count": 42,
     "languages": [
       "TypeScript"
@@ -324,6 +345,7 @@
     "name": "AI_mensetsu",
     "start_month": "2026-06",
     "start_date": "2026-06-17",
+    "latest_date": "2026-06-22",
     "commit_count": 0,
     "languages": [],
     "frontend": [],
@@ -336,6 +358,7 @@
     "name": "seikan_2",
     "start_month": "2026-06",
     "start_date": "2026-06-22",
+    "latest_date": "2026-07-17",
     "commit_count": 3,
     "languages": [
       "JavaScript",
@@ -362,6 +385,7 @@
     "name": "SNS Management",
     "start_month": "2026-06",
     "start_date": "2026-06-25",
+    "latest_date": "2026-09-24",
     "commit_count": 16,
     "languages": [
       "Python",
@@ -389,6 +413,7 @@
     "name": "powerapps",
     "start_month": "2026-06",
     "start_date": "2026-06-26",
+    "latest_date": "2026-06-26",
     "commit_count": 0,
     "languages": [],
     "frontend": [],
@@ -401,13 +426,17 @@
     "name": "project_me",
     "start_month": "2026-07",
     "start_date": "2026-07-02",
+    "latest_date": "2026-09-24",
     "commit_count": 3,
     "languages": [
       "JavaScript"
     ],
     "frontend": [],
     "backend": [],
-    "database": [],
+    "database": [
+      "PostgreSQL",
+      "Supabase (PostgreSQL BaaS)"
+    ],
     "tools_infra": [
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "MCP (Model Context Protocol)"
@@ -418,6 +447,7 @@
     "name": "Auto-X",
     "start_month": "2026-07",
     "start_date": "2026-07-23",
+    "latest_date": "2026-09-24",
     "commit_count": 170,
     "languages": [
       "Python",
@@ -440,6 +470,7 @@
     "name": "fabric",
     "start_month": "2026-07",
     "start_date": "2026-07-31",
+    "latest_date": "2026-09-23",
     "commit_count": 6,
     "languages": [
       "JavaScript",
@@ -457,24 +488,34 @@
   {
     "name": "camp",
     "start_month": "2026-08",
-    "start_date": "2026-08-05",
-    "commit_count": 2,
-    "languages": [],
-    "frontend": [],
+    "start_date": "2026-08-06",
+    "latest_date": "2026-10-22",
+    "commit_count": 64,
+    "languages": [
+      "Python",
+      "SQL",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Next.js",
+      "React",
+      "Tailwind CSS"
+    ],
     "backend": [],
     "database": [
-      "Supabase (PostgreSQL BaaS)"
+      "PostgreSQL"
     ],
     "tools_infra": [
       "Excel/VBA連携",
       "MCP (Model Context Protocol)"
     ],
-    "desc": ""
+    "desc": "`original/キャンプギヤ.xlsx`（119シート、14MB）の内容をNotionに移行する作業。"
   },
   {
     "name": "QuickFileCopy",
     "start_month": "2026-08",
     "start_date": "2026-08-13",
+    "latest_date": "2026-09-23",
     "commit_count": 29,
     "languages": [
       "C++",
@@ -496,6 +537,7 @@
     "name": "QuickDiskBench",
     "start_month": "2026-08",
     "start_date": "2026-08-15",
+    "latest_date": "2026-09-23",
     "commit_count": 55,
     "languages": [
       "C++",
@@ -519,6 +561,7 @@
     "name": "Quick7Zip",
     "start_month": "2026-08",
     "start_date": "2026-08-19",
+    "latest_date": "2026-09-23",
     "commit_count": 37,
     "languages": [
       "C++",
@@ -541,6 +584,7 @@
     "name": "ap-drill",
     "start_month": "2026-09",
     "start_date": "2026-09-01",
+    "latest_date": "2026-10-12",
     "commit_count": 10,
     "languages": [
       "JavaScript",
@@ -565,6 +609,7 @@
     "name": "shadowing-lab",
     "start_month": "2026-09",
     "start_date": "2026-09-01",
+    "latest_date": "2026-10-12",
     "commit_count": 15,
     "languages": [
       "JavaScript",
@@ -590,6 +635,7 @@
     "name": "auto-window",
     "start_month": "2026-09",
     "start_date": "2026-09-04",
+    "latest_date": "2026-09-08",
     "commit_count": 13,
     "languages": [
       "JavaScript",
@@ -612,6 +658,7 @@
     "name": "mont-simu",
     "start_month": "2026-09",
     "start_date": "2026-09-07",
+    "latest_date": "2026-09-23",
     "commit_count": 205,
     "languages": [
       "Python"
@@ -632,6 +679,7 @@
     "name": "QuickRightClick",
     "start_month": "2026-09",
     "start_date": "2026-09-07",
+    "latest_date": "2026-09-07",
     "commit_count": 1,
     "languages": [
       "C++",
@@ -652,6 +700,7 @@
     "name": "shinsa-2026",
     "start_month": "2026-09",
     "start_date": "2026-09-16",
+    "latest_date": "2026-09-17",
     "commit_count": 0,
     "languages": [
       "Python"
@@ -670,6 +719,7 @@
     "name": "QuickDock",
     "start_month": "2026-09",
     "start_date": "2026-09-20",
+    "latest_date": "2026-09-24",
     "commit_count": 11,
     "languages": [
       "C#",
@@ -691,6 +741,7 @@
     "name": "project-LLM",
     "start_month": "2026-09",
     "start_date": "2026-09-28",
+    "latest_date": "2026-09-28",
     "commit_count": 2,
     "languages": [
       "PowerShell"
@@ -710,6 +761,7 @@
     "name": "LLM-manage",
     "start_month": "2026-09",
     "start_date": "2026-09-29",
+    "latest_date": "2026-09-30",
     "commit_count": 7,
     "languages": [],
     "frontend": [],
@@ -724,6 +776,7 @@
     "name": "panzer-front",
     "start_month": "2026-09",
     "start_date": "2026-09-29",
+    "latest_date": "2026-10-20",
     "commit_count": 2,
     "languages": [],
     "frontend": [],
@@ -736,12 +789,15 @@
     "name": "supplier-manage",
     "start_month": "2026-10",
     "start_date": "2026-10-01",
+    "latest_date": "2026-10-05",
     "commit_count": 2,
     "languages": [
       "Python",
       "SQL"
     ],
-    "frontend": [],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
     "backend": [],
     "database": [
       "PostgreSQL"
@@ -755,26 +811,25 @@
     "name": "bunai-server",
     "start_month": "2026-10",
     "start_date": "2026-10-06",
-    "commit_count": 1,
-    "languages": [
-      "PowerShell"
-    ],
+    "latest_date": "2026-11-05",
+    "commit_count": 5,
+    "languages": [],
     "frontend": [],
     "backend": [],
     "database": [
       "PostgreSQL"
     ],
     "tools_infra": [
-      "Excel/VBA連携",
-      "Win32 API / Windows Native"
+      "Excel/VBA連携"
     ],
-    "desc": ""
+    "desc": "作成: 2026-10-28 / 更新: 2026-10-28(類似情報8ファイルと、手順書の出典4ファイルを、それぞれ ZIP へ退避し、元ファイルを削除)"
   },
   {
     "name": "jinji-db",
     "start_month": "2026-10",
     "start_date": "2026-10-07",
-    "commit_count": 3,
+    "latest_date": "2026-10-29",
+    "commit_count": 5,
     "languages": [
       "Python",
       "SQL",
@@ -802,7 +857,8 @@
     "name": "chumonsho-2seikan",
     "start_month": "2026-10",
     "start_date": "2026-10-12",
-    "commit_count": 17,
+    "latest_date": "2026-11-06",
+    "commit_count": 88,
     "languages": [
       "JavaScript",
       "Python",
@@ -811,9 +867,7 @@
     "frontend": [
       "HTML5/CSS3/Vanilla JS"
     ],
-    "backend": [
-      "FastAPI"
-    ],
+    "backend": [],
     "database": [
       "PostgreSQL"
     ],
@@ -828,6 +882,7 @@
     "name": "ikusei-taikei-2026",
     "start_month": "2026-10",
     "start_date": "2026-10-13",
+    "latest_date": "2026-10-22",
     "commit_count": 0,
     "languages": [],
     "frontend": [],
@@ -835,5 +890,65 @@
     "database": [],
     "tools_infra": [],
     "desc": ""
+  },
+  {
+    "name": "work",
+    "start_month": "2026-10",
+    "start_date": "2026-10-20",
+    "latest_date": "2026-10-29",
+    "commit_count": 0,
+    "languages": [
+      "TypeScript"
+    ],
+    "frontend": [
+      "React",
+      "Vite"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": ""
+  },
+  {
+    "name": "game-tank",
+    "start_month": "2026-10",
+    "start_date": "2026-10-22",
+    "latest_date": "2026-10-22",
+    "commit_count": 1,
+    "languages": [
+      "JavaScript"
+    ],
+    "frontend": [
+      "Vite"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": ""
+  },
+  {
+    "name": "buhin-jisseki",
+    "start_month": "2026-10",
+    "start_date": "2026-10-28",
+    "latest_date": "2026-10-29",
+    "commit_count": 6,
+    "languages": [
+      "TypeScript"
+    ],
+    "frontend": [
+      "React",
+      "Vite"
+    ],
+    "backend": [
+      "FastAPI",
+      "Fastify"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "部品購入原価実績DB API(試作) Fastify+TypeScript+PostgreSQL"
   }
 ]

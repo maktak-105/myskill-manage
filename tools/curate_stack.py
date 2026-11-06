@@ -162,7 +162,8 @@ def analyze_all():
         })
 
     projects_data.sort(key=lambda x: (x['start_month'], x['start_date']))
-    with open(r'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\curated_analysis.json', 'w', encoding='utf-8') as cf:
+    output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'curated_analysis.json')
+    with open(output_path, 'w', encoding='utf-8') as cf:
         json.dump(projects_data, cf, ensure_ascii=False, indent=2)
 
 analyze_all()

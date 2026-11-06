@@ -1,20 +1,21 @@
 # 🚀 半年間のスキル習得＆「できるようになったこと」ケイパビリティマップ
 
-> **対象期間**: 2026年5月〜10月（先行着手の3〜4月含む約半年間）  
-> **開発規模**: 全46+プロジェクト / 総コミット数 1,200+ / 6言語以上 / 自宅NAS・インフラ〜低レイヤ〜クラウド公開まで全方位網羅
+> **対象期間**: 2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）  
+> **開発規模**: 全48+プロジェクト / 総コミット数 1,400+ / 6言語以上 / 自宅NAS・インフラ〜低レイヤ〜クラウド公開まで全方位網羅
 
 ---
 
 ## 1. 全体像：半年で獲得した「6大ケイパビリティ領域」
 
-この半年間で、単にプログラミング言語の文法を覚えただけでなく、**「現実の複雑な業務課題・性能問題・インフラ運用・一般公開Webまで、最適な技術を選択してゼロから完結できるフルサイクル能力」** を手に入れました。
+この期間で、単にプログラミング言語の文法を覚えただけでなく、**「現実の複雑な業務課題・性能問題・インフラ運用・一般公開Webまで、最適な技術を選択してゼロから完結できるフルサイクル能力」** を手に入れました。
 
 ```mermaid
 mindmap
-  root["この半年で<br/>できるようになったこと"]
+  root["獲得した<br/>ケイパビリティ"]
     ["業務基盤DX・基幹システム内製化"]
       ["Excel/VBAからの完全脱却とWeb化"]
       ["得意先ユニーク調達EDI固定長電文の自動正規化"]
+      ["部内・原価実績DB安全参照REST API構築"]
       ["Active Directory人事マスタ自動同期"]
       ["製造ライン負荷平準化（数理最適化）"]
       ["部内PostgreSQLサーバー構築・運用"]
@@ -33,7 +34,7 @@ mindmap
     ["モダンWeb・SaaS開発"]
       ["Next.js + React + Tailwindの商用UI"]
       ["SupabaseによるBaaS/認証/RLS"]
-      ["FastAPIによる型安全REST API"]
+      ["FastAPI / Fastifyによる型安全REST API"]
       ["Streamlitによる高速データ可視化"]
       ["119シートExcelのNotion移行・文字化けゼロ突合"]
     ["AIエージェント・次世代連携"]
@@ -60,7 +61,8 @@ mindmap
 | できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
 | :--- | :--- | :--- |
 | **Excel/VBA見積業務の脱却とWeb化**<br>膨大なマクロに依存した原価見積を、ブラウザ上で誰でも入力・承認できるデータベース連動システムへ移行 | Python, FastAPI, PostgreSQL, HTML5/CSS, SQLチューニング | [shisaku-system](file:///c:/Users/0120025-Z100/source/project/shisaku-system) |
-| **得意先ユニーク調達EDI固定長電文の自動解析**<br>Shift_JIS固定長テキスト電文を自動パースし、リレーショナルDBへ正規化格納するミッションクリティカル処理 | Python (バイナリ/文字コード処理), PostgreSQL, 正規表現, トランザクション管理 | [chumonsho-2seikan](file:///c:/Users/0120025-Z100/source/project/chumonsho-2seikan) |
+| **得意先ユニーク調達EDI固定長電文の自動解析**<br>Shift_JIS固定長テキスト電文を自動パースし、リレーショナルDBへ正規化格納するミッションクリティカル処理（88+コミット） | Python (バイナリ/文字コード処理), PostgreSQL, 正規表現, トランザクション管理 | [chumonsho-2seikan](file:///c:/Users/0120025-Z100/source/project/chumonsho-2seikan) |
+| **購入部品原価実績DBの安全参照REST API構築**<br>基幹サーバー上の機密実績データを、最小権限・接続数制御・ローカル限定で安全にAPI提供（Fastify/TypeScript） | Node.js, Fastify, TypeScript, PostgreSQL, REST API設計 | [buhin-jisseki](file:///c:/Users/0120025-Z100/source/project/buhin-jisseki) |
 | **Active Directory（AD）連携による人事マスタ自動同期**<br>組織・社員・役職データをADから自動取得し、常に最新の権限・人事DBを社内に提供 | Python (LDAP/AD連携), PostgreSQL, React, Vite, FastAPI | [jinji-db](file:///c:/Users/0120025-Z100/source/project/jinji-db) |
 | **数理最適化アルゴリズムによる設備負荷平準化**<br>多階層BOM（部品構成）と設備の制約条件から、混合整数線形計画法（MILP）で最適な生産計画を自動算出 | Python (PuLP/SciPy), Pandas, FastAPI, Rust (高速化エンジン) | [myerp](file:///c:/Users/0120025-Z100/source/project/myerp) |
 | **部内専用PostgreSQLサーバーの構築・自動運用**<br>PowerShellで自動セットアップし、ロール・権限管理、Power Automate連携、IT部門向け手順書まで整備 | PowerShell, PostgreSQL運用管理, セキュリティ設計, バッチ自動化 | [bunai-server](file:///c:/Users/0120025-Z100/source/project/bunai-server) |

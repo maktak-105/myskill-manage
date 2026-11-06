@@ -1,7 +1,9 @@
 import json
+import os
 from collections import defaultdict
 
-with open(r'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\detailed_analysis.json', 'r', encoding='utf-8') as f:
+curated_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'curated_analysis.json')
+with open(curated_file, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
 print(f"{'Month':<7} | {'Project Name':<22} | {'Languages':<20} | {'Frontend':<25} | {'Backend':<25} | {'DB':<20}")
