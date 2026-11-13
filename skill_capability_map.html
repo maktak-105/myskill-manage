@@ -81,7 +81,7 @@
     .subtitle {
       font-size: 17px;
       color: var(--text-muted);
-      max-width: 800px;
+      max-width: 840px;
       margin: 0 auto;
     }
 
@@ -98,13 +98,13 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 20px;
+      padding: 10px 18px;
       background: rgba(30, 41, 59, 0.6);
       border: 1px solid var(--card-border);
       border-radius: 12px;
       color: var(--text-main);
       text-decoration: none;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
       transition: all 0.2s ease;
       backdrop-filter: blur(8px);
@@ -169,6 +169,7 @@
       align-items: center;
       gap: 12px;
       color: #fff;
+      flex-wrap: wrap;
     }
 
     .section-title span {
@@ -341,7 +342,7 @@
     }
 
     /* ===================================================
-       MONTHLY MATRIX TABLE STYLING
+       MATRIX TABLES STYLING (Project & Tech)
        =================================================== */
     .table-container {
       background: var(--card-bg);
@@ -356,7 +357,7 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 13.5px;
-      min-width: 1100px;
+      min-width: 1200px;
     }
 
     .matrix-table th, .matrix-table td {
@@ -367,7 +368,7 @@
     }
 
     .matrix-table th {
-      background: rgba(15, 23, 42, 0.85);
+      background: rgba(15, 23, 42, 0.9);
       color: #94a3b8;
       font-weight: 700;
       font-size: 13px;
@@ -435,6 +436,46 @@
       font-size: 12px;
       color: #94a3b8;
       line-height: 1.4;
+    }
+
+    /* Tech Matrix Specific Badges */
+    .tech-pill-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tech-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      width: fit-content;
+      transition: all 0.2s ease;
+    }
+
+    .tech-pill:hover {
+      transform: translateX(2px);
+    }
+
+    .pill-lang { background: rgba(56, 189, 248, 0.15); color: #7dd3fc; border: 1px solid rgba(56, 189, 248, 0.3); }
+    .pill-fw { background: rgba(168, 85, 247, 0.15); color: #d8b4fe; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .pill-gui { background: rgba(244, 63, 94, 0.15); color: #fda4af; border: 1px solid rgba(244, 63, 94, 0.3); }
+    .pill-lib { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+    .pill-db { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .pill-infra { background: rgba(6, 182, 212, 0.15); color: #67e8f9; border: 1px solid rgba(6, 182, 212, 0.3); }
+    .pill-ai { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+    .tech-sub-desc {
+      font-size: 11px;
+      color: #94a3b8;
+      font-family: 'Inter', sans-serif;
+      font-weight: normal;
+      margin-left: 2px;
     }
 
     /* ===================================================
@@ -718,9 +759,9 @@
         <span>🚀</span>
         <span>2026年3月〜11月 開発集大成 ポートフォリオ</span>
       </div>
-      <h1>エンジニアリング・ケイパビリティ ＆ プロジェクト統括</h1>
+      <h1>エンジニアリング・ケイパビリティ ＆ 技術習得統括</h1>
       <p class="subtitle">
-        Excel・VBA依存の現場課題脱却から、Webフルスタック、超高速C++低レイヤ制御、C#デスクトップ常駐、自宅NASコンテナ運用、自律型AIエージェントまで自力実装した全47プロジェクトの全貌です。
+        Excel・VBA依存の現場課題脱却から、Webフルスタック、超高速C++低レイヤ制御、C#デスクトップ常駐、自宅NASコンテナ運用、自律型AIエージェントまで自力実装した技術とプロジェクトの全貌です。
       </p>
     </header>
 
@@ -728,7 +769,8 @@
     <div class="nav-bar">
       <a href="#stats-section" class="nav-link">📊 総合統計</a>
       <a href="#cards-section" class="nav-link">🏆 6大ケイパビリティ領域</a>
-      <a href="#matrix-section" class="nav-link">📅 月別成果マトリクス</a>
+      <a href="#tech-matrix-section" class="nav-link" style="border-color: rgba(99, 102, 241, 0.6); background: rgba(99, 102, 241, 0.15);">🛠️ 技術スタック時系列マップ</a>
+      <a href="#matrix-section" class="nav-link">📅 月別成果物マトリクス</a>
       <a href="#projects-section" class="nav-link">📁 全プロジェクト完全一覧</a>
       <a href="#timeline-section" class="nav-link">📈 半年間の進化の歩み</a>
     </div>
@@ -1062,12 +1104,330 @@
     </div>
 
     <!-- ==========================================
-         SECTION 2: 月別 × 6大カテゴリ成果マトリクス
+         SECTION 2: 🛠️ 技術スタック時系列習得マップ (新セクション)
+         ========================================== -->
+    <div class="content-section" id="tech-matrix-section">
+      <div class="section-title">
+        <span>🛠️ 技術スタック時系列習得・導入マップ (Technology Acquisition Matrix)</span>
+        <span class="section-badge">技術視点・初導入タイミング体系化</span>
+      </div>
+
+      <div class="table-container">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th style="width: 120px;">着手年月</th>
+              <th>① 言語 (Languages)</th>
+              <th>② Web/API フレームワーク</th>
+              <th>③ デスクトップGUI</th>
+              <th>④ ライブラリ & SDK</th>
+              <th>⑤ DB & データストア</th>
+              <th>⑥ インフラ & クラウド</th>
+              <th>⑦ 先端AI & プロトコル</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <span class="month-badge">2026.03</span>
+                <div class="month-sub">黎明期</div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lang">Python</span>
+                  <span class="tech-pill pill-lang">Rust</span>
+                  <span class="tech-pill pill-lang">TypeScript</span>
+                  <span class="tech-pill pill-lang">SQL</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-fw">FastAPI</span>
+                  <span class="tech-pill pill-fw">Cargo (Rust BE)</span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">React</span>
+                  <span class="tech-pill pill-lib">Pandas</span>
+                  <span class="tech-pill pill-lib">PuLP / SciPy <span class="tech-sub-desc">(MILP)</span></span>
+                  <span class="tech-pill pill-lib">openpyxl / xlwings</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-db">PostgreSQL</span>
+                  <span class="tech-pill pill-db">SQLite</span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">OpenAI API</span>
+                  <span class="tech-pill pill-ai">数理モデル自動解法</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.04</span>
+                <div class="month-sub">Web基盤</div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-fw">Next.js <span class="tech-sub-desc">(App Router)</span></span>
+                  <span class="tech-pill pill-fw">Express <span class="tech-sub-desc">(Node.js)</span></span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">Tailwind CSS</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-db">Supabase <span class="tech-sub-desc">(Postgres BaaS)</span></span>
+                  <span class="tech-pill pill-db">RLS <span class="tech-sub-desc">(行単位セキュリティ)</span></span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">Gemini API 連動</span>
+                  <span class="tech-pill pill-ai">MCP 基礎連携</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.05</span>
+                <div class="month-sub">ネイティブ始動</div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lang">C++</span>
+                  <span class="tech-pill pill-lang">JavaScript</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-fw">Vite</span>
+                  <span class="tech-pill pill-fw">Streamlit</span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">Win32 Native API</span>
+                  <span class="tech-pill pill-lib">Lucide Icons</span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-infra">Vercel 本番デプロイ</span>
+                  <span class="tech-pill pill-infra">PWA <span class="tech-sub-desc">(Service Worker)</span></span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.06</span>
+                <div class="month-sub">高速化展開</div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">CMake <span class="tech-sub-desc">(C++ビルド)</span></span>
+                  <span class="tech-pill pill-lib">PDF Engine <span class="tech-sub-desc">(高速注釈)</span></span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-infra">Vercel Serverless</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">Gemini ストリーミング</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.07</span>
+                <div class="month-sub">大規模DX</div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">Playwright <span class="tech-sub-desc">(Web自動化)</span></span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-infra">GitHub Actions <span class="tech-sub-desc">(CI/CD)</span></span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">MS Fabric Lakehouse</span>
+                  <span class="tech-pill pill-ai">MCP サーバー連携</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.08</span>
+                <div class="month-sub">GPU・低レイヤ</div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-gui">Qt 6 / QML <span class="tech-sub-desc">(GPU描画)</span></span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">7-Zip DLL / CLI</span>
+                  <span class="tech-pill pill-lib">Win32 バッファ制御</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-db">Cloudflare D1 <span class="tech-sub-desc">(SQL)</span></span>
+                  <span class="tech-pill pill-db">Cloudflare KV</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-infra">Cloudflare Workers</span>
+                  <span class="tech-pill pill-infra">Cloudflare Pages</span>
+                  <span class="tech-pill pill-infra">Wrangler CLI</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">Notion API 連携</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.09</span>
+                <div class="month-sub">先端自律AI・C#</div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lang">C# <span class="tech-sub-desc">(.NET 10)</span></span>
+                  <span class="tech-pill pill-lang">PowerShell</span>
+                  <span class="tech-pill pill-lang">Gleam <span class="tech-sub-desc">(BEAM)</span></span>
+                  <span class="tech-pill pill-lang">Markdown</span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-gui">WPF <span class="tech-sub-desc">(XAML)</span></span>
+                  <span class="tech-pill pill-gui">Windows Forms</span>
+                  <span class="tech-pill pill-gui">pywebview</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">pywinauto <span class="tech-sub-desc">(UIA RPA)</span></span>
+                  <span class="tech-pill pill-lib">Jest <span class="tech-sub-desc">(TDD Runner)</span></span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-db">Obsidian Vault <span class="tech-sub-desc">(ナレッジDB)</span></span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-infra">.NET 10 Runtime</span>
+                  <span class="tech-pill pill-infra">BEAM <span class="tech-sub-desc">(Erlang VM)</span></span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">自律型AIループ <span class="tech-sub-desc">(Ralph Loop)</span></span>
+                  <span class="tech-pill pill-ai">Claude API セカンドブレイン</span>
+                  <span class="tech-pill pill-ai">Ollama ローカルLLM</span>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <span class="month-badge">2026.10〜11</span>
+                <div class="month-sub">NAS自前クラウド・基幹DX</div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-fw">Fastify <span class="tech-sub-desc">(Node/TS 高速API)</span></span>
+                </div>
+              </td>
+              <td style="color: #64748b; text-align: center;">—</td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-lib">node-postgres <span class="tech-sub-desc">(pg)</span></span>
+                  <span class="tech-pill pill-lib">LDAP / AD連携SDK</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-db">社内オンプレPostgreSQL</span>
+                  <span class="tech-pill pill-db">Active Directory <span class="tech-sub-desc">(人事マスタ)</span></span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-infra">QNAP NAS Container</span>
+                  <span class="tech-pill pill-infra">Docker Compose</span>
+                  <span class="tech-pill pill-infra">Cloudflare Tunnel</span>
+                  <span class="tech-pill pill-infra">Cloudflare Access <span class="tech-sub-desc">(Zero Trust)</span></span>
+                  <span class="tech-pill pill-infra">14世代自動バックアップ</span>
+                </div>
+              </td>
+              <td>
+                <div class="tech-pill-group">
+                  <span class="tech-pill pill-ai">STAR法 評価プロンプト</span>
+                  <span class="tech-pill pill-ai">昇格模擬面接AIエンジン</span>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         SECTION 3: 月別 × 6大カテゴリ成果物マトリクス
          ========================================== -->
     <div class="content-section" id="matrix-section">
       <div class="section-title">
-        <span>📅 月別 × 6大技術カテゴリ 成果物マトリクス (Monthly Matrix)</span>
-        <span class="section-badge">2026年3月〜11月 時系列クロス分析</span>
+        <span>📅 月別 × 6大カテゴリ 成果物マトリクス (Project Matrix)</span>
+        <span class="section-badge">成果物・PJ単位の時系列クロス集計</span>
       </div>
 
       <div class="table-container">
@@ -1410,7 +1770,7 @@
     </div>
 
     <!-- ==========================================
-         SECTION 3: 全47プロジェクト完全一覧データベース
+         SECTION 4: 全47プロジェクト完全一覧データベース
          ========================================== -->
     <div class="content-section" id="projects-section">
       <div class="section-title">
@@ -1460,7 +1820,7 @@
     </div>
 
     <!-- ==========================================
-         SECTION 4: 半年間の進化の歩み
+         SECTION 5: 半年間の進化の歩み
          ========================================== -->
     <div class="content-section" id="timeline-section">
       <div class="timeline-section">
