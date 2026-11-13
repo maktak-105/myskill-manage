@@ -1,11 +1,11 @@
-# 🚀 Engineering Capability & Tech Stack Portfolio (`skill-manage`)
+# 🚀 Engineering Capability & Tech Stack Portfolio (`myskill-manage`)
 
 [🇯🇵 日本語](#-概要-japanese) | [🇺🇸 English](#-overview-english)
 
 ---
 
 ## 🌐 Live Interactive Dashboard / 公開ダッシュボード
-👉 **[https://maktak-105.github.io/manage/](https://maktak-105.github.io/manage/)**  
+👉 **[https://maktak-105.github.io/myskill-manage/](https://maktak-105.github.io/myskill-manage/)**  
 *(A responsive, interactive single-page dashboard featuring instant search across all 47 projects, category filtering, chronological tech matrices, and bilingual support.)*
 
 ---
@@ -56,7 +56,7 @@ This repository serves as a unified engineering portfolio and capability trackin
 ## 🖥️ Usage / 使い方
 
 ### 1. View the Live Dashboard / ダッシュボードの閲覧
-Open [`index.html`](file:///c:/Users/0120025-Z100/source/manage/index.html) in any web browser, or visit the [GitHub Pages](https://maktak-105.github.io/manage/) site.
+Open [`index.html`](file:///c:/Users/0120025-Z100/source/manage/index.html) in any web browser, or visit the [GitHub Pages](https://maktak-105.github.io/myskill-manage/) site.
 
 ### 2. Rescan & Update Projects / プロジェクトの再解析
 ```powershell
