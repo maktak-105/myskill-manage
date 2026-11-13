@@ -1,6 +1,6 @@
-$srcDir = 'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b'
+$srcDir = '~\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b'
 $scratchDir = Join-Path $srcDir 'scratch'
-$destDir = 'c:\Users\0120025-Z100\source\manage'
+$destDir = '~\source\manage'
 $toolsDir = Join-Path $destDir 'tools'
 
 if (-not (Test-Path $toolsDir)) {

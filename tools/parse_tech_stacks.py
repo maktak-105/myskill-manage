@@ -3,10 +3,10 @@ import json
 import glob
 from collections import defaultdict
 
-with open(r'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\scan_summary.json', 'r', encoding='utf-8') as f:
+with open(r'~\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\scan_summary.json', 'r', encoding='utf-8') as f:
     projects = json.load(f)
 
-base_dir = r'c:\Users\0120025-Z100\source\project'
+base_dir = r'~\source\project'
 
 details = []
 
@@ -180,7 +180,7 @@ for p in projects:
 
 details.sort(key=lambda x: (x['start_month'], x['earliest_date']))
 
-with open(r'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\detailed_analysis.json', 'w', encoding='utf-8') as f_out:
+with open(r'~\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\detailed_analysis.json', 'w', encoding='utf-8') as f_out:
     json.dump(details, f_out, ensure_ascii=False, indent=2)
 
 print(f"Parsed {len(details)} projects successfully.")

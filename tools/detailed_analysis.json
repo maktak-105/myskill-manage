@@ -162,7 +162,7 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "readme": "# note投稿管理プロジェクト  ## 概要  じゅーご（元・炒飯15）のnote.com投稿を管理するプロジェクト  ---  ## マガジン  ### 「2ch伝説の炒飯15が語る、「勝てる炒飯を作る」」  2002年に2ちゃんねるニュー速板に何かの手違いで立った「うまい炒飯を作るスレ」に彗星のごとく登場した「炒飯15」本人による2026年版、炒飯総合エンターテインメントマガジン  **コン"
+    "readme": "# note投稿管理プロジェクト  ## 概要  技術ブログ投稿のnote.com投稿を管理するプロジェクト  ---  ## マガジン  ### 「2ch伝説の炒飯15が語る、「勝てる炒飯を作る」」  2002年に2ちゃんねるニュー速板に何かの手違いで立った「うまい炒飯を作るスレ」に彗星のごとく登場した「炒飯15」本人による2026年版、炒飯総合エンターテインメントマガジン  **コン"
   },
   {
     "name": "suuri-chat",
@@ -263,7 +263,7 @@
       "PostgreSQL"
     ],
     "tools_infra": [],
-    "readme": "# SNS Management  作業ディレクトリ: `C:\\Users\\makta\\source\\SNS_management`  ## 概要  旧 `SNS-Handler` と旧 `instagram-manager`（Instagram管理機能）を、この1フォルダに統合したNext.jsアプリです。2026-09-24にSupabaseを廃止し、認証は共通パスワード、DBは自宅NASのP"
+    "readme": "# SNS Management  作業ディレクトリ: `C:\\Users\\developer\\source\\SNS_management`  ## 概要  旧 `SNS-Handler` と旧 `instagram-manager`（Instagram管理機能）を、この1フォルダに統合したNext.jsアプリです。2026-09-24にSupabaseを廃止し、認証は共通パスワード、DBは自宅NASのP"
   },
   {
     "name": "udon-db",
@@ -285,7 +285,7 @@
       "Supabase"
     ],
     "tools_infra": [],
-    "readme": "# うどん店DB  香川うどんツアーの記録を管理するデータベースプロジェクト。  ## 概要  - **DB**: Supabase (PostgreSQL) — プロジェクトID: `zjevyovhiwqlmwzkkbvb`（東京リージョン） - **データソース**: NotebookLM の `うどんDB.csv` ＋ Obsidian メモ（`C:\\Users\\0120025-Z100\\"
+    "readme": "# うどん店DB  香川うどんツアーの記録を管理するデータベースプロジェクト。  ## 概要  - **DB**: Supabase (PostgreSQL) — プロジェクトID: `zjevyovhiwqlmwzkkbvb`（東京リージョン） - **データソース**: NotebookLM の `うどんDB.csv` ＋ Obsidian メモ（`C:\\Users\\developer\\"
   },
   {
     "name": "shisaku-system",
@@ -305,7 +305,7 @@
     ],
     "database": [],
     "tools_infra": [],
-    "readme": "# 試作部 原価見積システム  試作部の原価見積業務を、現行のExcel＋VBAマクロから内製システムへ移行するための作業リポジトリ。  **最終ゴール**: ユニットNoと見積基準日を指定すると、ShisakuDBおよび購入部品履歴DBから構成・部品・工程・単価を取得し、**採用したデータと計算根拠を追跡できる**原価見積結果を出力する。単に金額を返す計算機ではなく、どの単価をどの出典から何を根"
+    "readme": "# 製造・開発部門 原価見積システム  製造・開発部門の原価見積業務を、現行のExcel＋VBAマクロから内製システムへ移行するための作業リポジトリ。  **最終ゴール**: ユニットNoと見積基準日を指定すると、ShisakuDBおよび購入部品履歴DBから構成・部品・工程・単価を取得し、**採用したデータと計算根拠を追跡できる**原価見積結果を出力する。単に金額を返す計算機ではなく、どの単価をどの出典から何を根"
   },
   {
     "name": "Auto-X",
@@ -494,7 +494,7 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "readme": "# project_me  じゅーごの**残りの人生の下調べ**。   `personel_reserch`（分析）・`mytarent`（言動）・`mybusiness`（人生）を1リポジトリに統合した。  日常の入口は [`いま.md`](いま.md)。憲章は [`CHARTER.md`](CHARTER.md)。  ## 構成  ```text project_me/ ├── いま.md  "
+    "readme": "# project_me  長期キャリア・技術ロードマップ計画   `personel_reserch`（分析）・`mytarent`（言動）・`mybusiness`（人生）を1リポジトリに統合した。  日常の入口は [`いま.md`](いま.md)。憲章は [`CHARTER.md`](CHARTER.md)。  ## 構成  ```text project_me/ ├── いま.md  "
   },
   {
     "name": "ap-drill",
@@ -601,7 +601,7 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "readme": "# QuickRightClick  <p align=\"center\">   <img src=\"assets/QuickRightClick-gui-en.png\" alt=\"QuickRightClick English GUI\" width=\"720\"> </p>  The application icon source files and `assets/maktak105-V04-01"
+    "readme": "# QuickRightClick  <p align=\"center\">   <img src=\"assets/QuickRightClick-gui-en.png\" alt=\"QuickRightClick English GUI\" width=\"720\"> </p>  The application icon source files and `assets/developerk105-V04-01"
   },
   {
     "name": "QuickDiskRescue",
@@ -660,7 +660,7 @@
       "Excel操作(openpyxl/xlwings)",
       "pywinauto"
     ],
-    "readme": "# shinsa-2026  生技本部昇格審査のフィードバックシート（xlsx）を集計するスクリプト。  `〇FBシート`フォルダ配下の全xlsxの「事務局集計用」シートから、受験者・評価者の情報と評価内容を1つのブックにまとめる。  ## 前提  - Python 3系、`openpyxl`（`pip install openpyxl`）、`pywin32`（`pip install pywin"
+    "readme": "# shinsa-2026  生産技術部門のフィードバックシート（xlsx）を集計するスクリプト。  `〇FBシート`フォルダ配下の全xlsxの「事務局集計用」シートから、受験者・評価者の情報と評価内容を1つのブックにまとめる。  ## 前提  - Python 3系、`openpyxl`（`pip install openpyxl`）、`pywin32`（`pip install pywin"
   },
   {
     "name": "gleam",
@@ -772,7 +772,7 @@
     ],
     "database": [],
     "tools_infra": [],
-    "readme": "# 試作部 人事DB  試作部の人事リスト(`excel/試作部人事リスト 1.xlsm` の VBA が作っていたもの)を、AD から取得して PostgreSQL に蓄積し、Web で閲覧する。  - VBA の解析結果: [docs/vba-analysis.md](docs/vba-analysis.md) - 計画書・結果書: [plans/](plans/)  ## 構成  | 層 |"
+    "readme": "# 製造・開発部門 人事DB  製造・開発部門(`excel/製造・開発部門 1.xlsm` の VBA が作っていたもの)を、AD から取得して PostgreSQL に蓄積し、Web で閲覧する。  - VBA の解析結果: [docs/vba-analysis.md](docs/vba-analysis.md) - 計画書・結果書: [plans/](plans/)  ## 構成  | 層 |"
   },
   {
     "name": "chumonsho-2seikan",
@@ -790,7 +790,7 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "readme": "# W-IPS 次世代調達EDIデータ取込＆ビューアシステム  トヨタ次世代調達EDI形式（TMCPack）の固定長Shift_JISテキストファイルを自動解析（パース）し、PostgreSQLデータベースへ正規化格納するとともに、Webブラウザ上で直感的に検索・詳細確認ができる統合ビューアシステムです。  本システムは、**本番サーバー環境（常駐自動運用）** と **ローカル環境（開発・テスト"
+    "readme": "# W-IPS 次世代調達EDIデータ取込＆ビューアシステム  大手自動車調達EDIの固定長Shift_JISテキストファイルを自動解析（パース）し、PostgreSQLデータベースへ正規化格納するとともに、Webブラウザ上で直感的に検索・詳細確認ができる統合ビューアシステムです。  本システムは、**本番サーバー環境（常駐自動運用）** と **ローカル環境（開発・テスト"
   },
   {
     "name": "ikusei-taikei-2026",

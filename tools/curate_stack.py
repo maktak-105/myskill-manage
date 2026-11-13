@@ -4,7 +4,7 @@ import glob
 from collections import defaultdict
 from datetime import datetime
 
-base_dir = r'c:\Users\0120025-Z100\source\project'
+base_dir = r'~\source\project'
 
 def analyze_all():
     projects_data = []

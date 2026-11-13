@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'SilentlyContinue'
-$root = 'c:\Users\0120025-Z100\source\project'
+$root = '~\source\project'
 
 $results = @()
 
@@ -84,4 +84,4 @@ Get-ChildItem -Path $root -Directory | ForEach-Object {
     }
 }
 
-$results | ConvertTo-Json -Depth 4 | Out-File -FilePath 'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\scan_summary.json' -Encoding utf8
+$results | ConvertTo-Json -Depth 4 | Out-File -FilePath '~\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b\scratch\scan_summary.json' -Encoding utf8

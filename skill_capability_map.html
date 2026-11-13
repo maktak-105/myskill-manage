@@ -2,15 +2,15 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>半年間のスキル習得＆全プロジェクト・ケイパビリティ統合ダッシュボード</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Engineering Capability & Tech Stack Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-dark: #0b0f19;
-      --card-bg: rgba(22, 30, 49, 0.7);
+      --card-bg: rgba(22, 30, 49, 0.75);
       --card-border: rgba(255, 255, 255, 0.08);
       --primary: #6366f1;
       --primary-glow: rgba(99, 102, 241, 0.25);
@@ -39,7 +39,7 @@
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       min-height: 100vh;
       line-height: 1.6;
-      padding: 40px 24px 80px;
+      padding: 32px 20px 80px;
     }
 
     .container {
@@ -47,9 +47,40 @@
       margin: 0 auto;
     }
 
+    /* Top Utility Bar (Language Toggle) */
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .lang-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: rgba(30, 41, 59, 0.8);
+      border: 1px solid var(--primary);
+      border-radius: 9999px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 14px var(--primary-glow);
+      transition: all 0.25s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .lang-toggle-btn:hover {
+      background: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 18px var(--primary-glow);
+    }
+
     /* Header */
     header {
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       text-align: center;
     }
 
@@ -69,59 +100,78 @@
 
     h1 {
       font-family: 'Outfit', sans-serif;
-      font-size: clamp(32px, 5vw, 48px);
+      font-size: clamp(26px, 4.5vw, 46px);
       font-weight: 800;
       letter-spacing: -0.02em;
       background: linear-gradient(135deg, #ffffff 0%, #cbd5e1 50%, #94a3b8 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      line-height: 1.25;
     }
 
     .subtitle {
-      font-size: 17px;
+      font-size: clamp(14px, 1.8vw, 16.5px);
       color: var(--text-muted);
-      max-width: 840px;
+      max-width: 820px;
       margin: 0 auto;
+      line-height: 1.6;
     }
 
     /* Global Nav Bar */
+    .nav-bar-wrapper {
+      position: sticky;
+      top: 12px;
+      z-index: 90;
+      margin-bottom: 36px;
+    }
+
     .nav-bar {
       display: flex;
       justify-content: center;
-      gap: 12px;
-      margin-bottom: 36px;
+      gap: 10px;
       flex-wrap: wrap;
+      background: rgba(15, 23, 42, 0.75);
+      padding: 8px;
+      border-radius: 16px;
+      border: 1px solid var(--card-border);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
     }
 
     .nav-link {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 10px 18px;
-      background: rgba(30, 41, 59, 0.6);
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid transparent;
+      border-radius: 10px;
       color: var(--text-main);
       text-decoration: none;
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 600;
       transition: all 0.2s ease;
-      backdrop-filter: blur(8px);
+      white-space: nowrap;
     }
 
     .nav-link:hover {
       background: rgba(99, 102, 241, 0.2);
       border-color: var(--primary);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px var(--primary-glow);
+      transform: translateY(-1px);
+    }
+
+    .nav-link.highlight {
+      border-color: rgba(99, 102, 241, 0.6);
+      background: rgba(99, 102, 241, 0.15);
+      color: #c7d2fe;
     }
 
     /* Stats Banner */
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
+      gap: 14px;
       margin-bottom: 48px;
     }
 
@@ -129,7 +179,7 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 16px;
-      padding: 24px;
+      padding: 20px 16px;
       text-align: center;
       backdrop-filter: blur(12px);
       transition: all 0.3s ease;
@@ -143,7 +193,7 @@
 
     .stat-number {
       font-family: 'Outfit', sans-serif;
-      font-size: 40px;
+      font-size: clamp(32px, 3.5vw, 42px);
       font-weight: 800;
       line-height: 1.1;
       margin-bottom: 6px;
@@ -153,7 +203,7 @@
     }
 
     .stat-label {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-muted);
       font-weight: 500;
     }
@@ -161,10 +211,10 @@
     /* Section Header */
     .section-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 26px;
+      font-size: clamp(20px, 2.5vw, 26px);
       font-weight: 800;
       letter-spacing: -0.01em;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -179,7 +229,7 @@
     }
 
     .section-badge {
-      font-size: 13px;
+      font-size: 12px;
       padding: 3px 10px;
       border-radius: 9999px;
       background: rgba(99, 102, 241, 0.15);
@@ -190,25 +240,25 @@
 
     /* Section Container */
     .content-section {
-      margin-bottom: 64px;
-      scroll-margin-top: 24px;
+      margin-bottom: 56px;
+      scroll-margin-top: 80px;
     }
 
     /* Category Tabs */
     .tabs-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 28px;
+      gap: 8px;
+      margin-bottom: 24px;
     }
 
     .tab-btn {
       background: rgba(30, 41, 59, 0.5);
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      padding: 10px 18px;
+      padding: 8px 16px;
       border-radius: 12px;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -218,7 +268,6 @@
     .tab-btn:hover {
       color: var(--text-main);
       background: rgba(45, 55, 72, 0.8);
-      border-color: rgba(255, 255, 255, 0.2);
     }
 
     .tab-btn.active {
@@ -231,15 +280,15 @@
     /* Cards Grid */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 18px;
     }
 
     .cap-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 20px;
-      padding: 24px;
+      padding: 22px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -267,11 +316,11 @@
     }
 
     .cap-header {
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
 
     .cap-category {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -280,30 +329,30 @@
     }
 
     .cap-title {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 700;
       line-height: 1.35;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       color: #ffffff;
     }
 
     .cap-desc {
-      font-size: 14.5px;
+      font-size: 14px;
       color: #cbd5e1;
       line-height: 1.6;
     }
 
     .cap-tech-section {
       border-top: 1px solid rgba(255, 255, 255, 0.06);
-      padding-top: 16px;
-      margin-top: 16px;
+      padding-top: 14px;
+      margin-top: 14px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
 
     .tech-title {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 600;
       color: var(--text-muted);
       text-transform: uppercase;
@@ -317,11 +366,11 @@
     }
 
     .tech-tag {
-      font-size: 12px;
-      padding: 4px 10px;
+      font-size: 11.5px;
+      padding: 3px 9px;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
+      border-radius: 7px;
       color: #e2e8f0;
       font-family: 'JetBrains Mono', monospace;
     }
@@ -330,25 +379,35 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 6px 12px;
+      padding: 5px 11px;
       background: rgba(99, 102, 241, 0.12);
       border: 1px solid rgba(99, 102, 241, 0.3);
       border-radius: 8px;
       color: #c7d2fe;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 600;
       width: fit-content;
       margin-top: 4px;
     }
 
+    /* Scroll Hint for Mobile */
+    .scroll-hint {
+      display: none;
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+      text-align: right;
+    }
+
     /* ===================================================
-       MATRIX TABLES STYLING (Project & Tech)
+       MATRIX TABLES STYLING
        =================================================== */
     .table-container {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 20px;
       overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
       backdrop-filter: blur(12px);
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     }
@@ -357,21 +416,21 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 13.5px;
-      min-width: 1200px;
+      min-width: 1150px;
     }
 
     .matrix-table th, .matrix-table td {
-      padding: 16px;
+      padding: 14px 16px;
       text-align: left;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
       vertical-align: top;
     }
 
     .matrix-table th {
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.92);
       color: #94a3b8;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12.5px;
       text-transform: uppercase;
       letter-spacing: 0.03em;
       position: sticky;
@@ -387,28 +446,28 @@
       display: inline-block;
       font-family: 'Outfit', sans-serif;
       font-weight: 800;
-      font-size: 15px;
+      font-size: 14.5px;
       color: #fff;
       background: rgba(99, 102, 241, 0.2);
       border: 1px solid rgba(99, 102, 241, 0.4);
-      padding: 6px 12px;
-      border-radius: 10px;
+      padding: 5px 10px;
+      border-radius: 9px;
       white-space: nowrap;
     }
 
     .month-sub {
       font-size: 11px;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 3px;
       font-weight: 500;
     }
 
     .matrix-item {
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       background: rgba(30, 41, 59, 0.4);
       border: 1px solid rgba(255, 255, 255, 0.05);
-      padding: 8px 12px;
-      border-radius: 10px;
+      padding: 8px 11px;
+      border-radius: 9px;
       transition: all 0.2s ease;
     }
 
@@ -425,8 +484,8 @@
     .matrix-proj-name {
       font-weight: 700;
       color: #67e8f9;
-      font-size: 13.5px;
-      margin-bottom: 4px;
+      font-size: 13px;
+      margin-bottom: 3px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -451,8 +510,8 @@
       gap: 6px;
       font-size: 12px;
       font-weight: 600;
-      padding: 5px 10px;
-      border-radius: 8px;
+      padding: 4px 9px;
+      border-radius: 7px;
       font-family: 'JetBrains Mono', monospace;
       width: fit-content;
       transition: all 0.2s ease;
@@ -471,7 +530,7 @@
     .pill-ai { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
 
     .tech-sub-desc {
-      font-size: 11px;
+      font-size: 10.5px;
       color: #94a3b8;
       font-family: 'Inter', sans-serif;
       font-weight: normal;
@@ -484,23 +543,23 @@
     .controls-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 14px;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
     }
 
     .search-box-wrapper {
       position: relative;
       flex: 1;
-      min-width: 280px;
+      min-width: 260px;
       max-width: 480px;
     }
 
     .search-input {
       width: 100%;
-      padding: 12px 16px 12px 42px;
-      background: rgba(22, 30, 49, 0.8);
+      padding: 11px 14px 11px 38px;
+      background: rgba(22, 30, 49, 0.85);
       border: 1px solid var(--card-border);
       border-radius: 12px;
       color: #fff;
@@ -512,12 +571,12 @@
     .search-input:focus {
       border-color: var(--primary);
       box-shadow: 0 0 12px var(--primary-glow);
-      background: rgba(30, 41, 59, 0.9);
+      background: rgba(30, 41, 59, 0.95);
     }
 
     .search-icon {
       position: absolute;
-      left: 14px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
       color: var(--text-muted);
@@ -527,16 +586,16 @@
     .filter-pills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 6px;
     }
 
     .filter-btn {
       background: rgba(30, 41, 59, 0.5);
       border: 1px solid var(--card-border);
       color: var(--text-muted);
-      padding: 8px 14px;
-      border-radius: 10px;
-      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 9px;
+      font-size: 12.5px;
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s ease;
@@ -563,17 +622,17 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 13px;
-      min-width: 1000px;
+      min-width: 1050px;
     }
 
     .all-projs-table th, .all-projs-table td {
-      padding: 14px 16px;
+      padding: 13px 15px;
       text-align: left;
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .all-projs-table th {
-      background: rgba(15, 23, 42, 0.9);
+      background: rgba(15, 23, 42, 0.92);
       color: #94a3b8;
       font-weight: 700;
       text-transform: uppercase;
@@ -595,7 +654,7 @@
       font-weight: 700;
       color: #f8fafc;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 14px;
+      font-size: 13.5px;
       display: flex;
       align-items: center;
       gap: 8px;
@@ -603,10 +662,10 @@
 
     .commit-badge {
       display: inline-block;
-      padding: 3px 8px;
+      padding: 2px 7px;
       border-radius: 6px;
       font-weight: 700;
-      font-size: 12px;
+      font-size: 11.5px;
       font-family: 'JetBrains Mono', monospace;
       background: rgba(16, 185, 129, 0.15);
       border: 1px solid rgba(16, 185, 129, 0.3);
@@ -616,8 +675,8 @@
 
     .lang-pill {
       display: inline-block;
-      font-size: 11.5px;
-      padding: 2px 8px;
+      font-size: 11px;
+      padding: 2px 7px;
       border-radius: 6px;
       background: rgba(255, 255, 255, 0.08);
       color: #e2e8f0;
@@ -634,7 +693,8 @@
 
     .stack-cell {
       color: #cbd5e1;
-      font-size: 12.5px;
+      font-size: 12px;
+      line-height: 1.45;
     }
 
     .desc-cell {
@@ -649,20 +709,20 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: 24px;
-      padding: 36px;
+      padding: 32px 24px;
       backdrop-filter: blur(12px);
     }
 
     .timeline-list {
       position: relative;
-      padding-left: 32px;
-      margin-top: 24px;
+      padding-left: 28px;
+      margin-top: 20px;
     }
 
     .timeline-list::before {
       content: '';
       position: absolute;
-      left: 11px;
+      left: 10px;
       top: 8px;
       bottom: 8px;
       width: 2px;
@@ -672,7 +732,7 @@
 
     .timeline-item {
       position: relative;
-      margin-bottom: 36px;
+      margin-bottom: 32px;
     }
 
     .timeline-item:last-child {
@@ -681,21 +741,21 @@
 
     .timeline-dot {
       position: absolute;
-      left: -32px;
+      left: -28px;
       top: 0;
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background: #1e293b;
       border: 2px solid var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 11px;
     }
 
     .timeline-month {
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
       color: var(--cyan);
       text-transform: uppercase;
@@ -704,14 +764,14 @@
     }
 
     .timeline-headline {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       color: #ffffff;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .timeline-desc {
-      font-size: 14.5px;
+      font-size: 14px;
       color: #cbd5e1;
       line-height: 1.6;
     }
@@ -719,8 +779,8 @@
     /* Scroll To Top Button */
     .scroll-top-btn {
       position: fixed;
-      bottom: 24px;
-      right: 24px;
+      bottom: 20px;
+      right: 20px;
       background: var(--primary);
       color: #fff;
       border: none;
@@ -744,54 +804,144 @@
       visibility: visible;
     }
 
-    .scroll-top-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+    /* ===================================================
+       MOBILE RESPONSIVE TWEAKS (max-width: 768px)
+       =================================================== */
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 12px 64px;
+      }
+
+      .top-bar {
+        margin-bottom: 12px;
+      }
+
+      header {
+        margin-bottom: 20px;
+      }
+
+      .nav-bar-wrapper {
+        top: 8px;
+        margin-bottom: 24px;
+      }
+
+      .nav-bar {
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
+        padding: 6px;
+        scrollbar-width: none;
+      }
+
+      .nav-bar::-webkit-scrollbar {
+        display: none;
+      }
+
+      .nav-link {
+        padding: 7px 12px;
+        font-size: 12px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+
+      .stat-card {
+        padding: 16px 10px;
+      }
+
+      .stat-number {
+        font-size: 28px;
+      }
+
+      .stat-label {
+        font-size: 11.5px;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .scroll-hint {
+        display: block;
+      }
+
+      .table-container {
+        border-radius: 14px;
+      }
+
+      .controls-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .search-box-wrapper {
+        max-width: 100%;
+        min-width: 100%;
+      }
+
+      .timeline-section {
+        padding: 24px 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     
+    <!-- Top Bar with Language Toggle -->
+    <div class="top-bar">
+      <button class="lang-toggle-btn" id="langToggleBtn" onclick="toggleLanguage()">
+        <span id="langIcon">🌐</span>
+        <span id="langLabel">English に切替</span>
+      </button>
+    </div>
+
     <!-- Header -->
     <header>
       <div class="badge-pill">
         <span>🚀</span>
-        <span>2026年3月〜11月 開発集大成 ポートフォリオ</span>
+        <span data-i18n="badge">2026年3月〜11月 開発集大成 ポートフォリオ</span>
       </div>
-      <h1>エンジニアリング・ケイパビリティ ＆ 技術習得統括</h1>
-      <p class="subtitle">
-        Excel・VBA依存の現場課題脱却から、Webフルスタック、超高速C++低レイヤ制御、C#デスクトップ常駐、自宅NASコンテナ運用、自律型AIエージェントまで自力実装した技術とプロジェクトの全貌です。
+      <h1 data-i18n="main_title">エンジニアリング・ケイパビリティ ＆ 技術スタック統括</h1>
+      <p class="subtitle" data-i18n="subtitle">
+        Excel・VBA依存の現場課題脱却から、Webフルスタック、超高速C++低レイヤ制御、C#デスクトップ常駐、自宅NASコンテナ運用、自律型AIエージェントまで自力実装した全47プロジェクトの全貌です。
       </p>
     </header>
 
     <!-- Global Nav Bar -->
-    <div class="nav-bar">
-      <a href="#stats-section" class="nav-link">📊 総合統計</a>
-      <a href="#cards-section" class="nav-link">🏆 6大ケイパビリティ領域</a>
-      <a href="#tech-matrix-section" class="nav-link" style="border-color: rgba(99, 102, 241, 0.6); background: rgba(99, 102, 241, 0.15);">🛠️ 技術スタック時系列マップ</a>
-      <a href="#matrix-section" class="nav-link">📅 月別成果物マトリクス</a>
-      <a href="#projects-section" class="nav-link">📁 全プロジェクト完全一覧</a>
-      <a href="#timeline-section" class="nav-link">📈 半年間の進化の歩み</a>
+    <div class="nav-bar-wrapper">
+      <nav class="nav-bar">
+        <a href="#stats-section" class="nav-link" data-i18n="nav_stats">📊 総合統計</a>
+        <a href="#cards-section" class="nav-link" data-i18n="nav_cards">🏆 6大ケイパビリティ</a>
+        <a href="#tech-matrix-section" class="nav-link highlight" data-i18n="nav_tech">🛠️ 技術習得マップ</a>
+        <a href="#matrix-section" class="nav-link" data-i18n="nav_proj">📅 成果物マトリクス</a>
+        <a href="#projects-section" class="nav-link" data-i18n="nav_all">📁 全プロジェクト</a>
+        <a href="#timeline-section" class="nav-link" data-i18n="nav_time">📈 進化の歩み</a>
+      </nav>
     </div>
 
     <!-- Stats -->
     <div class="stats-grid" id="stats-section">
       <div class="stat-card">
         <div class="stat-number">47+</div>
-        <div class="stat-label">開発プロジェクト数</div>
+        <div class="stat-label" data-i18n="stat_projs">開発プロジェクト数</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">6+</div>
-        <div class="stat-label">習得・駆使したプログラミング言語</div>
+        <div class="stat-label" data-i18n="stat_langs">駆使・習得プログラミング言語</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">1,400+</div>
-        <div class="stat-label">総Gitコミット数</div>
+        <div class="stat-label" data-i18n="stat_commits">総Gitコミット数</div>
       </div>
       <div class="stat-card">
         <div class="stat-number">6</div>
-        <div class="stat-label">獲得した中核ケイパビリティ領域</div>
+        <div class="stat-label" data-i18n="stat_caps">獲得中核ケイパビリティ領域</div>
       </div>
     </div>
 
@@ -800,19 +950,19 @@
          ========================================== -->
     <div class="content-section" id="cards-section">
       <div class="section-title">
-        <span>🏆 6大中核ケイパビリティ領域 (Capability Cards)</span>
-        <span class="section-badge">15の代表的解決実績</span>
+        <span data-i18n="sec_cards_title">🏆 6大中核ケイパビリティ領域 (Core Capabilities)</span>
+        <span class="section-badge" data-i18n="sec_cards_badge">15の代表的解決実績</span>
       </div>
 
       <!-- Category Tabs -->
-      <div class="tabs-container">
-        <button class="tab-btn active" onclick="filterCards('all', this)">✨ すべて表示</button>
-        <button class="tab-btn" onclick="filterCards('infra', this)">🌐 自宅NAS・クラウド・公開Web</button>
-        <button class="tab-btn" onclick="filterCards('dx', this)">🏢 業務基盤DX・EDI・DB</button>
-        <button class="tab-btn" onclick="filterCards('native', this)">⚡ 超高速C++/C#・低レイヤ</button>
-        <button class="tab-btn" onclick="filterCards('web', this)">💻 モダンWeb・SaaS</button>
-        <button class="tab-btn" onclick="filterCards('ai', this)">🤖 AIエージェント・次世代連携</button>
-        <button class="tab-btn" onclick="filterCards('rpa', this)">🚀 脱商用RPA・自動化</button>
+      <div class="tabs-container" id="categoryTabs">
+        <button class="tab-btn active" onclick="filterCards('all', this)" data-i18n="tab_all">✨ すべて表示</button>
+        <button class="tab-btn" onclick="filterCards('infra', this)" data-i18n="tab_infra">🌐 自宅NAS・クラウド</button>
+        <button class="tab-btn" onclick="filterCards('dx', this)" data-i18n="tab_dx">🏢 業務基盤DX・EDI</button>
+        <button class="tab-btn" onclick="filterCards('native', this)" data-i18n="tab_native">⚡ 超高速C++/C#</button>
+        <button class="tab-btn" onclick="filterCards('web', this)" data-i18n="tab_web">💻 モダンWeb・SaaS</button>
+        <button class="tab-btn" onclick="filterCards('ai', this)" data-i18n="tab_ai">🤖 自律AIエージェント</button>
+        <button class="tab-btn" onclick="filterCards('rpa', this)" data-i18n="tab_rpa">🚀 脱商用RPA・自動化</button>
       </div>
 
       <!-- Cards Grid -->
@@ -821,18 +971,17 @@
         <!-- Card: Auto-X NAS & Infra -->
         <div class="cap-card" data-category="infra" style="--card-accent: #06b6d4;">
           <div class="cap-header">
-            <div class="cap-category">自宅NAS・クラウド・公開Web</div>
-            <h2 class="cap-title">自宅QNAP NAS上でのDocker+PostgreSQL常時稼働基盤</h2>
-            <p class="cap-desc">初期はGitHub Actionsで自動実行していた処理を、データ主権と自律運用のため自宅NASへ完全移行。PostgreSQL 16、自動Worker、Web UI、Cloudflare Tunnelをコンテナ化し24時間安定稼働。</p>
+            <div class="cap-category" data-ja="自宅NAS・クラウド・公開Web" data-en="Self-Hosted NAS & Cloud">自宅NAS・クラウド・公開Web</div>
+            <h2 class="cap-title" data-ja="自宅QNAP NAS上でのDocker+PostgreSQL常時稼働基盤" data-en="24/7 Docker + PostgreSQL Platform on Home QNAP NAS">自宅QNAP NAS上でのDocker+PostgreSQL常時稼働基盤</h2>
+            <p class="cap-desc" data-ja="初期はGitHub Actionsで自動実行していた処理を、データ主権と自律運用のため自宅NASへ完全移行。PostgreSQL 16、自動Worker、Web UI、Cloudflare Tunnelをコンテナ化し24時間安定稼働。" data-en="Migrated cloud batch jobs to on-premise QNAP NAS for data sovereignty. Containerized PostgreSQL 16, auto-worker, web UI, and Cloudflare Tunnel for stable 24/7 execution.">初期はGitHub Actionsで自動実行していた処理を、データ主権と自律運用のため自宅NASへ完全移行。PostgreSQL 16、自動Worker、Web UI、Cloudflare Tunnelをコンテナ化し24時間安定稼働。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">QNAP NAS</span>
               <span class="tech-tag">Docker Compose</span>
               <span class="tech-tag">PostgreSQL 16</span>
               <span class="tech-tag">Cloudflare Tunnel</span>
-              <span class="tech-tag">GitHub Actions</span>
             </div>
             <span class="project-pill">📁 Auto-X</span>
           </div>
@@ -841,12 +990,12 @@
         <!-- Card: campDB -->
         <div class="cap-card" data-category="infra" style="--card-accent: #3b82f6;">
           <div class="cap-header">
-            <div class="cap-category">自宅NAS・クラウド・公開Web</div>
-            <h2 class="cap-title">Cloudflare Access ゼロトラスト自前SaaS運用</h2>
-            <p class="cap-desc">自宅QNAP NAS上にPostgreSQL 16、Next.js standalone、14世代自動バックアップをDocker構築。ポート開放不要のCloudflare Tunnelと個人認証Accessで完全セキュアに外部公開（64+コミット）。</p>
+            <div class="cap-category" data-ja="自宅NAS・クラウド・公開Web" data-en="Self-Hosted NAS & Cloud">自宅NAS・クラウド・公開Web</div>
+            <h2 class="cap-title" data-ja="Cloudflare Access ゼロトラスト自前SaaS運用" data-en="Cloudflare Access Zero-Trust Self-Hosted SaaS">Cloudflare Access ゼロトラスト自前SaaS運用</h2>
+            <p class="cap-desc" data-ja="自宅QNAP NAS上にPostgreSQL 16、Next.js standalone、14世代自動バックアップをDocker構築。ポート開放不要のCloudflare Tunnelと個人認証Accessで完全セキュアに外部公開（64+コミット）。" data-en="Built self-hosted SaaS with PostgreSQL 16, Next.js standalone, and 14-generation automated backups on QNAP NAS. Securely exposed via Cloudflare Access Zero Trust without port forwarding.">自宅QNAP NAS上にPostgreSQL 16、Next.js standalone、14世代自動バックアップをDocker構築。ポート開放不要のCloudflare Tunnelと個人認証Accessで完全セキュアに外部公開（64+コミット）。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">Cloudflare Access</span>
               <span class="tech-tag">Next.js standalone</span>
@@ -860,12 +1009,12 @@
         <!-- Card: FieldStyle2026 -->
         <div class="cap-card" data-category="infra" style="--card-accent: #10b981;">
           <div class="cap-header">
-            <div class="cap-category">自宅NAS・クラウド・公開Web</div>
-            <h2 class="cap-title">展示会ナビPWAのVercel本番公開</h2>
-            <p class="cap-desc">日本最大のアウトドア展示会向け最短周回ルート探索アプリを開発。Service Workerによるオフラインキャッシュ、レスポンシブUI、Vercel CI/CDで一般公開本番運用。</p>
+            <div class="cap-category" data-ja="自宅NAS・クラウド・公開Web" data-en="Self-Hosted NAS & Cloud">自宅NAS・クラウド・公開Web</div>
+            <h2 class="cap-title" data-ja="展示会ナビPWAのVercel本番公開" data-en="Exhibition Shortest-Path Navigation PWA on Vercel">展示会ナビPWAのVercel本番公開</h2>
+            <p class="cap-desc" data-ja="日本最大のアウトドア展示会向け最短周回ルート探索アプリを開発。Service Workerによるオフラインキャッシュ、レスポンシブUI、Vercel CI/CDで一般公開本番運用。" data-en="Developed shortest route tour navigation app for Japan's largest outdoor exhibition. Features Service Worker offline caching, responsive UI, and automated CI/CD on Vercel.">日本最大のアウトドア展示会向け最短周回ルート探索アプリを開発。Service Workerによるオフラインキャッシュ、レスポンシブUI、Vercel CI/CDで一般公開本番運用。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">Vite</span>
               <span class="tech-tag">React / TypeScript</span>
@@ -879,17 +1028,17 @@
         <!-- Card: shisaku-system -->
         <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
           <div class="cap-header">
-            <div class="cap-category">業務基盤DX・基幹内製化</div>
-            <h2 class="cap-title">Excel/VBA見積業務の完全Web化</h2>
-            <p class="cap-desc">長年属人化していた試作見積Excelマクロを、FastAPI＋PostgreSQLのWebシステムへ刷新。社内誰でもブラウザから見積照会・登録が可能になり、計算ミスゼロ化と大幅な時間短縮を達成。</p>
+            <div class="cap-category" data-ja="業務基盤DX・基幹内製化" data-en="Enterprise DX & Data Engineering">業務基盤DX・基幹内製化</div>
+            <h2 class="cap-title" data-ja="Excel/VBA見積業務の完全Web化" data-en="Replacing Legacy Excel/VBA Estimation with Modern Web">Excel/VBA見積業務の完全Web化</h2>
+            <p class="cap-desc" data-ja="長年属人化していた製造部門の原価見積マクロを、FastAPI＋PostgreSQLのWebシステムへ刷新。社内誰でもブラウザから見積照会・登録が可能になり、計算ミスゼロ化と大幅な時間短縮を達成。" data-en="Replaced deeply personalized Excel quotation macros with an enterprise web app powered by FastAPI and PostgreSQL, eliminating human calculation errors and slashing processing time.">長年属人化していた製造部門の原価見積マクロを、FastAPI＋PostgreSQLのWebシステムへ刷新。社内誰でもブラウザから見積照会・登録が可能になり、計算ミスゼロ化と大幅な時間短縮を達成。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">FastAPI</span>
               <span class="tech-tag">PostgreSQL</span>
-              <span class="tech-tag">SQLチューニング</span>
-              <span class="tech-tag">Excel脱却</span>
+              <span class="tech-tag">SQL Tuning</span>
+              <span class="tech-tag">Excel Elimination</span>
             </div>
             <span class="project-pill">📁 shisaku-system</span>
           </div>
@@ -898,14 +1047,14 @@
         <!-- Card: chumonsho-2seikan -->
         <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
           <div class="cap-header">
-            <div class="cap-category">業務基盤DX・基幹内製化</div>
-            <h2 class="cap-title">得意先ユニーク調達EDI固定長電文の自動解析</h2>
-            <p class="cap-desc">Shift_JIS固定長テキスト電文を自動パース。ミッションクリティカルな受発注データを正規化しPostgreSQLへ格納する高信頼バッチ基盤（88+コミットで今なお進化中）。</p>
+            <div class="cap-category" data-ja="業務基盤DX・基幹内製化" data-en="Enterprise DX & Data Engineering">業務基盤DX・基幹内製化</div>
+            <h2 class="cap-title" data-ja="大手自動車調達EDI固定長電文の自動解析" data-en="Automated Automotive Procurement EDI Parser">大手自動車調達EDI固定長電文の自動解析</h2>
+            <p class="cap-desc" data-ja="Shift_JIS固定長テキスト電文を自動パース。ミッションクリティカルな受発注データを正規化しPostgreSQLへ格納する高信頼バッチ基盤（88+コミットで進化中）。" data-en="High-reliability batch pipeline parsing complex Shift_JIS fixed-length automotive EDI orders, normalizing procurement records into relational PostgreSQL schemas (88+ commits).">Shift_JIS固定長テキスト電文を自動パース。ミッションクリティカルな受発注データを正規化しPostgreSQLへ格納する高信頼バッチ基盤（88+コミットで進化中）。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
-              <span class="tech-tag">Python (バイナリ/文字コード)</span>
+              <span class="tech-tag">Python (Encoding / Binary)</span>
               <span class="tech-tag">PostgreSQL</span>
               <span class="tech-tag">FastAPI</span>
             </div>
@@ -916,12 +1065,12 @@
         <!-- Card: buhin-jisseki -->
         <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
           <div class="cap-header">
-            <div class="cap-category">業務基盤DX・基幹内製化</div>
-            <h2 class="cap-title">購入部品原価実績DB 読取専用セキュアREST API</h2>
-            <p class="cap-desc">サーバー上の原価実績DBを安全に外部連携。TypeScript + Fastify による接続プール制御・ループバック限定・読取専用ロールで堅牢な内製APIを構築。</p>
+            <div class="cap-category" data-ja="業務基盤DX・基幹内製化" data-en="Enterprise DX & Data Engineering">業務基盤DX・基幹内製化</div>
+            <h2 class="cap-title" data-ja="購入部品原価実績DB 読取専用セキュアREST API" data-en="Secure Read-Only Procurement Cost REST API">購入部品原価実績DB 読取専用セキュアREST API</h2>
+            <p class="cap-desc" data-ja="社内原価実績DBを安全に外部連携。TypeScript + Fastify による接続プール制御・ループバック限定・読取専用ロールで堅牢な内製APIを構築。" data-en="Secure read-only REST API built with Fastify and TypeScript, featuring strict loopback binding, connection pool limits, and read-only database roles for audit compliance.">社内原価実績DBを安全に外部連携。TypeScript + Fastify による接続プール制御・ループバック限定・読取専用ロールで堅牢な内製APIを構築。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">TypeScript</span>
               <span class="tech-tag">Fastify</span>
@@ -935,16 +1084,16 @@
         <!-- Card: bunai-server -->
         <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
           <div class="cap-header">
-            <div class="cap-category">業務基盤DX・基幹内製化</div>
-            <h2 class="cap-title">部内専用PostgreSQLサーバー自動構築</h2>
-            <p class="cap-desc">PowerShellによる無人セットアップ、ロール・権限分離、Power Automate連携、IT部門向け申請手順まで完備した部内データ基盤のプロビジョニング。</p>
+            <div class="cap-category" data-ja="業務基盤DX・基幹内製化" data-en="Enterprise DX & Data Engineering">業務基盤DX・基幹内製化</div>
+            <h2 class="cap-title" data-ja="部門専用PostgreSQLサーバー自動構築" data-en="Automated On-Premise PostgreSQL Server Provisioning">部門専用PostgreSQLサーバー自動構築</h2>
+            <p class="cap-desc" data-ja="PowerShellによる無人セットアップ、ロール・権限分離、Power Automate連携、IT部門向け申請手順まで完備した部内データ基盤のプロビジョニング。" data-en="Automated on-premise PostgreSQL database provisioning using PowerShell, complete with role isolation, Power Automate integration, and security application documentation.">PowerShellによる無人セットアップ、ロール・権限分離、Power Automate連携、IT部門向け申請手順まで完備した部内データ基盤のプロビジョニング。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">PowerShell</span>
-              <span class="tech-tag">PostgreSQL管理</span>
-              <span class="tech-tag">セキュリティ設計</span>
+              <span class="tech-tag">PostgreSQL Admin</span>
+              <span class="tech-tag">Security Design</span>
             </div>
             <span class="project-pill">📁 bunai-server</span>
           </div>
@@ -953,14 +1102,14 @@
         <!-- Card: jinji-db -->
         <div class="cap-card" data-category="dx" style="--card-accent: #06b6d4;">
           <div class="cap-header">
-            <div class="cap-category">業務基盤DX・基幹内製化</div>
-            <h2 class="cap-title">Active Directory連携・人事マスタ自動同期</h2>
-            <p class="cap-desc">社内Active Directory (AD) から社員・組織マスタを自動巡回取得。VBAから脱却し、最新の組織情報をReact＋FastAPI画面で瞬時に検索可能に。</p>
+            <div class="cap-category" data-ja="業務基盤DX・基幹内製化" data-en="Enterprise DX & Data Engineering">業務基盤DX・基幹内製化</div>
+            <h2 class="cap-title" data-ja="Active Directory連携・人事マスタ自動同期" data-en="Active Directory Integration & HR Master Sync">Active Directory連携・人事マスタ自動同期</h2>
+            <p class="cap-desc" data-ja="社内Active Directory (AD) から社員・組織マスタを自動巡回取得。VBAから脱却し、最新の組織情報をReact＋FastAPI画面で瞬時に検索可能に。" data-en="Automated employee and organizational directory crawler integrating with Active Directory LDAP, syncing real-time staff masters to React and FastAPI dashboards.">社内Active Directory (AD) から社員・組織マスタを自動巡回取得。VBAから脱却し、最新の組織情報をReact＋FastAPI画面で瞬時に検索可能に。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
-              <span class="tech-tag">LDAP / AD連携</span>
+              <span class="tech-tag">LDAP / AD Sync</span>
               <span class="tech-tag">React / Vite</span>
               <span class="tech-tag">FastAPI</span>
               <span class="tech-tag">PostgreSQL</span>
@@ -972,17 +1121,17 @@
         <!-- Card: QuickImageView -->
         <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
           <div class="cap-header">
-            <div class="cap-category">超高速C++/C#・低レイヤ</div>
-            <h2 class="cap-title">Qt 6 / QML によるGPU画像ビューア</h2>
-            <p class="cap-desc">C++とQt Quick/QMLを組み合わせ、DirectX/OpenGLハードウェアアクセラレーションを活用。大容量RAW/JPEG画像を遅延ゼロ・秒間60fpsでスムーズ拡大表示。</p>
+            <div class="cap-category" data-ja="超高速C++/C#・低レイヤ" data-en="High-Performance Native & Low-Level">超高速C++/C#・低レイヤ</div>
+            <h2 class="cap-title" data-ja="Qt 6 / QML によるGPU画像ビューア" data-en="Qt 6 / QML GPU-Accelerated Image Viewer">Qt 6 / QML によるGPU画像ビューア</h2>
+            <p class="cap-desc" data-ja="C++とQt Quick/QMLを組み合わせ、DirectX/OpenGLハードウェアアクセラレーションを活用。大容量RAW/JPEG画像を遅延ゼロ・秒間60fpsでスムーズ拡大表示。" data-en="Ultra-fast native image viewer built with C++17 and Qt 6 / QML, harnessing DirectX/OpenGL hardware acceleration for silky smooth 60fps zooming on large RAW images.">C++とQt Quick/QMLを組み合わせ、DirectX/OpenGLハードウェアアクセラレーションを活用。大容量RAW/JPEG画像を遅延ゼロ・秒間60fpsでスムーズ拡大表示。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">C++17/20</span>
               <span class="tech-tag">Qt 6 / QML</span>
               <span class="tech-tag">CMake</span>
-              <span class="tech-tag">GPUレンダリング</span>
+              <span class="tech-tag">GPU Rendering</span>
             </div>
             <span class="project-pill">📁 QuickImageView</span>
           </div>
@@ -991,12 +1140,12 @@
         <!-- Card: QuickDock -->
         <div class="cap-card" data-category="native" style="--card-accent: #a855f7;">
           <div class="cap-header">
-            <div class="cap-category">超高速C++/C#・低レイヤ</div>
-            <h2 class="cap-title">C# (.NET 10) Windows常駐フローティングドック</h2>
-            <p class="cap-desc">最新.NET 10とWPF/WinFormsを使用。半透明グラスモーフィズムUI、画面端自動格納、ドラッグ＆ドロップ登録を備えた自前ランチャー。</p>
+            <div class="cap-category" data-ja="超高速C++/C#・低レイヤ" data-en="High-Performance Native & Low-Level">超高速C++/C#・低レイヤ</div>
+            <h2 class="cap-title" data-ja="C# (.NET 10) Windows常駐フローティングドック" data-en="C# (.NET 10) Windows Floating Dock Launcher">C# (.NET 10) Windows常駐フローティングドック</h2>
+            <p class="cap-desc" data-ja="最新.NET 10とWPF/WinFormsを使用。半透明グラスモーフィズムUI、画面端自動格納、ドラッグ＆ドロップ登録を備えた自前ランチャー。" data-en="Windows desktop floating launcher built with latest .NET 10 and WPF/WinForms, featuring glassmorphism translucency, edge-auto-hide, and drag-and-drop registration.">最新.NET 10とWPF/WinFormsを使用。半透明グラスモーフィズムUI、画面端自動格納、ドラッグ＆ドロップ登録を備えた自前ランチャー。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">C# (.NET 10)</span>
               <span class="tech-tag">WPF / XAML</span>
@@ -1010,16 +1159,16 @@
         <!-- Card: QuickMarkPDF -->
         <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
           <div class="cap-header">
-            <div class="cap-category">超高速C++/C#・低レイヤ</div>
-            <h2 class="cap-title">PythonからC++への移植によるPDF高速化</h2>
-            <p class="cap-desc">Pythonで作成したPDF注釈・図面処理エンジンを純粋なC++へ完全移植。処理時間を30倍以上高速化し、100ページ超の大判図面を瞬時に一括マーキング処理。</p>
+            <div class="cap-category" data-ja="超高速C++/C#・低レイヤ" data-en="High-Performance Native & Low-Level">超高速C++/C#・低レイヤ</div>
+            <h2 class="cap-title" data-ja="PythonからC++への移植によるPDF高速化" data-en="30x PDF Speedup by Porting from Python to C++">PythonからC++への移植によるPDF高速化</h2>
+            <p class="cap-desc" data-ja="Pythonで作成したPDF注釈・図面処理エンジンを純粋なC++へ完全移植。処理時間を30倍以上高速化し、100ページ超の大判図面を瞬時に一括マーキング処理。" data-en="Ported drawing annotation pipeline from Python to pure modern C++, achieving over 30x performance improvement for processing 100+ page architectural blueprints.">Pythonで作成したPDF注釈・図面処理エンジンを純粋なC++へ完全移植。処理時間を30倍以上高速化し、100ページ超の大判図面を瞬時に一括マーキング処理。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
-              <span class="tech-tag">C++ 高速化移植</span>
-              <span class="tech-tag">PDFバイナリ制御</span>
-              <span class="tech-tag">メモリ最適化</span>
+              <span class="tech-tag">C++ Porting</span>
+              <span class="tech-tag">PDF Binary Engine</span>
+              <span class="tech-tag">Memory Tuning</span>
             </div>
             <span class="project-pill">📁 QuickMarkPDF</span>
           </div>
@@ -1028,16 +1177,16 @@
         <!-- Card: QuickFolderSize -->
         <div class="cap-card" data-category="native" style="--card-accent: #f43f5e;">
           <div class="cap-header">
-            <div class="cap-category">超高速C++/C#・低レイヤ</div>
-            <h2 class="cap-title">Win32 API直接制御によるNTFS高速走査</h2>
-            <p class="cap-desc">エクスプローラーでは分単位かかる数百GBのディレクトリツリー走査を、Win32 `FindFirstFileExW` / `FILE_ID_BOTH_DIR_INFO` で直接呼び出し、数秒で集計完了。</p>
+            <div class="cap-category" data-ja="超高速C++/C#・低レイヤ" data-en="High-Performance Native & Low-Level">超高速C++/C#・低レイヤ</div>
+            <h2 class="cap-title" data-ja="Win32 API直接制御によるNTFS高速走査" data-en="Direct Win32 API NTFS High-Speed Directory Scan">Win32 API直接制御によるNTFS高速走査</h2>
+            <p class="cap-desc" data-ja="エクスプローラーでは分単位かかる数百GBのディレクトリツリー走査を、Win32 `FindFirstFileExW` / `FILE_ID_BOTH_DIR_INFO` で直接呼び出し、数秒で集計完了。" data-en="Directly invoked Win32 NTFS APIs (FindFirstFileExW / FILE_ID_BOTH_DIR_INFO) to traverse multi-hundred GB disk trees in seconds instead of minutes.">エクスプローラーでは分単位かかる数百GBのディレクトリツリー走査を、Win32 `FindFirstFileExW` / `FILE_ID_BOTH_DIR_INFO` で直接呼び出し、数秒で集計完了。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">Win32 Native API</span>
-              <span class="tech-tag">NTFS最適化</span>
-              <span class="tech-tag">マルチスレッド</span>
+              <span class="tech-tag">NTFS Optimization</span>
+              <span class="tech-tag">Multithreading</span>
             </div>
             <span class="project-pill">📁 QuickFolderSize</span>
           </div>
@@ -1046,17 +1195,17 @@
         <!-- Card: udon-db -->
         <div class="cap-card" data-category="web" style="--card-accent: #10b981;">
           <div class="cap-header">
-            <div class="cap-category">モダンWeb・SaaS</div>
-            <h2 class="cap-title">Supabase (東京) × Vercel 実用DB一般公開</h2>
-            <p class="cap-desc">Supabase東京リージョン上にPostgreSQL DBを設計しRLS（行単位セキュリティ）を適用。StreamlitおよびNext.js UIから高速な位置情報付きうどん巡礼アプリを公開。</p>
+            <div class="cap-category" data-ja="モダンWeb・SaaS" data-en="Modern Web & Fullstack SaaS">モダンWeb・SaaS</div>
+            <h2 class="cap-title" data-ja="Supabase (東京) × Vercel 実用DB一般公開" data-en="Supabase Tokyo Region & Vercel Public Web App">Supabase (東京) × Vercel 実用DB一般公開</h2>
+            <p class="cap-desc" data-ja="Supabase東京リージョン上にPostgreSQL DBを設計しRLS（行単位セキュリティ）を適用。StreamlitおよびNext.js UIから高速な位置情報付きうどん巡礼アプリを公開。" data-en="Production web application published on Vercel backed by Supabase Tokyo (PostgreSQL with Row Level Security), providing interactive maps and data querying.">Supabase東京リージョン上にPostgreSQL DBを設計しRLS（行単位セキュリティ）を適用。StreamlitおよびNext.js UIから高速な位置情報付きうどん巡礼アプリを公開。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">Supabase (PostgreSQL)</span>
               <span class="tech-tag">Streamlit</span>
               <span class="tech-tag">Vercel Deploy</span>
-              <span class="tech-tag">RLSセキュリティ</span>
+              <span class="tech-tag">RLS Security</span>
             </div>
             <span class="project-pill">📁 udon-db</span>
           </div>
@@ -1065,14 +1214,14 @@
         <!-- Card: agent-loop -->
         <div class="cap-card" data-category="ai" style="--card-accent: #8b5cf6;">
           <div class="cap-header">
-            <div class="cap-category">AIエージェント・次世代連携</div>
-            <h2 class="cap-title">自律型AIループエージェント＆TDD自己修復</h2>
-            <p class="cap-desc">Jestテスト失敗のエラーログをAI自身が解析し、コードを自動修正してテスト再実行する自律ループ（Ralph Loop）を実証。人間の介入なしでバグを自己修復する未来型開発基盤。</p>
+            <div class="cap-category" data-ja="AIエージェント・次世代連携" data-en="AI Agents & Autonomous Loops">AIエージェント・次世代連携</div>
+            <h2 class="cap-title" data-ja="自律型AIループエージェント＆TDD自己修復" data-en="Autonomous Self-Healing AI Loop (Ralph Loop)">自律型AIループエージェント＆TDD自己修復</h2>
+            <p class="cap-desc" data-ja="Jestテスト失敗のエラーログをAI自身が解析し、コードを自動修正してテスト再実行する自律ループ（Ralph Loop）を実証。人間の介入なしでバグを自己修復する未来型開発基盤。" data-en="Pioneered autonomous self-healing agent loop where AI agent analyzes Jest test failures, edits failing source files, and iterates until 100% green without human intervention.">Jestテスト失敗のエラーログをAI自身が解析し、コードを自動修正してテスト再実行する自律ループ（Ralph Loop）を実証。人間の介入なしでバグを自己修復する未来型開発基盤。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
-              <span class="tech-tag">自律AIループ</span>
+              <span class="tech-tag">Autonomous Loop</span>
               <span class="tech-tag">Jest / TDD</span>
               <span class="tech-tag">TypeScript</span>
               <span class="tech-tag">Ralph Loop</span>
@@ -1084,12 +1233,12 @@
         <!-- Card: auto-window -->
         <div class="cap-card" data-category="rpa" style="--card-accent: #f59e0b;">
           <div class="cap-header">
-            <div class="cap-category">脱商用RPA・ハイパー自動化</div>
-            <h2 class="cap-title">pywinauto × Playwright ハイブリッドRPA</h2>
-            <p class="cap-desc">年間ライセンス費数百万円の商用RPAを排除。Windowsデスクトップ画面のボタン押し・値入力とブラウザ自動操作をシームレスに連携した完全内製RPA。</p>
+            <div class="cap-category" data-ja="脱商用RPA・ハイパー自動化" data-en="Custom Hyper-Automation & RPA">脱商用RPA・ハイパー自動化</div>
+            <h2 class="cap-title" data-ja="pywinauto × Playwright ハイブリッドRPA" data-en="Hybrid RPA: pywinauto & Playwright">pywinauto × Playwright ハイブリッドRPA</h2>
+            <p class="cap-desc" data-ja="年間ライセンス費数百万円の商用RPAを排除。Windowsデスクトップ画面のボタン押し・値入力とブラウザ自動操作をシームレスに連携した完全内製RPA。" data-en="Cost-free in-house hyper-automation framework eliminating expensive commercial RPA licenses, bridging Windows UI Automation with headless Playwright web scraping.">年間ライセンス費数百万円の商用RPAを排除。Windowsデスクトップ画面のボタン押し・値入力とブラウザ自動操作をシームレスに連携した完全内製RPA。</p>
           </div>
           <div class="cap-tech-section">
-            <div class="tech-title">活用スキル</div>
+            <div class="tech-title" data-ja="活用スキル" data-en="Technologies">活用スキル</div>
             <div class="tech-tags">
               <span class="tech-tag">pywinauto</span>
               <span class="tech-tag">Playwright</span>
@@ -1104,33 +1253,34 @@
     </div>
 
     <!-- ==========================================
-         SECTION 2: 🛠️ 技術スタック時系列習得マップ (新セクション)
+         SECTION 2: 🛠️ 技術スタック時系列習得マップ
          ========================================== -->
     <div class="content-section" id="tech-matrix-section">
       <div class="section-title">
-        <span>🛠️ 技術スタック時系列習得・導入マップ (Technology Acquisition Matrix)</span>
-        <span class="section-badge">技術視点・初導入タイミング体系化</span>
+        <span data-i18n="sec_tech_title">🛠️ 技術スタック時系列習得・導入マップ (Technology Acquisition Matrix)</span>
+        <span class="section-badge" data-i18n="sec_tech_badge">技術視点・初導入タイミング体系化</span>
       </div>
 
+      <div class="scroll-hint">👉 <span data-i18n="scroll_hint">横スクロールできます</span></div>
       <div class="table-container">
         <table class="matrix-table">
           <thead>
             <tr>
-              <th style="width: 120px;">着手年月</th>
-              <th>① 言語 (Languages)</th>
-              <th>② Web/API フレームワーク</th>
-              <th>③ デスクトップGUI</th>
-              <th>④ ライブラリ & SDK</th>
-              <th>⑤ DB & データストア</th>
-              <th>⑥ インフラ & クラウド</th>
-              <th>⑦ 先端AI & プロトコル</th>
+              <th style="width: 120px;" data-i18n="th_month">着手年月</th>
+              <th data-i18n="th_lang">① 言語 (Languages)</th>
+              <th data-i18n="th_web_fw">② Web/API FW</th>
+              <th data-i18n="th_gui_fw">③ デスクトップGUI</th>
+              <th data-i18n="th_libs">④ ライブラリ & SDK</th>
+              <th data-i18n="th_db">⑤ DB & データストア</th>
+              <th data-i18n="th_infra">⑥ インフラ & クラウド</th>
+              <th data-i18n="th_ai">⑦ 先端AI & プロトコル</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
                 <span class="month-badge">2026.03</span>
-                <div class="month-sub">黎明期</div>
+                <div class="month-sub" data-ja="黎明期" data-en="Dawn">黎明期</div>
               </td>
               <td>
                 <div class="tech-pill-group">
@@ -1165,7 +1315,7 @@
               <td>
                 <div class="tech-pill-group">
                   <span class="tech-pill pill-ai">OpenAI API</span>
-                  <span class="tech-pill pill-ai">数理モデル自動解法</span>
+                  <span class="tech-pill pill-ai" data-ja="数理モデル自動解法" data-en="Math Model Solver">数理モデル自動解法</span>
                 </div>
               </td>
             </tr>
@@ -1173,7 +1323,7 @@
             <tr>
               <td>
                 <span class="month-badge">2026.04</span>
-                <div class="month-sub">Web基盤</div>
+                <div class="month-sub" data-ja="Web基盤" data-en="Web Foundation">Web基盤</div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
@@ -1191,14 +1341,14 @@
               <td>
                 <div class="tech-pill-group">
                   <span class="tech-pill pill-db">Supabase <span class="tech-sub-desc">(Postgres BaaS)</span></span>
-                  <span class="tech-pill pill-db">RLS <span class="tech-sub-desc">(行単位セキュリティ)</span></span>
+                  <span class="tech-pill pill-db">RLS <span class="tech-sub-desc">(Row Security)</span></span>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-ai">Gemini API 連動</span>
-                  <span class="tech-pill pill-ai">MCP 基礎連携</span>
+                  <span class="tech-pill pill-ai">Gemini API</span>
+                  <span class="tech-pill pill-ai">MCP (Foundation)</span>
                 </div>
               </td>
             </tr>
@@ -1206,7 +1356,7 @@
             <tr>
               <td>
                 <span class="month-badge">2026.05</span>
-                <div class="month-sub">ネイティブ始動</div>
+                <div class="month-sub" data-ja="ネイティブ始動" data-en="Native Start">ネイティブ始動</div>
               </td>
               <td>
                 <div class="tech-pill-group">
@@ -1230,7 +1380,7 @@
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-infra">Vercel 本番デプロイ</span>
+                  <span class="tech-pill pill-infra">Vercel Deployment</span>
                   <span class="tech-pill pill-infra">PWA <span class="tech-sub-desc">(Service Worker)</span></span>
                 </div>
               </td>
@@ -1240,15 +1390,15 @@
             <tr>
               <td>
                 <span class="month-badge">2026.06</span>
-                <div class="month-sub">高速化展開</div>
+                <div class="month-sub" data-ja="高速化展開" data-en="Acceleration">高速化展開</div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-lib">CMake <span class="tech-sub-desc">(C++ビルド)</span></span>
-                  <span class="tech-pill pill-lib">PDF Engine <span class="tech-sub-desc">(高速注釈)</span></span>
+                  <span class="tech-pill pill-lib">CMake <span class="tech-sub-desc">(C++ Build)</span></span>
+                  <span class="tech-pill pill-lib">PDF Engine <span class="tech-sub-desc">(Annotation)</span></span>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1259,7 +1409,7 @@
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-ai">Gemini ストリーミング</span>
+                  <span class="tech-pill pill-ai">Gemini Streaming</span>
                 </div>
               </td>
             </tr>
@@ -1267,14 +1417,14 @@
             <tr>
               <td>
                 <span class="month-badge">2026.07</span>
-                <div class="month-sub">大規模DX</div>
+                <div class="month-sub" data-ja="大規模DX" data-en="Enterprise DX">大規模DX</div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-lib">Playwright <span class="tech-sub-desc">(Web自動化)</span></span>
+                  <span class="tech-pill pill-lib">Playwright <span class="tech-sub-desc">(Web RPA)</span></span>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1286,7 +1436,7 @@
               <td>
                 <div class="tech-pill-group">
                   <span class="tech-pill pill-ai">MS Fabric Lakehouse</span>
-                  <span class="tech-pill pill-ai">MCP サーバー連携</span>
+                  <span class="tech-pill pill-ai">MCP Tool Server</span>
                 </div>
               </td>
             </tr>
@@ -1294,24 +1444,24 @@
             <tr>
               <td>
                 <span class="month-badge">2026.08</span>
-                <div class="month-sub">GPU・低レイヤ</div>
+                <div class="month-sub" data-ja="GPU・低レイヤ" data-en="GPU & Low-Level">GPU・低レイヤ</div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-gui">Qt 6 / QML <span class="tech-sub-desc">(GPU描画)</span></span>
+                  <span class="tech-pill pill-gui">Qt 6 / QML <span class="tech-sub-desc">(GPU Accel)</span></span>
                 </div>
               </td>
               <td>
                 <div class="tech-pill-group">
                   <span class="tech-pill pill-lib">7-Zip DLL / CLI</span>
-                  <span class="tech-pill pill-lib">Win32 バッファ制御</span>
+                  <span class="tech-pill pill-lib">Win32 Buffer I/O</span>
                 </div>
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-db">Cloudflare D1 <span class="tech-sub-desc">(SQL)</span></span>
+                  <span class="tech-pill pill-db">Cloudflare D1 <span class="tech-sub-desc">(Edge SQL)</span></span>
                   <span class="tech-pill pill-db">Cloudflare KV</span>
                 </div>
               </td>
@@ -1324,7 +1474,7 @@
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-ai">Notion API 連携</span>
+                  <span class="tech-pill pill-ai">Notion API Sync</span>
                 </div>
               </td>
             </tr>
@@ -1332,7 +1482,7 @@
             <tr>
               <td>
                 <span class="month-badge">2026.09</span>
-                <div class="month-sub">先端自律AI・C#</div>
+                <div class="month-sub" data-ja="先端自律AI・C#" data-en="Autonomous AI & C#">先端自律AI・C#</div>
               </td>
               <td>
                 <div class="tech-pill-group">
@@ -1358,7 +1508,7 @@
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-db">Obsidian Vault <span class="tech-sub-desc">(ナレッジDB)</span></span>
+                  <span class="tech-pill pill-db">Obsidian Vault <span class="tech-sub-desc">(Knowledge DB)</span></span>
                 </div>
               </td>
               <td>
@@ -1369,9 +1519,9 @@
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-ai">自律型AIループ <span class="tech-sub-desc">(Ralph Loop)</span></span>
-                  <span class="tech-pill pill-ai">Claude API セカンドブレイン</span>
-                  <span class="tech-pill pill-ai">Ollama ローカルLLM</span>
+                  <span class="tech-pill pill-ai">Ralph Loop <span class="tech-sub-desc">(Self-Healing AI)</span></span>
+                  <span class="tech-pill pill-ai">Claude API</span>
+                  <span class="tech-pill pill-ai">Ollama Local LLM</span>
                 </div>
               </td>
             </tr>
@@ -1379,25 +1529,25 @@
             <tr>
               <td>
                 <span class="month-badge">2026.10〜11</span>
-                <div class="month-sub">NAS自前クラウド・基幹DX</div>
+                <div class="month-sub" data-ja="NAS自前クラウド・基幹DX" data-en="Self-Hosted Cloud & DX">NAS自前クラウド・基幹DX</div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-fw">Fastify <span class="tech-sub-desc">(Node/TS 高速API)</span></span>
+                  <span class="tech-pill pill-fw">Fastify <span class="tech-sub-desc">(Node/TS API)</span></span>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="tech-pill-group">
                   <span class="tech-pill pill-lib">node-postgres <span class="tech-sub-desc">(pg)</span></span>
-                  <span class="tech-pill pill-lib">LDAP / AD連携SDK</span>
+                  <span class="tech-pill pill-lib">LDAP / AD SDK</span>
                 </div>
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-db">社内オンプレPostgreSQL</span>
-                  <span class="tech-pill pill-db">Active Directory <span class="tech-sub-desc">(人事マスタ)</span></span>
+                  <span class="tech-pill pill-db">On-Premise PostgreSQL</span>
+                  <span class="tech-pill pill-db">Active Directory <span class="tech-sub-desc">(HR LDAP)</span></span>
                 </div>
               </td>
               <td>
@@ -1406,13 +1556,13 @@
                   <span class="tech-pill pill-infra">Docker Compose</span>
                   <span class="tech-pill pill-infra">Cloudflare Tunnel</span>
                   <span class="tech-pill pill-infra">Cloudflare Access <span class="tech-sub-desc">(Zero Trust)</span></span>
-                  <span class="tech-pill pill-infra">14世代自動バックアップ</span>
+                  <span class="tech-pill pill-infra">14-Gen Backup</span>
                 </div>
               </td>
               <td>
                 <div class="tech-pill-group">
-                  <span class="tech-pill pill-ai">STAR法 評価プロンプト</span>
-                  <span class="tech-pill pill-ai">昇格模擬面接AIエンジン</span>
+                  <span class="tech-pill pill-ai">STAR Evaluation Prompt</span>
+                  <span class="tech-pill pill-ai">Interview Simulation AI</span>
                 </div>
               </td>
             </tr>
@@ -1426,40 +1576,41 @@
          ========================================== -->
     <div class="content-section" id="matrix-section">
       <div class="section-title">
-        <span>📅 月別 × 6大カテゴリ 成果物マトリクス (Project Matrix)</span>
-        <span class="section-badge">成果物・PJ単位の時系列クロス集計</span>
+        <span data-i18n="sec_proj_title">📅 月別 × 6大カテゴリ 成果物マトリクス (Project Matrix)</span>
+        <span class="section-badge" data-i18n="sec_proj_badge">成果物・PJ単位の時系列クロス集計</span>
       </div>
 
+      <div class="scroll-hint">👉 <span data-i18n="scroll_hint">横スクロールできます</span></div>
       <div class="table-container">
         <table class="matrix-table">
           <thead>
             <tr>
-              <th style="width: 130px;">着手年月</th>
-              <th>① 業務基盤DX・基幹システム</th>
-              <th>② 自宅NAS・インフラ・公開Web</th>
-              <th>③ 超高速ネイティブ・低レイヤ</th>
-              <th>④ モダンWeb・SaaS開発</th>
-              <th>⑤ AIエージェント・先端技術</th>
-              <th>⑥ 脱商用RPA・自動化</th>
+              <th style="width: 130px;" data-i18n="th_month">着手年月</th>
+              <th data-i18n="cat_dx">① 業務基盤DX・基幹システム</th>
+              <th data-i18n="cat_infra">② 自宅NAS・インフラ・公開Web</th>
+              <th data-i18n="cat_native">③ 超高速ネイティブ・低レイヤ</th>
+              <th data-i18n="cat_web">④ モダンWeb・SaaS開発</th>
+              <th data-i18n="cat_ai">⑤ AIエージェント・先端技術</th>
+              <th data-i18n="cat_rpa">⑥ 脱商用RPA・自動化</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>
                 <span class="month-badge">2026.03〜04</span>
-                <div class="month-sub">黎明期</div>
+                <div class="month-sub" data-ja="黎明期" data-en="Dawn">黎明期</div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 myerp</div>
-                  <div class="matrix-tech-desc">Python, FastAPI, 数理最適化 (MILP), PostgreSQL/SQLite</div>
+                  <div class="matrix-tech-desc">Python, FastAPI, MILP (PuLP), PostgreSQL/SQLite</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 myerp (rs)</div>
-                  <div class="matrix-tech-desc">Rust (Cargo), 高速計算エンジン</div>
+                  <div class="matrix-tech-desc">Rust (Cargo), Fast Math Engine</div>
                 </div>
               </td>
               <td>
@@ -1471,7 +1622,7 @@
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 myDB</div>
-                  <div class="matrix-tech-desc">Gemini API 連動アシスタント</div>
+                  <div class="matrix-tech-desc">Gemini AI Assistant Integration</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1480,24 +1631,24 @@
             <tr>
               <td>
                 <span class="month-badge">2026.05</span>
-                <div class="month-sub">本格始動</div>
+                <div class="month-sub" data-ja="本格始動" data-en="Expansion">本格始動</div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 mail_manage</div>
-                  <div class="matrix-tech-desc">FastAPI, Win32 / Outlook連携</div>
+                  <div class="matrix-tech-desc">FastAPI, Outlook InboxRule Sync</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 FieldStyle2026</div>
-                  <div class="matrix-tech-desc">Vercel 本番公開, PWA 実稼働</div>
+                  <div class="matrix-tech-desc">Vercel Deploy, PWA Production</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickFolderSize</div>
-                  <div class="matrix-tech-desc">C++, Win32 API 直接高速走査</div>
+                  <div class="matrix-tech-desc">C++, Direct Win32 API NTFS Scan</div>
                 </div>
               </td>
               <td>
@@ -1507,11 +1658,11 @@
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 game-tank</div>
-                  <div class="matrix-tech-desc">Vite, Canvas/JS 2D戦車アクション</div>
+                  <div class="matrix-tech-desc">Vite, Canvas/JS 2D Action</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 map_maker_cl</div>
-                  <div class="matrix-tech-desc">Python 地図・経路生成</div>
+                  <div class="matrix-tech-desc">Python Map Generation</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1521,7 +1672,7 @@
             <tr>
               <td>
                 <span class="month-badge">2026.06</span>
-                <div class="month-sub">Web・ネイティブ展開</div>
+                <div class="month-sub" data-ja="Web・ネイティブ展開" data-en="Web & Native">Web・ネイティブ展開</div>
               </td>
               <td>
                 <div class="matrix-item">
@@ -1532,13 +1683,13 @@
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 udon-db</div>
-                  <div class="matrix-tech-desc">Vercel Serverless, Supabase東京 本番公開</div>
+                  <div class="matrix-tech-desc">Vercel Serverless, Supabase Tokyo Public</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickMarkPDF</div>
-                  <div class="matrix-tech-desc">C++ (高速化移植), CMake, PDF Engine</div>
+                  <div class="matrix-tech-desc">C++ Porting, CMake, PDF Engine</div>
                 </div>
               </td>
               <td>
@@ -1552,13 +1703,13 @@
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 note</div>
-                  <div class="matrix-tech-desc">Python 投稿・ナレッジ基盤</div>
+                  <div class="matrix-tech-desc">Python Knowledge Platform</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 suuri-chat</div>
-                  <div class="matrix-tech-desc">Gemini / OpenAI API, ストリーミング対話</div>
+                  <div class="matrix-tech-desc">Gemini & OpenAI API Streaming Chat</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1567,22 +1718,22 @@
             <tr>
               <td>
                 <span class="month-badge">2026.07</span>
-                <div class="month-sub">基幹DX・大規模化</div>
+                <div class="month-sub" data-ja="基幹DX・大規模化" data-en="Enterprise DX">基幹DX・大規模化</div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 shisaku-system</div>
-                  <div class="matrix-tech-desc">FastAPI, PostgreSQL, Excel原価見積脱却</div>
+                  <div class="matrix-tech-desc">FastAPI, PostgreSQL, Excel Macro Elimination</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 seikan_2</div>
-                  <div class="matrix-tech-desc">Node.js Express, 製缶見積管理</div>
+                  <div class="matrix-tech-desc">Node.js Express, Metal Cost Estimator</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
-                  <div class="matrix-proj-name">📁 Auto-X (初期)</div>
-                  <div class="matrix-tech-desc">GitHub Actions, CI/CD クラウド自動実行</div>
+                  <div class="matrix-proj-name">📁 Auto-X (Early)</div>
+                  <div class="matrix-tech-desc">GitHub Actions CI/CD Cloud Automation</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1590,13 +1741,13 @@
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 fabric</div>
-                  <div class="matrix-tech-desc">MCP (Model Context Protocol), MS Fabric Lakehouse</div>
+                  <div class="matrix-tech-desc">MCP, MS Fabric Lakehouse Integration</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 Auto-X</div>
-                  <div class="matrix-tech-desc">Python, Playwright, 170コミット自動化基盤</div>
+                  <div class="matrix-tech-desc">Python, Playwright, 170+ Commits Core</div>
                 </div>
               </td>
             </tr>
@@ -1604,36 +1755,36 @@
             <tr>
               <td>
                 <span class="month-badge">2026.08</span>
-                <div class="month-sub">ネイティブ深化・移行</div>
+                <div class="month-sub" data-ja="ネイティブ深化・移行" data-en="Deep Native">ネイティブ深化・移行</div>
               </td>
               <td>
                 <div class="matrix-item">
-                  <div class="matrix-proj-name">📁 camp (第1期)</div>
-                  <div class="matrix-tech-desc">Python, Notion API, 119シートExcel突合・文字化けゼロ化</div>
+                  <div class="matrix-proj-name">📁 camp (Phase 1)</div>
+                  <div class="matrix-tech-desc">Python, Notion API, 119 Excel Sheet Reconciliation</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 jugo-shoten-web</div>
-                  <div class="matrix-tech-desc">Cloudflare Workers / Pages, Wrangler エッジ配信</div>
+                  <div class="matrix-tech-desc">Cloudflare Workers / Pages, Wrangler Edge</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickImageView</div>
-                  <div class="matrix-tech-desc">Qt 6, QML, C++ GPU画像ビューア</div>
+                  <div class="matrix-tech-desc">Qt 6, QML, C++ GPU Image Viewer</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickFileCopy</div>
-                  <div class="matrix-tech-desc">Win32 バッファ制御・超高速コピー</div>
+                  <div class="matrix-tech-desc">Win32 Buffer Control High-Speed Copy</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickDiskBench</div>
-                  <div class="matrix-tech-desc">ディスクI/Oベンチマーク測定</div>
+                  <div class="matrix-tech-desc">Disk I/O Benchmark Measurement</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 Quick7Zip</div>
-                  <div class="matrix-tech-desc">7-Zip CLI/DLL 連携圧縮解凍</div>
+                  <div class="matrix-tech-desc">7-Zip DLL/CLI Optimization Frontend</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1644,7 +1795,7 @@
             <tr>
               <td>
                 <span class="month-badge">2026.09</span>
-                <div class="month-sub">先端・自律AI・C#</div>
+                <div class="month-sub" data-ja="先端・自律AI・C#" data-en="Autonomous AI & C#">先端・自律AI・C#</div>
               </td>
               <td>
                 <div class="matrix-item">
@@ -1653,46 +1804,46 @@
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 mont-simu</div>
-                  <div class="matrix-tech-desc">Python, GUI解析・シミュレータ</div>
+                  <div class="matrix-tech-desc">Python, OPRISM Operations Simulator</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickDock</div>
-                  <div class="matrix-tech-desc">C#, .NET 10, WinForms / WPF 常駐ドック</div>
+                  <div class="matrix-tech-desc">C#, .NET 10, WinForms / WPF Resident Dock</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 QuickDiskRescue</div>
-                  <div class="matrix-tech-desc">C++, RAWディスク直接データ救出</div>
+                  <div class="matrix-tech-desc">C++, Raw Disk Direct Data Recovery</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 shadowing-lab</div>
-                  <div class="matrix-tech-desc">FastAPI, Supabase</div>
+                  <div class="matrix-tech-desc">FastAPI, Supabase Phonetics Lab</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 ap-drill</div>
-                  <div class="matrix-tech-desc">AP過去問ドリルWeb</div>
+                  <div class="matrix-tech-desc">AP Engineer Exam Study Drill Web</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 agent-loop-demo</div>
-                  <div class="matrix-tech-desc">自律AIループ (Ralph Loop), Jest TDD自己修復</div>
+                  <div class="matrix-tech-desc">Ralph Loop, Jest TDD Self-Healing AI</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 obsidian-claude</div>
-                  <div class="matrix-tech-desc">Claude セカンドブレイン・知識体系化</div>
+                  <div class="matrix-tech-desc">Claude Second Brain Knowledge Vault</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 project-LLM</div>
-                  <div class="matrix-tech-desc">ローカルLLM / Ollama ハック</div>
+                  <div class="matrix-tech-desc">Local LLM (30B), Ollama Hack</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 gleam</div>
-                  <div class="matrix-tech-desc">Gleam新世代言語・BEAM検証</div>
+                  <div class="matrix-tech-desc">Gleam Language on Erlang BEAM</div>
                 </div>
               </td>
               <td>
@@ -1702,7 +1853,7 @@
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 shinsa-2026</div>
-                  <div class="matrix-tech-desc">業務審査プロセス自動化</div>
+                  <div class="matrix-tech-desc">Department Workflow Automation</div>
                 </div>
               </td>
             </tr>
@@ -1710,38 +1861,38 @@
             <tr>
               <td>
                 <span class="month-badge">2026.10〜11</span>
-                <div class="month-sub">自宅NAS自前クラウド・基幹DX深化</div>
+                <div class="month-sub" data-ja="自宅NAS自前クラウド・基幹DX" data-en="Self-Hosted Cloud & DX">自宅NAS自前クラウド・基幹DX</div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 chumonsho-2seikan</div>
-                  <div class="matrix-tech-desc">EDI固定長S-JISパース, PostgreSQL (88+コミット)</div>
+                  <div class="matrix-tech-desc">Automotive EDI Parser, PostgreSQL (88+ Commits)</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 buhin-jisseki</div>
-                  <div class="matrix-tech-desc">TypeScript + Fastify, 原価実績DB読取REST API</div>
+                  <div class="matrix-tech-desc">TypeScript + Fastify, Procurement Cost REST API</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 bunai-server</div>
-                  <div class="matrix-tech-desc">部内PostgreSQL自動構築・運用, PowerShell</div>
+                  <div class="matrix-tech-desc">On-Premise PostgreSQL Auto-Provisioning, PowerShell</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 jinji-db</div>
-                  <div class="matrix-tech-desc">AD人事マスタ自動同期, React + FastAPI</div>
+                  <div class="matrix-tech-desc">Active Directory HR Sync, React + FastAPI</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 ikusei-taikei-2026</div>
-                  <div class="matrix-tech-desc">STAR法キャリアシート体系化</div>
+                  <div class="matrix-tech-desc">STAR Competency Framework Template</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
-                  <div class="matrix-proj-name">📁 Auto-X (NAS版)</div>
-                  <div class="matrix-tech-desc">QNAP NAS Docker, PostgreSQL 16 常時稼働, Cloudflare Tunnel</div>
+                  <div class="matrix-proj-name">📁 Auto-X (NAS)</div>
+                  <div class="matrix-tech-desc">QNAP NAS Docker, PostgreSQL 16 24/7, Cloudflare Tunnel</div>
                 </div>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 camp (campDB)</div>
-                  <div class="matrix-tech-desc">Docker Compose, Next.js standalone (64+コミット), Cloudflare Access ゼロトラスト, 14世代バックアップ</div>
+                  <div class="matrix-tech-desc">Docker Compose, Next.js standalone (64+ Commits), Cloudflare Access Zero Trust, 14-Gen Backup</div>
                 </div>
               </td>
               <td style="color: #64748b; text-align: center;">—</td>
@@ -1754,13 +1905,13 @@
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 AI_mensetsu</div>
-                  <div class="matrix-tech-desc">昇格面接AI設計, STAR法評価ロジック</div>
+                  <div class="matrix-tech-desc">STAR Method Competency Evaluation AI</div>
                 </div>
               </td>
               <td>
                 <div class="matrix-item">
                   <div class="matrix-proj-name">📁 Auto-X</div>
-                  <div class="matrix-tech-desc">NAS自動同期・監視・長期安定バッチ運用</div>
+                  <div class="matrix-tech-desc">NAS Auto-Sync, Monitoring & 24/7 Batch</div>
                 </div>
               </td>
             </tr>
@@ -1774,8 +1925,8 @@
          ========================================== -->
     <div class="content-section" id="projects-section">
       <div class="section-title">
-        <span>📁 全プロジェクト完全一覧データベース (All 47 Projects)</span>
-        <span class="section-badge">リアルタイム検索＆ソート機能</span>
+        <span data-i18n="sec_all_title">📁 全プロジェクト完全一覧データベース (All 47 Projects)</span>
+        <span class="section-badge" data-i18n="sec_all_badge">リアルタイム検索＆ソート機能</span>
       </div>
 
       <!-- Controls: Search & Filters -->
@@ -1799,21 +1950,22 @@
       </div>
 
       <!-- Table Container -->
+      <div class="scroll-hint">👉 <span data-i18n="scroll_hint">横スクロールできます</span></div>
       <div class="table-container">
         <table class="all-projs-table" id="allProjsTable">
           <thead>
             <tr>
-              <th onclick="sortTable(0)" style="width: 180px;">プロジェクト名 ⬍</th>
-              <th onclick="sortTable(1)" style="width: 100px;">着手時期 ⬍</th>
-              <th onclick="sortTable(2)" style="width: 100px;">コミット ⬍</th>
-              <th style="width: 140px;">主要言語</th>
-              <th style="width: 160px;">フロントエンド</th>
-              <th style="width: 160px;">バックエンド / DB</th>
-              <th>概要・目的</th>
+              <th onclick="sortTable(0)" style="width: 180px;"><span data-i18n="th_pname">プロジェクト名</span> ⬍</th>
+              <th onclick="sortTable(1)" style="width: 100px;"><span data-i18n="th_pdate">着手時期</span> ⬍</th>
+              <th onclick="sortTable(2)" style="width: 100px;"><span data-i18n="th_pcommits">コミット</span> ⬍</th>
+              <th style="width: 140px;" data-i18n="th_plangs">主要言語</th>
+              <th style="width: 160px;" data-i18n="th_pfe">フロントエンド</th>
+              <th style="width: 160px;" data-i18n="th_pbe">バックエンド / DB</th>
+              <th data-i18n="th_pdesc">概要・目的</th>
             </tr>
           </thead>
           <tbody id="projTableBody">
-            <!-- Table rows generated dynamically by JS -->
+            <!-- Dynamically generated -->
           </tbody>
         </table>
       </div>
@@ -1825,17 +1977,17 @@
     <div class="content-section" id="timeline-section">
       <div class="timeline-section">
         <div class="section-title">
-          <span>📈 半年間の進化の歩み（Timeline Journey）</span>
-          <span class="section-badge">2026年3月〜11月</span>
+          <span data-i18n="sec_time_title">📈 半年間の進化の歩み（Timeline Journey）</span>
+          <span class="section-badge">2026.03 — 2026.11</span>
         </div>
 
         <div class="timeline-list">
           <div class="timeline-item">
             <div class="timeline-dot">🌱</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 3月〜4月：黎明期</div>
-              <div class="timeline-headline">数理最適化とモダンWeb（Next.js / Supabase）の基礎確立</div>
-              <div class="timeline-desc">
+              <div class="timeline-month" data-ja="2026年 3月〜4月：黎明期" data-en="March - April 2026: Dawn Phase">2026年 3月〜4月：黎明期</div>
+              <div class="timeline-headline" data-ja="数理最適化とモダンWeb（Next.js / Supabase）の基礎確立" data-en="Foundations of Mathematical Optimization & Modern Web">数理最適化とモダンWeb（Next.js / Supabase）の基礎確立</div>
+              <div class="timeline-desc" data-ja="製造業の設備負荷平準化（MILP）を行う「myerp」や、Gemini AIアシスタント連動の「myDB」に着手。Python/FastAPIとNext.js/Supabaseの基礎を完全に固める。" data-en="Initiated manufacturing scheduling with mathematical optimization (myerp) and Gemini AI-backed database (myDB), establishing solid fullstack foundations with Python, FastAPI, Next.js, and Supabase.">
                 製造業の設備負荷平準化（MILP）を行う「myerp」や、Gemini AIアシスタント連動の「myDB」に着手。Python/FastAPIとNext.js/Supabaseの基礎を完全に固める。
               </div>
             </div>
@@ -1844,9 +1996,9 @@
           <div class="timeline-item">
             <div class="timeline-dot">⚡</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 5月：本格始動期</div>
-              <div class="timeline-headline">C++低レイヤWin32制御 ＆ 展示会ナビPWAの一般公開（Vercel）</div>
-              <div class="timeline-desc">
+              <div class="timeline-month" data-ja="2026年 5月：本格始動期" data-en="May 2026: Expansion Phase">2026年 5月：本格始動期</div>
+              <div class="timeline-headline" data-ja="C++低レイヤWin32制御 ＆ 展示会ナビPWAの一般公開（Vercel）" data-en="Win32 Low-Level C++ Control & Public Navigation PWA">C++低レイヤWin32制御 ＆ 展示会ナビPWAの一般公開（Vercel）</div>
+              <div class="timeline-desc" data-ja="「QuickFolderSize」でWin32 API直接走査を体得しQuickシリーズ始動。同時にVite+Reactで「FieldStyle2026」ナビPWAを開発しVercelに一般公開。ブラウザゲーム「game-tank」も制作。" data-en="Mastered Win32 Native APIs in QuickFolderSize to kickstart the Quick Series. Published FieldStyle2026 navigation PWA to Vercel, and built Canvas game-tank.">
                 「QuickFolderSize」でWin32 API直接走査を体得しQuickシリーズ始動。同時にVite+Reactで「FieldStyle2026」ナビPWAを開発しVercelに一般公開。ブラウザゲーム「game-tank」も制作。
               </div>
             </div>
@@ -1855,9 +2007,9 @@
           <div class="timeline-item">
             <div class="timeline-dot">🚀</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 6月：展開期</div>
-              <div class="timeline-headline">PythonからC++への高速化ポーティング成功 ＆ うどんDB一般公開</div>
-              <div class="timeline-desc">
+              <div class="timeline-month" data-ja="2026年 6月：展開期" data-en="June 2026: Porting & Performance">2026年 6月：展開期</div>
+              <div class="timeline-headline" data-ja="PythonからC++への高速化ポーティング成功 ＆ うどんDB一般公開" data-en="Python to C++ Porting (30x Speedup) & Restaurant DB">PythonからC++への高速化ポーティング成功 ＆ うどんDB一般公開</div>
+              <div class="timeline-desc" data-ja="「QuickMarkPDF」でPythonコードを純粋なC++に移植し数十倍高速化を達成。Supabase東京リージョン＋Vercelで「udon-db」を本番公開。Next.jsによるSNS管理やGemini対話チャット「suuri-chat」を構築。" data-en="Achieved 30x performance boost by porting Python PDF logic into pure C++ (QuickMarkPDF). Published udon-db with Supabase Tokyo and built conversational Gemini chat (suuri-chat).">
                 「QuickMarkPDF」でPythonコードを純粋なC++に移植し数十倍高速化を達成。Supabase東京リージョン＋Vercelで「udon-db」を本番公開。Next.jsによるSNS管理やGemini対話チャット「suuri-chat」を構築。
               </div>
             </div>
@@ -1866,9 +2018,9 @@
           <div class="timeline-item">
             <div class="timeline-dot">🏢</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 7月：基幹DX ＆ 大規模自動化期</div>
-              <div class="timeline-headline">試作見積Web内製化（Excel脱却） ＆ Auto-X 170コミット基盤</div>
-              <div class="timeline-desc">
+              <div class="timeline-month" data-ja="2026年 7月：基幹DX ＆ 大規模自動化期" data-en="July 2026: Enterprise DX & RPA">2026年 7月：基幹DX ＆ 大規模自動化期</div>
+              <div class="timeline-headline" data-ja="試作見積Web内製化（Excel脱却） ＆ Auto-X 170コミット基盤" data-en="Legacy Excel Modernization & Auto-X 170+ Commits">試作見積Web内製化（Excel脱却） ＆ Auto-X 170コミット基盤</div>
+              <div class="timeline-desc" data-ja="長年の属人マクロを刷新した「shisaku-system」を稼働開始。大規模RPA「Auto-X」を開発し、Microsoft Fabricと連携する自作MCPツールの実験にも成功。" data-en="Modernized legacy Excel quotation into web-based shisaku-system. Engineered large-scale RPA Auto-X and built custom MCP tools interfacing with Microsoft Fabric.">
                 長年の属人マクロを刷新した「shisaku-system」を稼働開始。大規模RPA「Auto-X」を開発し、Microsoft Fabricと連携する自作MCPツールの実験にも成功。
               </div>
             </div>
@@ -1877,10 +2029,10 @@
           <div class="timeline-item">
             <div class="timeline-dot">🛠️</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 8月：ネイティブ深化 ＆ データ移行期</div>
-              <div class="timeline-headline">Qt 6/QMLによるGPU画像ビューア ＆ 119シートExcel完全突合</div>
-              <div class="timeline-desc">
-                Qt 6 / QMLによるGPU画像ビューア（QuickImageView）やC++ユーティリティ連作（QuickFileCopy, Quick7Zip）を完成。「camp」では14MB・119シートのExcelから文字化けゼロでNotionへ精密突合移行。
+              <div class="timeline-month" data-ja="2026年 8月：ネイティブ深化 ＆ データ移行期" data-en="August 2026: GPU & Cloudflare Workers">2026年 8月：ネイティブ深化 ＆ データ移行期</div>
+              <div class="timeline-headline" data-ja="Qt 6/QMLによるGPU画像ビューア ＆ 119シートExcel完全突合" data-en="Qt 6/QML GPU Image Viewer & 119-Sheet Excel Migration">Qt 6/QMLによるGPU画像ビューア ＆ 119シートExcel完全突合</div>
+              <div class="timeline-desc" data-ja="Qt 6 / QMLによるGPU画像ビューア（QuickImageView）やC++ユーティリティ連作（QuickFileCopy, Quick7Zip）を完成。「camp」では14MB・119シートのExcelから文字化けゼロでNotionへ精密突合移行。Cloudflare Workers/Pagesも導入。" data-en="Completed Qt 6 / QML GPU image viewer (QuickImageView) and native C++ utilities (QuickFileCopy, Quick7Zip). Migrated 119-sheet Excel to Notion with zero encoding errors and deployed Cloudflare Workers.">
+                Qt 6 / QMLによるGPU画像ビューア（QuickImageView）やC++ユーティリティ連作（QuickFileCopy, Quick7Zip）を完成。「camp」では14MB・119シートのExcelから文字化けゼロでNotionへ精密突合移行。Cloudflare Workers/Pagesも導入。
               </div>
             </div>
           </div>
@@ -1888,9 +2040,9 @@
           <div class="timeline-item">
             <div class="timeline-dot">🔥</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 9月：先端スタック ＆ 自律AIループ期</div>
-              <div class="timeline-headline">C# (.NET 10) 常駐 ＆ 自律型AIループ検証 ＆ Claudeセカンドブレイン</div>
-              <div class="timeline-desc">
+              <div class="timeline-month" data-ja="2026年 9月：先端スタック ＆ 自律AIループ期" data-en="September 2026: Autonomous AI & C#">2026年 9月：先端スタック ＆ 自律AIループ期</div>
+              <div class="timeline-headline" data-ja="C# (.NET 10) 常駐 ＆ 自律型AIループ検証 ＆ Claudeセカンドブレイン" data-en=".NET 10 Desktop, Autonomous Loop & Second Brain">C# (.NET 10) 常駐 ＆ 自律型AIループ検証 ＆ Claudeセカンドブレイン</div>
+              <div class="timeline-desc" data-ja="C#最新.NET 10でフローティングドック（QuickDock）を構築。AIが自律修正する「agent-loop-demo」、Claude連携ナレッジ体系化「obsidian-claude」、pywinauto＋Playwrightの完全脱商用RPA（auto-window）を実現。" data-en="Engineered floating dock launcher with C# (.NET 10), implemented self-healing test loop (Ralph Loop), configured Claude second brain, and achieved full commercial RPA replacement.">
                 C#最新.NET 10でフローティングドック（QuickDock）を構築。AIが自律修正する「agent-loop-demo」、Claude連携ナレッジ体系化「obsidian-claude」、pywinauto＋Playwrightの完全脱商用RPA（auto-window）を実現。
               </div>
             </div>
@@ -1899,10 +2051,10 @@
           <div class="timeline-item">
             <div class="timeline-dot">👑</div>
             <div class="timeline-content">
-              <div class="timeline-month">2026年 10月〜11月：自宅NAS自前クラウド ＆ 基幹DX深化</div>
-              <div class="timeline-headline">自宅QNAP NAS常時運用 ＆ EDI・部内サーバー ＆ 原価実績Fastify API</div>
-              <div class="timeline-desc">
-                Auto-Xを自宅QNAP NAS（Docker+PostgreSQL+Cloudflare Tunnel）へ移行し24時間稼働化。campDBのスタンドアロン運用と自動バックアップを完備。さらにEDI固定長Shift_JIS電文パース（chumonsho-2seikan：88+コミット）、社内AD連携人事DB（jinji-db）、Fastify+TypeScriptによる原価実績REST API（buhin-jisseki）まで完遂。
+              <div class="timeline-month" data-ja="2026年 10月〜11月：自宅NAS自前クラウド ＆ 基幹DX深化" data-en="October - November 2026: Self-Hosted Cloud & Fastify">2026年 10月〜11月：自宅NAS自前クラウド ＆ 基幹DX深化</div>
+              <div class="timeline-headline" data-ja="自宅QNAP NAS常時運用 ＆ EDI・部内サーバー ＆ 原価実績Fastify API" data-en="24/7 QNAP NAS Cloud, Automotive EDI & Fastify API">自宅QNAP NAS常時運用 ＆ EDI・部内サーバー ＆ 原価実績Fastify API</div>
+              <div class="timeline-desc" data-ja="Auto-Xを自宅QNAP NAS（Docker+PostgreSQL+Cloudflare Tunnel）へ移行し24時間稼働化。campDBのスタンドアロン運用と自動バックアップを完備。さらに大手自動車調達EDI固定長電文パース（chumonsho-2seikan：88+コミット）、社内AD連携人事DB（jinji-db）、Fastify+TypeScriptによる原価実績REST API（buhin-jisseki）まで完遂。" data-en="Migrated Auto-X to QNAP NAS (Docker+PostgreSQL+Cloudflare Tunnel) for 24/7 execution. Operationalized campDB with zero-trust access. Implemented automotive EDI parser (88+ commits), Active Directory sync, and read-only procurement REST API with Fastify.">
+                Auto-Xを自宅QNAP NAS（Docker+PostgreSQL+Cloudflare Tunnel）へ移行し24時間稼働化。campDBのスタンドアロン運用と自動バックアップを完備。さらに大手自動車調達EDI固定長電文パース（chumonsho-2seikan：88+コミット）、社内AD連携人事DB（jinji-db）、Fastify+TypeScriptによる原価実績REST API（buhin-jisseki）まで完遂。
               </div>
             </div>
           </div>
@@ -1916,15 +2068,134 @@
   <button class="scroll-top-btn" id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
 
   <script>
-    // 埋め込み用全プロジェクトデータ
-    const rawProjects = [{"name": "myerp", "start_month": "2026-02", "start_date": "2026-02-25", "latest_date": "2026-11-05", "commit_count": 14, "languages": ["Python", "Rust", "SQL", "TypeScript"], "frontend": ["React"], "backend": ["FastAPI", "Rust Backend (Cargo)"], "database": ["PostgreSQL", "SQLite", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "`myERP` は、数理最適化（MILP）を用いた製造ラインの設備負荷平準化、AIアシスタントによる計画調整、多階層BOM（部品構成）管理、および柔軟なマスタ・トランザクションデータ管理を実現する生産", "display_month": "2026-03"}, {"name": "myDB", "start_month": "2026-04", "start_date": "2026-04-06", "latest_date": "2026-05-07", "commit_count": 28, "languages": ["Python", "TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS"], "backend": ["Express", "FastAPI"], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Supabase（PostgreSQL）に保存されたテントのデータベースを管理・閲覧し、Google Gemini AIを搭載したチャットアシスタントから自律的にデータを検索・UI操作の提案を行えるN", "display_month": "2026-04"}, {"name": "udon-db", "start_month": "2026-05", "start_date": "2026-05-19", "latest_date": "2026-08-26", "commit_count": 145, "languages": ["JavaScript", "Python", "SQL"], "frontend": ["Streamlit"], "backend": [], "database": ["PostgreSQL", "SQLite", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "香川うどんツアーの記録を管理するデータベースプロジェクト。", "display_month": "2026-05"}, {"name": "FieldStyle2026", "start_month": "2026-05", "start_date": "2026-05-02", "latest_date": "2026-11-06", "commit_count": 62, "languages": ["Python", "TypeScript"], "frontend": ["React", "Vite"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "> [!CAUTION]", "display_month": "2026-05"}, {"name": "QuickFolderSize", "start_month": "2026-05", "start_date": "2026-05-29", "latest_date": "2026-09-24", "commit_count": 43, "languages": ["C++", "JavaScript", "Python"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": ["Express"], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)", "Win32 API / Windows Native"], "desc": "<p align=\"center\">", "display_month": "2026-05"}, {"name": "map_maker_cl", "start_month": "2026-05", "start_date": "2026-05-06", "latest_date": "2026-11-03", "commit_count": 22, "languages": ["Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "map maker for FieldStyle Navi", "display_month": "2026-05"}, {"name": "mail_manage", "start_month": "2026-04", "start_date": "2026-04-23", "latest_date": "2026-07-06", "commit_count": 2, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["SQLite"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)", "Win32 API / Windows Native"], "desc": "過去数か月の受信メールを分析し、**ドメイン＆キーワード両方**をOutlook受信ルール（InboxRule）に同期させるローカルWebアプリ。", "display_month": "2026-05"}, {"name": "QuickMarkPDF", "start_month": "2018-05", "start_date": "2018-05-15", "latest_date": "2026-10-15", "commit_count": 122, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": [], "tools_infra": [], "desc": "<p align=\"center\">", "display_month": "2026-06"}, {"name": "suuri-chat", "start_month": "2026-06", "start_date": "2026-06-09", "latest_date": "2026-07-17", "commit_count": 42, "languages": ["TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "数学者の知性と詩人の心を持つ人生相談チャットアプリ。ユーザーの悩みや想いに、数学的な視点と京都の奥ゆかしさを持つ「数織（すうり）先生」が静かに寄り添う。", "display_month": "2026-06"}, {"name": "note", "start_month": "2026-03", "start_date": "2026-03-16", "latest_date": "2026-09-22", "commit_count": 26, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "じゅーご（元・炒飯15）のnote.com投稿を管理するプロジェクト", "display_month": "2026-06"}, {"name": "SNS Management", "start_month": "2026-06", "start_date": "2026-06-25", "latest_date": "2026-09-24", "commit_count": 16, "languages": ["Python", "SQL", "TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS", "Vite"], "backend": [], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "作業ディレクトリ: `C:\\Users\\makta\\source\\SNS_management`", "display_month": "2026-06"}, {"name": "seikan_2", "start_month": "2026-06", "start_date": "2026-06-22", "latest_date": "2026-07-17", "commit_count": 3, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": ["PostgreSQL", "SQLite"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "製缶板金加工見積・原価管理システム（Node.js Express + SQLite/PostgreSQL）", "display_month": "2026-06"}, {"name": "AI_mensetsu", "start_month": "2026-06", "start_date": "2026-06-17", "latest_date": "2026-06-22", "commit_count": 0, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "昇格面接対策AI（STAR法に基づく評価・模擬面接支援ロジック）", "display_month": "2026-06"}, {"name": "powerapps", "start_month": "2026-06", "start_date": "2026-06-26", "latest_date": "2026-06-26", "commit_count": 0, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "Power Apps連携・ローコード社内DX資産", "display_month": "2026-06"}, {"name": "Auto-X", "start_month": "2026-07", "start_date": "2026-07-23", "latest_date": "2026-09-24", "commit_count": 170, "languages": ["Python", "SQL"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "Playwright (Web RPA)"], "desc": "> **Version**: 3.0.0", "display_month": "2026-07"}, {"name": "shisaku-system", "start_month": "2023-10", "start_date": "2023-10-20", "latest_date": "2026-11-02", "commit_count": 33, "languages": ["JavaScript", "Python", "SQL"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携"], "desc": "試作部の原価見積業務を、現行のExcel＋VBAマクロから内製システムへ移行するための作業リポジトリ。", "display_month": "2026-07"}, {"name": "fabric", "start_month": "2026-07", "start_date": "2026-07-31", "latest_date": "2026-09-23", "commit_count": 6, "languages": ["JavaScript", "SQL"], "frontend": [], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Microsoft Fabric Lakehouse × MCP (Model Context Protocol) ツール連携", "display_month": "2026-07"}, {"name": "project_me", "start_month": "2026-07", "start_date": "2026-07-02", "latest_date": "2026-09-24", "commit_count": 3, "languages": ["JavaScript"], "frontend": [], "backend": [], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "じゅーごの**残りの人生の下調べ**。", "display_month": "2026-07"}, {"name": "shokaku-2026", "start_month": "2024-06", "start_date": "2024-06-12", "latest_date": "2026-08-05", "commit_count": 1, "languages": ["JavaScript", "Python"], "frontend": [], "backend": [], "database": [], "tools_infra": ["Excel/VBA連携"], "desc": "2027年9月の昇格面接本番に向けて、対象者が職能資格基準に沿った行動を日常業務で実践し、その事実をSTAR法で具体的に説明できる状態をつくる。", "display_month": "2026-07"}, {"name": "camp", "start_month": "2026-08", "start_date": "2026-08-06", "latest_date": "2026-10-22", "commit_count": 64, "languages": ["Python", "SQL", "TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携", "MCP (Model Context Protocol)"], "desc": "`original/キャンプギヤ.xlsx`（119シート、14MB）の内容をNotionに移行する作業。", "display_month": "2026-08"}, {"name": "QuickDiskBench", "start_month": "2026-08", "start_date": "2026-08-15", "latest_date": "2026-09-23", "commit_count": 55, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express", "FastAPI"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "<p align=\"center\">", "display_month": "2026-08"}, {"name": "QuickImageView", "start_month": "2014-03", "start_date": "2014-03-11", "latest_date": "2026-09-23", "commit_count": 55, "languages": ["C++", "Python", "TypeScript"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "Qt 6（Qt Quick / QML）とC++17で作ったWindows向けの軽量画像ビューアー・画像編集アプリです。画像の表示、編集、別形式保存ができ、日本語と英語を切り替えられます。", "display_month": "2026-08"}, {"name": "Quick7Zip", "start_month": "2026-08", "start_date": "2026-08-19", "latest_date": "2026-09-23", "commit_count": 37, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "Quick7Zipは、インストール済みの7-Zipを利用するWindows向け自動最適化フロントエンドです。ストレージ種別、CPU、メモリ、ファイル数、合計サイズ、ファイル構成を分析してから、実用的な", "display_month": "2026-08"}, {"name": "QuickFileCopy", "start_month": "2026-08", "start_date": "2026-08-13", "latest_date": "2026-09-23", "commit_count": 29, "languages": ["C++", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "QuickFileCopyはWindows 10/11向けのネイティブ高速ファイルコピーアプリです。簡潔な操作、容量とファイル件数の分かる進捗、安全な置換、Windows固有メタデータの保持を重視し、", "display_month": "2026-08"}, {"name": "jugo-shoten-web", "start_month": "2026-08", "start_date": "2026-08-20", "latest_date": "2026-10-15", "commit_count": 15, "languages": ["TypeScript", "JavaScript"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Cloudflare Workers"], "database": ["Cloudflare D1 / KV"], "tools_infra": ["Cloudflare Pages", "Wrangler"], "desc": "Cloudflare Workers/PagesによるエッジサーバーレスWeb配信基盤", "display_month": "2026-08"}, {"name": "mont-simu", "start_month": "2026-09", "start_date": "2026-09-07", "latest_date": "2026-09-23", "commit_count": 205, "languages": ["Python"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": [], "database": [], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "**OPRISM**（オプリズム、Operations × Prism の造語。英語表記: *OPRISM — Stochastic Operations Intelligence*）は、飲食店オペレ", "display_month": "2026-09"}, {"name": "shadowing-lab", "start_month": "2026-09", "start_date": "2026-09-01", "latest_date": "2026-10-12", "commit_count": 15, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["PostgreSQL", "SQLite", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "英語のリンキング（連結）・リダクション（弱形）・同化の聞き取り練習用Webアプリ。", "display_month": "2026-09"}, {"name": "auto-window", "start_month": "2026-09", "start_date": "2026-09-04", "latest_date": "2026-09-08", "commit_count": 13, "languages": ["JavaScript", "Python"], "frontend": ["pywebview (Desktop GUI)"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "Playwright (Web RPA)", "Win32 API / Windows Native", "pywinauto (Windows RPA)"], "desc": "Windowsアプリを自動操作するためのツール。既存の商用RPA(Power Automate Desktop / UiPath等)や、", "display_month": "2026-09"}, {"name": "agent-loop-demo", "start_month": "2026-09", "start_date": "2026-09-15", "latest_date": "2026-09-20", "commit_count": 12, "languages": ["TypeScript", "JavaScript"], "frontend": ["Jest / CLI"], "backend": ["Node.js"], "database": [], "tools_infra": ["自律AIループ (Ralph Loop)", "TDD自己修復"], "desc": "AIがテスト失敗を検知して自律的にコードを自己修復する自律AIループ検証", "display_month": "2026-09"}, {"name": "QuickDock", "start_month": "2026-09", "start_date": "2026-09-20", "latest_date": "2026-09-24", "commit_count": 11, "languages": ["C#", "C++", "Python"], "frontend": ["WPF (Desktop)", "WinForms (Desktop)"], "backend": ["Express"], "database": [], "tools_infra": [], "desc": "Windows 用の枠なしフローティングドック。ショートカットをドロップして格納し、ホバーで展開、クリックで起動する。", "display_month": "2026-09"}, {"name": "ap-drill", "start_month": "2026-09", "start_date": "2026-09-01", "latest_date": "2026-10-12", "commit_count": 10, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "応用情報技術者試験(AP) 過去問ドリルWebアプリ（FastAPI + Supabase）", "display_month": "2026-09"}, {"name": "QuickDiskRescue", "start_month": "2026-05", "start_date": "2026-05-19", "latest_date": "2026-09-23", "commit_count": 9, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "Windows がマウントできないディスクから、フォルダ構造を保って別ドライブへ救出するツールです。ソースへは書き込みません。", "display_month": "2026-09"}, {"name": "obsidian-claude", "start_month": "2026-09", "start_date": "2026-09-23", "latest_date": "2026-09-23", "commit_count": 8, "languages": ["Markdown", "Python"], "frontend": ["Obsidian"], "backend": ["Claude API"], "database": ["ローカルVault"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Claudeと連携した業務セカンドブレイン・ナレッジ体系化基盤", "display_month": "2026-09"}, {"name": "LLM-manage", "start_month": "2026-09", "start_date": "2026-09-29", "latest_date": "2026-09-30", "commit_count": 7, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "ローカルLLM環境およびモデル管理スクリプト群", "display_month": "2026-09"}, {"name": "gleam", "start_month": "1970-01", "start_date": "1970-01-01", "latest_date": "2026-10-06", "commit_count": 5, "languages": ["Gleam", "JavaScript"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": ["SQLite"], "tools_infra": [], "desc": "Gleam と BEAM の並行処理を試すための、複数 URL の死活監視 CLI です。", "display_month": "2026-09"}, {"name": "panzer-front", "start_month": "2026-09", "start_date": "2026-09-29", "latest_date": "2026-10-20", "commit_count": 2, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "戦車シミュレーション・GUIゲーム研究", "display_month": "2026-09"}, {"name": "project-LLM", "start_month": "2026-09", "start_date": "2026-09-28", "latest_date": "2026-09-28", "commit_count": 2, "languages": ["PowerShell"], "frontend": ["Tailwind CSS"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "Win32 API / Windows Native"], "desc": "VS Code + Continue で、ローカルLLM（自宅 Mac の Ollama・Qwen3-Coder-30B）を使うための設定と修正手順をまとめたフォルダ。", "display_month": "2026-09"}, {"name": "QuickRightClick", "start_month": "2026-09", "start_date": "2026-09-07", "latest_date": "2026-09-07", "commit_count": 1, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "<p align=\"center\">", "display_month": "2026-09"}, {"name": "shinsa-2026", "start_month": "2026-09", "start_date": "2026-09-16", "latest_date": "2026-09-17", "commit_count": 0, "languages": ["Python"], "frontend": [], "backend": [], "database": [], "tools_infra": ["Excel/VBA連携", "Win32 API / Windows Native", "pywinauto (Windows RPA)"], "desc": "生技本部昇格審査のフィードバックシート（xlsx）を集計するスクリプト。", "display_month": "2026-09"}, {"name": "chumonsho-2seikan", "start_month": "2026-10", "start_date": "2026-10-12", "latest_date": "2026-11-06", "commit_count": 88, "languages": ["JavaScript", "Python", "SQL"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "トヨタ次世代調達EDI形式（TMCPack）の固定長Shift_JISテキストファイルを自動解析（パース）し、PostgreSQLデータベースへ正規化格納するとともに、Webブラウザ上で直感的に検索・", "display_month": "2026-10"}, {"name": "buhin-jisseki", "start_month": "2026-10", "start_date": "2026-10-28", "latest_date": "2026-10-29", "commit_count": 6, "languages": ["TypeScript"], "frontend": ["React", "Vite"], "backend": ["FastAPI", "Fastify"], "database": ["PostgreSQL"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "部品購入原価実績DB API(試作) Fastify+TypeScript+PostgreSQL", "display_month": "2026-10"}, {"name": "bunai-server", "start_month": "2026-10", "start_date": "2026-10-06", "latest_date": "2026-11-05", "commit_count": 5, "languages": [], "frontend": [], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携"], "desc": "作成: 2026-10-28 / 更新: 2026-10-28(類似情報8ファイルと、手順書の出典4ファイルを、それぞれ ZIP へ退避し、元ファイルを削除)", "display_month": "2026-10"}, {"name": "jinji-db", "start_month": "2026-10", "start_date": "2026-10-07", "latest_date": "2026-10-29", "commit_count": 5, "languages": ["Python", "SQL", "TypeScript"], "frontend": ["React", "Tailwind CSS", "Vite"], "backend": ["Express", "FastAPI"], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携", "Win32 API / Windows Native"], "desc": "試作部の人事リスト(`excel/試作部人事リスト 1.xlsm` の VBA が作っていたもの)を、AD から取得して PostgreSQL に蓄積し、Web で閲覧する。", "display_month": "2026-10"}, {"name": "supplier-manage", "start_month": "2026-10", "start_date": "2026-10-01", "latest_date": "2026-10-05", "commit_count": 2, "languages": ["Python", "SQL"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携"], "desc": "サプライヤー・仕入先管理システム（Qt6 / Python / PostgreSQL）", "display_month": "2026-10"}, {"name": "game-tank", "start_month": "2026-10", "start_date": "2026-10-22", "latest_date": "2026-10-22", "commit_count": 1, "languages": ["JavaScript"], "frontend": ["Vite"], "backend": [], "database": [], "tools_infra": [], "desc": "HTML5 Canvas/JS 2D戦車アクションゲーム（Vite）", "display_month": "2026-10"}, {"name": "ikusei-taikei-2026", "start_month": "2026-10", "start_date": "2026-10-13", "latest_date": "2026-10-22", "commit_count": 0, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "人材育成体系・STAR法キャリアシート作成基盤", "display_month": "2026-10"}, {"name": "work", "start_month": "2026-10", "start_date": "2026-10-20", "latest_date": "2026-10-29", "commit_count": 0, "languages": ["TypeScript"], "frontend": ["React", "Vite"], "backend": [], "database": [], "tools_infra": [], "desc": "Webフロントエンド試作アプリ（React + Vite + TypeScript）", "display_month": "2026-10"}];
+    // 埋め込み用全プロジェクトデータ (サニタイズ＆バイリンガル対応済み)
+    const rawProjects = [{"name": "myerp", "start_month": "2026-02", "start_date": "2026-02-25", "latest_date": "2026-11-05", "commit_count": 14, "languages": ["Python", "Rust", "SQL", "TypeScript"], "frontend": ["React"], "backend": ["FastAPI", "Rust Backend (Cargo)"], "database": ["PostgreSQL", "SQLite", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "数理最適化（MILP）による設備負荷平準化と生産計画自動立案システム。Rust計算エンジン連携。", "display_month": "2026-03", "desc_ja": "数理最適化（MILP）による設備負荷平準化と生産計画自動立案システム。Rust計算エンジン連携。", "desc_en": "Production planning system with mathematical optimization (MILP) & Rust computation engine."}, {"name": "myDB", "start_month": "2026-04", "start_date": "2026-04-06", "latest_date": "2026-05-07", "commit_count": 28, "languages": ["Python", "TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS"], "backend": ["Express", "FastAPI"], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Supabase連携のアウトドアギア管理DB。Gemini AIアシスタントによる自律検索・操作提案。", "display_month": "2026-04", "desc_ja": "Supabase連携のアウトドアギア管理DB。Gemini AIアシスタントによる自律検索・操作提案。", "desc_en": "Outdoor gear management DB with Supabase & autonomous Gemini AI chat assistant."}, {"name": "udon-db", "start_month": "2026-05", "start_date": "2026-05-19", "latest_date": "2026-08-26", "commit_count": 145, "languages": ["JavaScript", "Python", "SQL"], "frontend": ["Streamlit"], "backend": [], "database": ["PostgreSQL", "SQLite", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Supabase東京リージョン＋Streamlitによる位置情報連動うどん店DB。Vercel本番一般公開。", "display_month": "2026-05", "desc_ja": "Supabase東京リージョン＋Streamlitによる位置情報連動うどん店DB。Vercel本番一般公開。", "desc_en": "Geo-location restaurant database built with Supabase Tokyo & Streamlit on Vercel."}, {"name": "FieldStyle2026", "start_month": "2026-05", "start_date": "2026-05-02", "latest_date": "2026-11-06", "commit_count": 62, "languages": ["Python", "TypeScript"], "frontend": ["React", "Vite"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "日本最大級アウトドア展示会の最短周回ルート探索PWA。オフライン対応＆Vercel本番公開中。", "display_month": "2026-05", "desc_ja": "日本最大級アウトドア展示会の最短周回ルート探索PWA。オフライン対応＆Vercel本番公開中。", "desc_en": "Exhibition shortest navigation PWA with offline caching. Deployed on Vercel."}, {"name": "QuickFolderSize", "start_month": "2026-05", "start_date": "2026-05-29", "latest_date": "2026-09-24", "commit_count": 43, "languages": ["C++", "JavaScript", "Python"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": ["Express"], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)", "Win32 API / Windows Native"], "desc": "Win32 APIを直接制御し、NTFSファイルツリーを数秒で超高速走査・集計するネイティブツール。", "display_month": "2026-05", "desc_ja": "Win32 APIを直接制御し、NTFSファイルツリーを数秒で超高速走査・集計するネイティブツール。", "desc_en": "Native NTFS high-speed directory tree scanner utilizing Win32 Native APIs directly."}, {"name": "map_maker_cl", "start_month": "2026-05", "start_date": "2026-05-06", "latest_date": "2026-11-03", "commit_count": 22, "languages": ["Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "Pythonによる自動地図・経路生成CLIツール。展示会フロアマップの座標変換を自動化。", "display_month": "2026-05", "desc_ja": "Pythonによる自動地図・経路生成CLIツール。展示会フロアマップの座標変換を自動化。", "desc_en": "Python CLI tool for floor map coordinate conversion and optimal route generation."}, {"name": "mail_manage", "start_month": "2026-04", "start_date": "2026-04-23", "latest_date": "2026-07-06", "commit_count": 2, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["SQLite"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)", "Win32 API / Windows Native"], "desc": "過去メールの分析に基づき、ドメイン・キーワードをOutlook受信ルールへ自動同期するWebアプリ。", "display_month": "2026-05", "desc_ja": "過去メールの分析に基づき、ドメイン・キーワードをOutlook受信ルールへ自動同期するWebアプリ。", "desc_en": "Outlook InboxRule synchronization Web app based on email history analysis."}, {"name": "QuickMarkPDF", "start_month": "2018-05", "start_date": "2018-05-15", "latest_date": "2026-10-15", "commit_count": 122, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": [], "tools_infra": [], "desc": "PythonからC++へ完全移植し30倍高速化したPDF図面一括注釈・マーキングエンジン。", "display_month": "2026-06", "desc_ja": "PythonからC++へ完全移植し30倍高速化したPDF図面一括注釈・マーキングエンジン。", "desc_en": "C++ high-performance PDF annotation engine ported from Python (30x faster)."}, {"name": "suuri-chat", "start_month": "2026-06", "start_date": "2026-06-09", "latest_date": "2026-07-17", "commit_count": 42, "languages": ["TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "Gemini / OpenAI APIストリーミング対話。数学的知性と情緒を兼ね備えた人生相談AIチャット。", "display_month": "2026-06", "desc_ja": "Gemini / OpenAI APIストリーミング対話。数学的知性と情緒を兼ね備えた人生相談AIチャット。", "desc_en": "Streaming AI chat app with empathetic persona powered by Gemini & OpenAI APIs."}, {"name": "note", "start_month": "2026-03", "start_date": "2026-03-16", "latest_date": "2026-09-22", "commit_count": 26, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "技術ナレッジの蓄積と外部ブログ（note.com）への自動投稿・構成管理基盤。", "display_month": "2026-06", "desc_ja": "技術ナレッジの蓄積と外部ブログ（note.com）への自動投稿・構成管理基盤。", "desc_en": "Technical knowledge management and automated publication pipeline."}, {"name": "SNS Management", "start_month": "2026-06", "start_date": "2026-06-25", "latest_date": "2026-09-24", "commit_count": 16, "languages": ["Python", "SQL", "TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS", "Vite"], "backend": [], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Next.js App RouterとPostgreSQLによるSNS投稿管理・アナリティクスWebダッシュボード。", "display_month": "2026-06", "desc_ja": "Next.js App RouterとPostgreSQLによるSNS投稿管理・アナリティクスWebダッシュボード。", "desc_en": "Social media management & analytics dashboard built with Next.js & PostgreSQL."}, {"name": "seikan_2", "start_month": "2026-06", "start_date": "2026-06-22", "latest_date": "2026-07-17", "commit_count": 3, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": ["PostgreSQL", "SQLite"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "製造業向け製缶板金加工の原価見積・工数計算管理システム（Node.js Express + SQLite）。", "display_month": "2026-06", "desc_ja": "製造業向け製缶板金加工の原価見積・工数計算管理システム（Node.js Express + SQLite）。", "desc_en": "Manufacturing sheet-metal cost estimation system (Node.js Express + SQLite)."}, {"name": "AI_mensetsu", "start_month": "2026-06", "start_date": "2026-06-17", "latest_date": "2026-06-22", "commit_count": 0, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "STAR法（状況・課題・行動・成果）に基づく職能評価・模擬面接支援AIエンジン。", "display_month": "2026-06", "desc_ja": "STAR法（状況・課題・行動・成果）に基づく職能評価・模擬面接支援AIエンジン。", "desc_en": "Competency evaluation & interview simulation AI engine based on STAR methodology."}, {"name": "powerapps", "start_month": "2026-06", "start_date": "2026-06-26", "latest_date": "2026-06-26", "commit_count": 0, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "Microsoft Power AppsおよびPower Automateによる社内ローコードDX連携資産。", "display_month": "2026-06", "desc_ja": "Microsoft Power AppsおよびPower Automateによる社内ローコードDX連携資産。", "desc_en": "Enterprise low-code DX assets integrating Microsoft Power Apps & Automate."}, {"name": "Auto-X", "start_month": "2026-07", "start_date": "2026-07-23", "latest_date": "2026-09-24", "commit_count": 170, "languages": ["Python", "SQL"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "Playwright (Web RPA)"], "desc": "自宅QNAP NAS Docker上で24時間常時稼働する自律型X自動化・監視バッチ運用基盤（170+コミット）。", "display_month": "2026-07", "desc_ja": "自宅QNAP NAS Docker上で24時間常時稼働する自律型X自動化・監視バッチ運用基盤（170+コミット）。", "desc_en": "24/7 autonomous X automation & monitoring system running on QNAP NAS Docker."}, {"name": "shisaku-system", "start_month": "2023-10", "start_date": "2023-10-20", "latest_date": "2026-11-02", "commit_count": 33, "languages": ["JavaScript", "Python", "SQL"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携"], "desc": "属人化したExcel原価見積マクロをFastAPI＋PostgreSQLの堅牢な内製Webシステムへ刷新。", "display_month": "2026-07", "desc_ja": "属人化したExcel原価見積マクロをFastAPI＋PostgreSQLの堅牢な内製Webシステムへ刷新。", "desc_en": "Enterprise web system replacing legacy Excel macros with FastAPI & PostgreSQL."}, {"name": "fabric", "start_month": "2026-07", "start_date": "2026-07-31", "latest_date": "2026-09-23", "commit_count": 6, "languages": ["JavaScript", "SQL"], "frontend": [], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "Microsoft Fabric LakehouseとAIエージェントを繋ぐ自作MCP（Model Context Protocol）ツール。", "display_month": "2026-07", "desc_ja": "Microsoft Fabric LakehouseとAIエージェントを繋ぐ自作MCP（Model Context Protocol）ツール。", "desc_en": "Custom MCP (Model Context Protocol) tool integrating with Microsoft Fabric Lakehouse."}, {"name": "project_me", "start_month": "2026-07", "start_date": "2026-07-02", "latest_date": "2026-09-24", "commit_count": 3, "languages": ["JavaScript"], "frontend": [], "backend": [], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "長期的な技術習得ロードマップとキャリアプランニング支援ナレッジ基盤。", "display_month": "2026-07", "desc_ja": "長期的な技術習得ロードマップとキャリアプランニング支援ナレッジ基盤。", "desc_en": "Long-term engineering roadmap and career planning knowledge base."}, {"name": "shokaku-2026", "start_month": "2024-06", "start_date": "2024-06-12", "latest_date": "2026-08-05", "commit_count": 1, "languages": ["JavaScript", "Python"], "frontend": [], "backend": [], "database": [], "tools_infra": ["Excel/VBA連携"], "desc": "職能資格基準に沿った日常業務実践記録およびSTAR法事実証明ドキュメント。", "display_month": "2026-07", "desc_ja": "職能資格基準に沿った日常業務実践記録およびSTAR法事実証明ドキュメント。", "desc_en": "Competency standard tracking & STAR behavioral demonstration framework."}, {"name": "camp", "start_month": "2026-08", "start_date": "2026-08-06", "latest_date": "2026-10-22", "commit_count": 64, "languages": ["Python", "SQL", "TypeScript"], "frontend": ["Next.js", "React", "Tailwind CSS"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携", "MCP (Model Context Protocol)"], "desc": "QNAP NAS Docker + Next.js standalone + Cloudflare Access ゼロトラスト運用の自前SaaS。", "display_month": "2026-08", "desc_ja": "QNAP NAS Docker + Next.js standalone + Cloudflare Access ゼロトラスト運用の自前SaaS。", "desc_en": "Self-hosted SaaS on QNAP NAS Docker with Cloudflare Access Zero Trust & backup."}, {"name": "QuickDiskBench", "start_month": "2026-08", "start_date": "2026-08-15", "latest_date": "2026-09-23", "commit_count": 55, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express", "FastAPI"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "ストレージI/Oベンチマーク測定とHTML5レポート可視化ツール。", "display_month": "2026-08", "desc_ja": "ストレージI/Oベンチマーク測定とHTML5レポート可視化ツール。", "desc_en": "Storage I/O benchmark utility with HTML5 performance visualization."}, {"name": "QuickImageView", "start_month": "2014-03", "start_date": "2014-03-11", "latest_date": "2026-09-23", "commit_count": 55, "languages": ["C++", "Python", "TypeScript"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "Qt 6 / QMLとC++17によるGPUハードウェアアクセラレーション軽量画像ビューア・編集アプリ。", "display_month": "2026-08", "desc_ja": "Qt 6 / QMLとC++17によるGPUハードウェアアクセラレーション軽量画像ビューア・編集アプリ。", "desc_en": "Ultra-fast GPU image viewer built with Qt 6 / QML and C++17 (60fps)."}, {"name": "Quick7Zip", "start_month": "2026-08", "start_date": "2026-08-19", "latest_date": "2026-09-23", "commit_count": 37, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "7-Zip DLL/CLI連携により、CPU・メモリ・ストレージを自動分析して最適圧縮するフロントエンド。", "display_month": "2026-08", "desc_ja": "7-Zip DLL/CLI連携により、CPU・メモリ・ストレージを自動分析して最適圧縮するフロントエンド。", "desc_en": "Optimized frontend for 7-Zip with automatic hardware-aware compression tuning."}, {"name": "QuickFileCopy", "start_month": "2026-08", "start_date": "2026-08-13", "latest_date": "2026-09-23", "commit_count": 29, "languages": ["C++", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "Win32バッファ制御・マルチスレッドによる大容量ファイル超高速ファイルコピーアプリ。", "display_month": "2026-08", "desc_ja": "Win32バッファ制御・マルチスレッドによる大容量ファイル超高速ファイルコピーアプリ。", "desc_en": "Win32 native high-speed multithreaded file copy utility with metadata preservation."}, {"name": "jugo-shoten-web", "start_month": "2026-08", "start_date": "2026-08-20", "latest_date": "2026-10-15", "commit_count": 15, "languages": ["TypeScript", "JavaScript"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Cloudflare Workers"], "database": ["Cloudflare D1 / KV"], "tools_infra": ["Cloudflare Pages", "Wrangler"], "desc": "Cloudflare Workers / Pagesによるエッジサーバーレス高速配信Webサイト（Wrangler）。", "display_month": "2026-08", "desc_ja": "Cloudflare Workers / Pagesによるエッジサーバーレス高速配信Webサイト（Wrangler）。", "desc_en": "Serverless edge-rendered Web publication platform built on Cloudflare Workers/Pages."}, {"name": "mont-simu", "start_month": "2026-09", "start_date": "2026-09-07", "latest_date": "2026-09-23", "commit_count": 205, "languages": ["Python"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": [], "database": [], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "飲食店オペレーション確率統計シミュレータ（OPRISM）。待ち時間・配置最適化解析。", "display_month": "2026-09", "desc_ja": "飲食店オペレーション確率統計シミュレータ（OPRISM）。待ち時間・配置最適化解析。", "desc_en": "Stochastic operations intelligence & queue simulation software (OPRISM)."}, {"name": "shadowing-lab", "start_month": "2026-09", "start_date": "2026-09-01", "latest_date": "2026-10-12", "commit_count": 15, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["PostgreSQL", "SQLite", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "英語の音変化（リンキング・リダクション）を聞き取り特訓する音声学習Webアプリ。", "display_month": "2026-09", "desc_ja": "英語の音変化（リンキング・リダクション）を聞き取り特訓する音声学習Webアプリ。", "desc_en": "English speech phonetics shadowing practice Web app (FastAPI + Supabase)."}, {"name": "auto-window", "start_month": "2026-09", "start_date": "2026-09-04", "latest_date": "2026-09-08", "commit_count": 13, "languages": ["JavaScript", "Python"], "frontend": ["pywebview (Desktop GUI)"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "Playwright (Web RPA)", "Win32 API / Windows Native", "pywinauto (Windows RPA)"], "desc": "商用RPA不要。pywinauto（デスクトップUIA）× Playwright（Web）のハイブリッド自動化基盤。", "display_month": "2026-09", "desc_ja": "商用RPA不要。pywinauto（デスクトップUIA）× Playwright（Web）のハイブリッド自動化基盤。", "desc_en": "Hybrid automation platform combining pywinauto (Windows UIA) & Playwright (Web)."}, {"name": "agent-loop-demo", "start_month": "2026-09", "start_date": "2026-09-15", "latest_date": "2026-09-20", "commit_count": 12, "languages": ["TypeScript", "JavaScript"], "frontend": ["Jest / CLI"], "backend": ["Node.js"], "database": [], "tools_infra": ["自律AIループ (Ralph Loop)", "TDD自己修復"], "desc": "Jestテスト失敗をAI自身が解析・コード自己修正して再検証する自律AIループ（Ralph Loop）の実証。", "display_month": "2026-09", "desc_ja": "Jestテスト失敗をAI自身が解析・コード自己修正して再検証する自律AIループ（Ralph Loop）の実証。", "desc_en": "Autonomous self-healing AI loop (Ralph Loop) fixing code failures automatically."}, {"name": "QuickDock", "start_month": "2026-09", "start_date": "2026-09-20", "latest_date": "2026-09-24", "commit_count": 11, "languages": ["C#", "C++", "Python"], "frontend": ["WPF (Desktop)", "WinForms (Desktop)"], "backend": ["Express"], "database": [], "tools_infra": [], "desc": "C# (.NET 10) とWPFによる枠なし半透明グラスモーフィズム常駐型フローティングランチャー。", "display_month": "2026-09", "desc_ja": "C# (.NET 10) とWPFによる枠なし半透明グラスモーフィズム常駐型フローティングランチャー。", "desc_en": "Windows floating dock launcher built with C# (.NET 10) and WPF glassmorphism."}, {"name": "ap-drill", "start_month": "2026-09", "start_date": "2026-09-01", "latest_date": "2026-10-12", "commit_count": 10, "languages": ["JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["FastAPI"], "database": ["PostgreSQL", "Supabase (PostgreSQL BaaS)"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "応用情報技術者試験の過去問演習Webアプリ（FastAPI + Supabase）。進捗管理と分野別演習。", "display_month": "2026-09", "desc_ja": "応用情報技術者試験の過去問演習Webアプリ（FastAPI + Supabase）。進捗管理と分野別演習。", "desc_en": "Applied Information Technology Engineer Exam study drill Web app (FastAPI + Supabase)."}, {"name": "QuickDiskRescue", "start_month": "2026-05", "start_date": "2026-05-19", "latest_date": "2026-09-23", "commit_count": 9, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": ["Express"], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "マウント不能となった破損ドライブから、NTFS構造を解析して別ドライブへ直接救出するC++ツール。", "display_month": "2026-09", "desc_ja": "マウント不能となった破損ドライブから、NTFS構造を解析して別ドライブへ直接救出するC++ツール。", "desc_en": "C++ data rescue tool recovering files from unmountable raw disk drives."}, {"name": "obsidian-claude", "start_month": "2026-09", "start_date": "2026-09-23", "latest_date": "2026-09-23", "commit_count": 8, "languages": ["Markdown", "Python"], "frontend": ["Obsidian"], "backend": ["Claude API"], "database": ["ローカルVault"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "ObsidianローカルナレッジVaultとClaude APIを双方向連携させた業務セカンドブレイン基盤。", "display_month": "2026-09", "desc_ja": "ObsidianローカルナレッジVaultとClaude APIを双方向連携させた業務セカンドブレイン基盤。", "desc_en": "Second brain knowledge management system integrating Obsidian with Claude API."}, {"name": "LLM-manage", "start_month": "2026-09", "start_date": "2026-09-29", "latest_date": "2026-09-30", "commit_count": 7, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "ローカルLLM環境および複数AIモデルの切り替え・実行管理スクリプト群。", "display_month": "2026-09", "desc_ja": "ローカルLLM環境および複数AIモデルの切り替え・実行管理スクリプト群。", "desc_en": "Local LLM model lifecycle and prompt configuration management scripts."}, {"name": "gleam", "start_month": "1970-01", "start_date": "1970-01-01", "latest_date": "2026-10-06", "commit_count": 5, "languages": ["Gleam", "JavaScript"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": ["SQLite"], "tools_infra": [], "desc": "Erlang BEAM仮想マシン上で動作する新世代型安全言語Gleamによる高並行死活監視CLI。", "display_month": "2026-09", "desc_ja": "Erlang BEAM仮想マシン上で動作する新世代型安全言語Gleamによる高並行死活監視CLI。", "desc_en": "Concurrent health-check CLI built with Gleam on the Erlang BEAM virtual machine."}, {"name": "panzer-front", "start_month": "2026-09", "start_date": "2026-09-29", "latest_date": "2026-10-20", "commit_count": 2, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "GUIゲーム研究およびリアルタイムグラフィックス描画シミュレーション。", "display_month": "2026-09", "desc_ja": "GUIゲーム研究およびリアルタイムグラフィックス描画シミュレーション。", "desc_en": "Real-time graphics rendering and tactical simulation research project."}, {"name": "project-LLM", "start_month": "2026-09", "start_date": "2026-09-28", "latest_date": "2026-09-28", "commit_count": 2, "languages": ["PowerShell"], "frontend": ["Tailwind CSS"], "backend": [], "database": [], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)", "Win32 API / Windows Native"], "desc": "OllamaによるローカルLLM（30Bモデル）の環境構築とVS Code / Continueプロンプトハック。", "display_month": "2026-09", "desc_ja": "OllamaによるローカルLLM（30Bモデル）の環境構築とVS Code / Continueプロンプトハック。", "desc_en": "Local LLM (30B) configuration and prompt engineering integration for VS Code."}, {"name": "QuickRightClick", "start_month": "2026-09", "start_date": "2026-09-07", "latest_date": "2026-09-07", "commit_count": 1, "languages": ["C++", "JavaScript", "Python"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": [], "tools_infra": ["Win32 API / Windows Native"], "desc": "Windowsエクスプローラーの右クリックコンテキストメニュー高速拡張C++ユーティリティ。", "display_month": "2026-09", "desc_ja": "Windowsエクスプローラーの右クリックコンテキストメニュー高速拡張C++ユーティリティ。", "desc_en": "Windows Explorer right-click context menu native C++ extension utility."}, {"name": "shinsa-2026", "start_month": "2026-09", "start_date": "2026-09-16", "latest_date": "2026-09-17", "commit_count": 0, "languages": ["Python"], "frontend": [], "backend": [], "database": [], "tools_infra": ["Excel/VBA連携", "Win32 API / Windows Native", "pywinauto (Windows RPA)"], "desc": "社内技術部門の業務プロセス・評価シート自動集計Pythonスクリプト。", "display_month": "2026-09", "desc_ja": "社内技術部門の業務プロセス・評価シート自動集計Pythonスクリプト。", "desc_en": "Automated evaluation sheet aggregation & analytics script for technical departments."}, {"name": "chumonsho-2seikan", "start_month": "2026-10", "start_date": "2026-10-12", "latest_date": "2026-11-06", "commit_count": 88, "languages": ["JavaScript", "Python", "SQL"], "frontend": ["HTML5/CSS3/Vanilla JS"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携", "LLM API (OpenAI/Claude/Gemini/Ollama)", "MCP (Model Context Protocol)"], "desc": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（88+コミット）。", "display_month": "2026-10", "desc_ja": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（88+コミット）。", "desc_en": "Automotive EDI fixed-length message parser & PostgreSQL normalizer (88+ commits)."}, {"name": "buhin-jisseki", "start_month": "2026-10", "start_date": "2026-10-28", "latest_date": "2026-10-29", "commit_count": 6, "languages": ["TypeScript"], "frontend": ["React", "Vite"], "backend": ["FastAPI", "Fastify"], "database": ["PostgreSQL"], "tools_infra": ["LLM API (OpenAI/Claude/Gemini/Ollama)"], "desc": "社内原価実績DBを安全・最小権限で抽出するTypeScript + Fastify読取専用REST APIサーバー。", "display_month": "2026-10", "desc_ja": "社内原価実績DBを安全・最小権限で抽出するTypeScript + Fastify読取専用REST APIサーバー。", "desc_en": "Read-only secure REST API server for procurement cost DB built with Fastify & TypeScript."}, {"name": "bunai-server", "start_month": "2026-10", "start_date": "2026-10-06", "latest_date": "2026-11-05", "commit_count": 5, "languages": [], "frontend": [], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携"], "desc": "PowerShellによる部門専用PostgreSQLサーバーの無人自動構築・ロール権限管理・バックアップ自動化。", "display_month": "2026-10", "desc_ja": "PowerShellによる部門専用PostgreSQLサーバーの無人自動構築・ロール権限管理・バックアップ自動化。", "desc_en": "Automated on-premise PostgreSQL server provisioning with PowerShell scripts."}, {"name": "jinji-db", "start_month": "2026-10", "start_date": "2026-10-07", "latest_date": "2026-10-29", "commit_count": 5, "languages": ["Python", "SQL", "TypeScript"], "frontend": ["React", "Tailwind CSS", "Vite"], "backend": ["Express", "FastAPI"], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携", "Win32 API / Windows Native"], "desc": "社内Active Directoryから組織・社員マスタを自動巡回取得しPostgreSQLに同期するReact+FastAPI基盤。", "display_month": "2026-10", "desc_ja": "社内Active Directoryから組織・社員マスタを自動巡回取得しPostgreSQLに同期するReact+FastAPI基盤。", "desc_en": "Enterprise Active Directory HR master synchronization system with React & FastAPI."}, {"name": "supplier-manage", "start_month": "2026-10", "start_date": "2026-10-01", "latest_date": "2026-10-05", "commit_count": 2, "languages": ["Python", "SQL"], "frontend": ["Qt 6 / QML (Desktop GUI)"], "backend": [], "database": ["PostgreSQL"], "tools_infra": ["Excel/VBA連携"], "desc": "サプライヤー取引・調達実績を管理するQt 6 / Python / PostgreSQLデスクトップ管理基盤。", "display_month": "2026-10", "desc_ja": "サプライヤー取引・調達実績を管理するQt 6 / Python / PostgreSQLデスクトップ管理基盤。", "desc_en": "Procurement supplier management desktop system with Qt 6, Python & PostgreSQL."}, {"name": "game-tank", "start_month": "2026-10", "start_date": "2026-10-22", "latest_date": "2026-10-22", "commit_count": 1, "languages": ["JavaScript"], "frontend": ["Vite"], "backend": [], "database": [], "tools_infra": [], "desc": "ViteとHTML5 Canvasで制作した2D戦車アクションゲーム。軽量かつスムーズな物理挙動。", "display_month": "2026-10", "desc_ja": "ViteとHTML5 Canvasで制作した2D戦車アクションゲーム。軽量かつスムーズな物理挙動。", "desc_en": "2D tank action game built with Vite & HTML5 Canvas with smooth 60fps physics."}, {"name": "ikusei-taikei-2026", "start_month": "2026-10", "start_date": "2026-10-13", "latest_date": "2026-10-22", "commit_count": 0, "languages": [], "frontend": [], "backend": [], "database": [], "tools_infra": [], "desc": "技術者人材育成体系およびSTAR法キャリアシートの標準化テンプレート。", "display_month": "2026-10", "desc_ja": "技術者人材育成体系およびSTAR法キャリアシートの標準化テンプレート。", "desc_en": "Engineering talent development framework & STAR method competency template."}, {"name": "work", "start_month": "2026-10", "start_date": "2026-10-20", "latest_date": "2026-10-29", "commit_count": 0, "languages": ["TypeScript"], "frontend": ["React", "Vite"], "backend": [], "database": [], "tools_infra": [], "desc": "React + Vite + TypeScriptによるモダンフロントエンド試作アプリケーション。", "display_month": "2026-10", "desc_ja": "React + Vite + TypeScriptによるモダンフロントエンド試作アプリケーション。", "desc_en": "Modern frontend prototyping application built with React, Vite & TypeScript."}];
 
+    let currentLang = 'ja';
     let currentLangFilter = 'all';
     let searchQuery = '';
     let sortColumn = 1;
     let sortAsc = false;
 
-    // 初期表示
+    // 言語辞書
+    const i18n = {
+      ja: {
+        badge: "2026年3月〜11月 開発集大成 ポートフォリオ",
+        main_title: "エンジニアリング・ケイパビリティ ＆ 技術スタック統括",
+        subtitle: "Excel・VBA依存の現場課題脱却から、Webフルスタック、超高速C++低レイヤ制御、C#デスクトップ常駐、自宅NASコンテナ運用、自律型AIエージェントまで自力実装した全47プロジェクトの全貌です。",
+        nav_stats: "📊 総合統計",
+        nav_cards: "🏆 6大ケイパビリティ",
+        nav_tech: "🛠️ 技術習得マップ",
+        nav_proj: "📅 成果物マトリクス",
+        nav_all: "📁 全プロジェクト",
+        nav_time: "📈 進化の歩み",
+        stat_projs: "開発プロジェクト数",
+        stat_langs: "駆使・習得プログラミング言語",
+        stat_commits: "総Gitコミット数",
+        stat_caps: "獲得中核ケイパビリティ領域",
+        sec_cards_title: "🏆 6大中核ケイパビリティ領域 (Core Capabilities)",
+        sec_cards_badge: "15の代表的解決実績",
+        tab_all: "✨ すべて表示",
+        tab_infra: "🌐 自宅NAS・クラウド",
+        tab_dx: "🏢 業務基盤DX・EDI",
+        tab_native: "⚡ 超高速C++/C#",
+        tab_web: "💻 モダンWeb・SaaS",
+        tab_ai: "🤖 自律AIエージェント",
+        tab_rpa: "🚀 脱商用RPA・自動化",
+        sec_tech_title: "🛠️ 技術スタック時系列習得・導入マップ (Technology Acquisition Matrix)",
+        sec_tech_badge: "技術視点・初導入タイミング体系化",
+        th_month: "着手年月",
+        th_lang: "① 言語 (Languages)",
+        th_web_fw: "② Web/API FW",
+        th_gui_fw: "③ デスクトップGUI",
+        th_libs: "④ ライブラリ & SDK",
+        th_db: "⑤ DB & データストア",
+        th_infra: "⑥ インフラ & クラウド",
+        th_ai: "⑦ 先端AI & プロトコル",
+        scroll_hint: "横スクロールできます",
+        sec_proj_title: "📅 月別 × 6大カテゴリ 成果物マトリクス (Project Matrix)",
+        sec_proj_badge: "成果物・PJ単位の時系列クロス集計",
+        cat_dx: "① 業務基盤DX・基幹システム",
+        cat_infra: "② 自宅NAS・インフラ・公開Web",
+        cat_native: "③ 超高速ネイティブ・低レイヤ",
+        cat_web: "④ モダンWeb・SaaS開発",
+        cat_ai: "⑤ AIエージェント・先端技術",
+        cat_rpa: "⑥ 脱商用RPA・自動化",
+        sec_all_title: "📁 全プロジェクト完全一覧データベース (All 47 Projects)",
+        sec_all_badge: "リアルタイム検索＆ソート機能",
+        search_placeholder: "プロジェクト名・言語・技術スタック・説明で検索...",
+        th_pname: "プロジェクト名",
+        th_pdate: "着手時期",
+        th_pcommits: "コミット",
+        th_plangs: "主要言語",
+        th_pfe: "フロントエンド",
+        th_pbe: "バックエンド / DB",
+        th_pdesc: "概要・目的",
+        sec_time_title: "📈 半年間の進化の歩み（Timeline Journey）",
+        btn_switch: "English に切替",
+        count_prefix: "表示中",
+        count_suffix: "件"
+      },
+      en: {
+        badge: "March - November 2026 Engineering Portfolio",
+        main_title: "Engineering Capabilities & Tech Stack Overview",
+        subtitle: "Comprehensive portfolio of 47 self-implemented projects spanning enterprise DX, modern fullstack Web, high-performance C++/C# desktop, self-hosted QNAP NAS cloud, and autonomous AI loops.",
+        nav_stats: "📊 Overview",
+        nav_cards: "🏆 Capabilities",
+        nav_tech: "🛠️ Tech Matrix",
+        nav_proj: "📅 Project Matrix",
+        nav_all: "📁 All Projects",
+        nav_time: "📈 Timeline",
+        stat_projs: "Total Projects",
+        stat_langs: "Programming Languages",
+        stat_commits: "Total Git Commits",
+        stat_caps: "Core Capability Areas",
+        sec_cards_title: "🏆 Core Engineering Capabilities",
+        sec_cards_badge: "15 Key Engineering Achievements",
+        tab_all: "✨ Show All",
+        tab_infra: "🌐 Self-Hosted Cloud",
+        tab_dx: "🏢 Enterprise DX & EDI",
+        tab_native: "⚡ High-Perf C++/C#",
+        tab_web: "💻 Modern Web & SaaS",
+        tab_ai: "🤖 Autonomous AI",
+        tab_rpa: "🚀 Hyper-Automation",
+        sec_tech_title: "🛠️ Technology Acquisition Timeline Matrix",
+        sec_tech_badge: "Chronological First-Adoption Mapping",
+        th_month: "Timeline",
+        th_lang: "① Languages",
+        th_web_fw: "② Web/API FW",
+        th_gui_fw: "③ Desktop GUI",
+        th_libs: "④ Libraries & SDKs",
+        th_db: "⑤ Databases & Storage",
+        th_infra: "⑥ Infra & Cloud",
+        th_ai: "⑦ AI & Protocols",
+        scroll_hint: "Scroll horizontally to view",
+        sec_proj_title: "📅 Monthly × Category Project Matrix",
+        sec_proj_badge: "Chronological Cross-Category Breakdown",
+        cat_dx: "① Enterprise DX & Core Systems",
+        cat_infra: "② Self-Hosted NAS & Cloud",
+        cat_native: "③ High-Performance Native",
+        cat_web: "④ Modern Web & Fullstack",
+        cat_ai: "⑤ AI Agents & Advanced Tech",
+        cat_rpa: "⑥ Hyper-Automation & RPA",
+        sec_all_title: "📁 Complete Projects Database (All 47 Projects)",
+        sec_all_badge: "Real-time Instant Search & Sort",
+        search_placeholder: "Search by project, language, stack, keyword...",
+        th_pname: "Project Name",
+        th_pdate: "First Started",
+        th_pcommits: "Commits",
+        th_plangs: "Languages",
+        th_pfe: "Frontend",
+        th_pbe: "Backend / Database",
+        th_pdesc: "Description & Purpose",
+        sec_time_title: "📈 Evolution Timeline Journey",
+        btn_switch: "日本語に切替",
+        count_prefix: "Showing",
+        count_suffix: "projects"
+      }
+    };
+
+    // 初期化
     document.addEventListener('DOMContentLoaded', () => {
       renderTable();
 
@@ -1938,22 +2209,52 @@
       });
     });
 
-    // フィルタ・検索処理
+    // 言語切り替えトグル
+    function toggleLanguage() {
+      currentLang = (currentLang === 'ja') ? 'en' : 'ja';
+      document.documentElement.lang = currentLang;
+      applyLanguage();
+    }
+
+    function applyLanguage() {
+      const dict = i18n[currentLang];
+
+      // ボタンラベル
+      document.getElementById('langLabel').textContent = dict.btn_switch;
+
+      // data-i18n属性の要素置換
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) el.textContent = dict[key];
+      });
+
+      // 検索プレースホルダー
+      document.getElementById('projSearchInput').placeholder = dict.search_placeholder;
+
+      // カード・タイムライン・テーブル内の日英置換
+      document.querySelectorAll('[data-ja][data-en]').forEach(el => {
+        el.textContent = (currentLang === 'ja') ? el.getAttribute('data-ja') : el.getAttribute('data-en');
+      });
+
+      renderTable();
+    }
+
+    // 全プロジェクトテーブル描画
     function renderTable() {
       const tbody = document.getElementById('projTableBody');
       tbody.innerHTML = '';
+      const dict = i18n[currentLang];
 
       let filtered = rawProjects.filter(p => {
-        // 言語フィルター
         if (currentLangFilter !== 'all') {
           if (!p.languages.includes(currentLangFilter)) return false;
         }
 
-        // テキスト検索
         if (searchQuery.trim() !== '') {
           const q = searchQuery.toLowerCase();
+          const pDesc = (currentLang === 'ja' ? p.desc_ja : p.desc_en) || p.desc || '';
           const matchName = p.name.toLowerCase().includes(q);
-          const matchDesc = (p.desc || '').toLowerCase().includes(q);
+          const matchDesc = pDesc.toLowerCase().includes(q);
           const matchLang = p.languages.some(l => l.toLowerCase().includes(q));
           const matchFE = p.frontend.some(f => f.toLowerCase().includes(q));
           const matchBE = p.backend.some(b => b.toLowerCase().includes(q));
@@ -1966,16 +2267,15 @@
         return true;
       });
 
-      // ソート処理
       filtered.sort((a, b) => {
         let valA, valB;
-        if (sortColumn === 0) { // Name
+        if (sortColumn === 0) {
           valA = a.name.toLowerCase();
           valB = b.name.toLowerCase();
-        } else if (sortColumn === 1) { // Month
+        } else if (sortColumn === 1) {
           valA = a.display_month || a.start_month;
           valB = b.display_month || b.start_month;
-        } else if (sortColumn === 2) { // Commit Count
+        } else if (sortColumn === 2) {
           valA = a.commit_count;
           valB = b.commit_count;
         }
@@ -1985,12 +2285,10 @@
         return 0;
       });
 
-      // レンダリング
       filtered.forEach(p => {
         const tr = document.createElement('tr');
         tr.className = 'proj-row';
 
-        // 言語ピル
         const langsHtml = p.languages.length > 0
           ? p.languages.map(l => {
               const cls = 'lang-' + l.replace('++', 'Cpp').replace('#', 'Sharp');
@@ -1998,19 +2296,18 @@
             }).join(' ')
           : '<span style="color:#64748b">—</span>';
 
-        // FE
         const feHtml = p.frontend.length > 0 ? p.frontend.join(', ') : '—';
 
-        // BE / DB
         const beDbList = [];
         if (p.backend.length > 0) beDbList.push(...p.backend);
         if (p.database.length > 0) beDbList.push(...p.database);
         const beDbHtml = beDbList.length > 0 ? beDbList.join('<br>') : '—';
 
-        // コミットバッジスタイル
         let commitClass = '';
         if (p.commit_count >= 50) commitClass = 'style="background:rgba(244,63,94,0.18); color:#fb7185; border-color:rgba(244,63,94,0.4);"';
         else if (p.commit_count >= 15) commitClass = 'style="background:rgba(99,102,241,0.18); color:#a5b4fc; border-color:rgba(99,102,241,0.4);"';
+
+        const displayDesc = (currentLang === 'ja' ? p.desc_ja : p.desc_en) || p.desc || '—';
 
         tr.innerHTML = `
           <td>
@@ -2024,13 +2321,13 @@
           <td>${langsHtml}</td>
           <td class="stack-cell">${feHtml}</td>
           <td class="stack-cell">${beDbHtml}</td>
-          <td class="desc-cell">${p.desc || '—'}</td>
+          <td class="desc-cell">${displayDesc}</td>
         `;
 
         tbody.appendChild(tr);
       });
 
-      document.getElementById('projectCount').textContent = `表示中: ${filtered.length} / ${rawProjects.length} 件`;
+      document.getElementById('projectCount').textContent = `${dict.count_prefix}: ${filtered.length} / ${rawProjects.length} ${dict.count_suffix}`;
     }
 
     function handleSearch() {

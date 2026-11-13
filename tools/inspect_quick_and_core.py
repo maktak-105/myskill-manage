@@ -1,7 +1,7 @@
 import os
 import glob
 
-base_dir = r'c:\Users\0120025-Z100\source\project'
+base_dir = r'~\source\project'
 quick_projects = [d for d in os.listdir(base_dir) if d.startswith('Quick') or d in ['auto-window', 'Auto-X', 'seikan_2', 'chumonsho-2seikan', 'shisaku-system', 'shokaku-2026', 'ap-drill', 'shadowing-lab', 'jinji-db', 'myerp', 'myDB', 'udon-db', 'suuri-chat', 'SNS Management']]
 
 for q in quick_projects:

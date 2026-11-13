@@ -3,7 +3,7 @@ import json
 import subprocess
 from datetime import datetime
 
-base_dir = r'c:\Users\0120025-Z100\source\project'
+base_dir = r'~\source\project'
 
 projects = []
 

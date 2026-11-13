@@ -1,7 +1,7 @@
 import os
 import glob
 
-base_dir = r'c:\Users\0120025-Z100\source\project'
+base_dir = r'~\source\project'
 target_names = [
     'QuickFolderSize', 'QuickMarkPDF', 'QuickFileCopy', 'QuickDiskBench',
     'Quick7Zip', 'QuickImageView', 'QuickRightClick', 'QuickDiskRescue', 'QuickDock',

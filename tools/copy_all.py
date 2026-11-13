@@ -1,9 +1,9 @@
 import os
 import shutil
 
-src_dir = r'C:\Users\0120025-Z100\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b'
+src_dir = r'~\.gemini\antigravity-ide\brain\a3e97f15-97b9-4139-87a9-99685f0a833b'
 scratch_dir = os.path.join(src_dir, 'scratch')
-dest_dir = r'c:\Users\0120025-Z100\source\manage'
+dest_dir = r'~\source\manage'
 tools_dir = os.path.join(dest_dir, 'tools')
 
 os.makedirs(tools_dir, exist_ok=True)

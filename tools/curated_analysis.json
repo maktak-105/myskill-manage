@@ -1,110 +1,5 @@
 [
   {
-    "name": "gleam",
-    "start_month": "1970-01",
-    "start_date": "1970-01-01",
-    "latest_date": "2026-10-06",
-    "commit_count": 5,
-    "languages": [
-      "Gleam",
-      "JavaScript"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [],
-    "database": [
-      "SQLite"
-    ],
-    "tools_infra": [],
-    "desc": "Gleam と BEAM の並行処理を試すための、複数 URL の死活監視 CLI です。"
-  },
-  {
-    "name": "QuickImageView",
-    "start_month": "2014-03",
-    "start_date": "2014-03-11",
-    "latest_date": "2026-09-23",
-    "commit_count": 55,
-    "languages": [
-      "C++",
-      "Python",
-      "TypeScript"
-    ],
-    "frontend": [
-      "Qt 6 / QML (Desktop GUI)"
-    ],
-    "backend": [
-      "Express"
-    ],
-    "database": [],
-    "tools_infra": [
-      "Win32 API / Windows Native"
-    ],
-    "desc": "Qt 6（Qt Quick / QML）とC++17で作ったWindows向けの軽量画像ビューアー・画像編集アプリです。画像の表示、編集、別形式保存ができ、日本語と英語を切り替えられます。"
-  },
-  {
-    "name": "QuickMarkPDF",
-    "start_month": "2018-05",
-    "start_date": "2018-05-15",
-    "latest_date": "2026-10-15",
-    "commit_count": 122,
-    "languages": [
-      "C++",
-      "JavaScript",
-      "Python"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [],
-    "database": [],
-    "tools_infra": [],
-    "desc": "<p align=\"center\">"
-  },
-  {
-    "name": "shisaku-system",
-    "start_month": "2023-10",
-    "start_date": "2023-10-20",
-    "latest_date": "2026-11-02",
-    "commit_count": 33,
-    "languages": [
-      "JavaScript",
-      "Python",
-      "SQL"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [
-      "FastAPI"
-    ],
-    "database": [
-      "PostgreSQL"
-    ],
-    "tools_infra": [
-      "Excel/VBA連携"
-    ],
-    "desc": "試作部の原価見積業務を、現行のExcel＋VBAマクロから内製システムへ移行するための作業リポジトリ。"
-  },
-  {
-    "name": "shokaku-2026",
-    "start_month": "2024-06",
-    "start_date": "2024-06-12",
-    "latest_date": "2026-08-05",
-    "commit_count": 1,
-    "languages": [
-      "JavaScript",
-      "Python"
-    ],
-    "frontend": [],
-    "backend": [],
-    "database": [],
-    "tools_infra": [
-      "Excel/VBA連携"
-    ],
-    "desc": "2027年9月の昇格面接本番に向けて、対象者が職能資格基準に沿った行動を日常業務で実践し、その事実をSTAR法で具体的に説明できる状態をつくる。"
-  },
-  {
     "name": "myerp",
     "start_month": "2026-02",
     "start_date": "2026-02-25",
@@ -132,23 +27,10 @@
       "Excel/VBA連携",
       "LLM API (OpenAI/Claude/Gemini/Ollama)"
     ],
-    "desc": "`myERP` は、数理最適化（MILP）を用いた製造ラインの設備負荷平準化、AIアシスタントによる計画調整、多階層BOM（部品構成）管理、および柔軟なマスタ・トランザクションデータ管理を実現する生産"
-  },
-  {
-    "name": "note",
-    "start_month": "2026-03",
-    "start_date": "2026-03-16",
-    "latest_date": "2026-09-22",
-    "commit_count": 26,
-    "languages": [],
-    "frontend": [],
-    "backend": [],
-    "database": [],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)",
-      "MCP (Model Context Protocol)"
-    ],
-    "desc": "じゅーご（元・炒飯15）のnote.com投稿を管理するプロジェクト"
+    "desc": "数理最適化（MILP）による設備負荷平準化と生産計画自動立案システム。Rust計算エンジン連携。",
+    "display_month": "2026-03",
+    "desc_ja": "数理最適化（MILP）による設備負荷平準化と生産計画自動立案システム。Rust計算エンジン連携。",
+    "desc_en": "Production planning system with mathematical optimization (MILP) & Rust computation engine."
   },
   {
     "name": "myDB",
@@ -177,7 +59,113 @@
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "MCP (Model Context Protocol)"
     ],
-    "desc": "Supabase（PostgreSQL）に保存されたテントのデータベースを管理・閲覧し、Google Gemini AIを搭載したチャットアシスタントから自律的にデータを検索・UI操作の提案を行えるN"
+    "desc": "Supabase連携のアウトドアギア管理DB。Gemini AIアシスタントによる自律検索・操作提案。",
+    "display_month": "2026-04",
+    "desc_ja": "Supabase連携のアウトドアギア管理DB。Gemini AIアシスタントによる自律検索・操作提案。",
+    "desc_en": "Outdoor gear management DB with Supabase & autonomous Gemini AI chat assistant."
+  },
+  {
+    "name": "udon-db",
+    "start_month": "2026-05",
+    "start_date": "2026-05-19",
+    "latest_date": "2026-08-26",
+    "commit_count": 145,
+    "languages": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "Streamlit"
+    ],
+    "backend": [],
+    "database": [
+      "PostgreSQL",
+      "SQLite",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "Supabase東京リージョン＋Streamlitによる位置情報連動うどん店DB。Vercel本番一般公開。",
+    "display_month": "2026-05",
+    "desc_ja": "Supabase東京リージョン＋Streamlitによる位置情報連動うどん店DB。Vercel本番一般公開。",
+    "desc_en": "Geo-location restaurant database built with Supabase Tokyo & Streamlit on Vercel."
+  },
+  {
+    "name": "FieldStyle2026",
+    "start_month": "2026-05",
+    "start_date": "2026-05-02",
+    "latest_date": "2026-11-06",
+    "commit_count": 62,
+    "languages": [
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React",
+      "Vite"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "日本最大級アウトドア展示会の最短周回ルート探索PWA。オフライン対応＆Vercel本番公開中。",
+    "display_month": "2026-05",
+    "desc_ja": "日本最大級アウトドア展示会の最短周回ルート探索PWA。オフライン対応＆Vercel本番公開中。",
+    "desc_en": "Exhibition shortest navigation PWA with offline caching. Deployed on Vercel."
+  },
+  {
+    "name": "QuickFolderSize",
+    "start_month": "2026-05",
+    "start_date": "2026-05-29",
+    "latest_date": "2026-09-24",
+    "commit_count": 43,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)",
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Win32 APIを直接制御し、NTFSファイルツリーを数秒で超高速走査・集計するネイティブツール。",
+    "display_month": "2026-05",
+    "desc_ja": "Win32 APIを直接制御し、NTFSファイルツリーを数秒で超高速走査・集計するネイティブツール。",
+    "desc_en": "Native NTFS high-speed directory tree scanner utilizing Win32 Native APIs directly."
+  },
+  {
+    "name": "map_maker_cl",
+    "start_month": "2026-05",
+    "start_date": "2026-05-06",
+    "latest_date": "2026-11-03",
+    "commit_count": 22,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "Pythonによる自動地図・経路生成CLIツール。展示会フロアマップの座標変換を自動化。",
+    "display_month": "2026-05",
+    "desc_ja": "Pythonによる自動地図・経路生成CLIツール。展示会フロアマップの座標変換を自動化。",
+    "desc_en": "Python CLI tool for floor map coordinate conversion and optimal route generation."
   },
   {
     "name": "mail_manage",
@@ -204,54 +192,17 @@
       "MCP (Model Context Protocol)",
       "Win32 API / Windows Native"
     ],
-    "desc": "過去数か月の受信メールを分析し、**ドメイン＆キーワード両方**をOutlook受信ルール（InboxRule）に同期させるローカルWebアプリ。"
+    "desc": "過去メールの分析に基づき、ドメイン・キーワードをOutlook受信ルールへ自動同期するWebアプリ。",
+    "display_month": "2026-05",
+    "desc_ja": "過去メールの分析に基づき、ドメイン・キーワードをOutlook受信ルールへ自動同期するWebアプリ。",
+    "desc_en": "Outlook InboxRule synchronization Web app based on email history analysis."
   },
   {
-    "name": "FieldStyle2026",
-    "start_month": "2026-05",
-    "start_date": "2026-05-02",
-    "latest_date": "2026-11-06",
-    "commit_count": 62,
-    "languages": [
-      "Python",
-      "TypeScript"
-    ],
-    "frontend": [
-      "React",
-      "Vite"
-    ],
-    "backend": [],
-    "database": [],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)"
-    ],
-    "desc": "> [!CAUTION]"
-  },
-  {
-    "name": "map_maker_cl",
-    "start_month": "2026-05",
-    "start_date": "2026-05-06",
-    "latest_date": "2026-11-03",
-    "commit_count": 22,
-    "languages": [
-      "Python"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [],
-    "database": [],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)"
-    ],
-    "desc": "map maker for FieldStyle Navi"
-  },
-  {
-    "name": "QuickDiskRescue",
-    "start_month": "2026-05",
-    "start_date": "2026-05-19",
-    "latest_date": "2026-09-23",
-    "commit_count": 9,
+    "name": "QuickMarkPDF",
+    "start_month": "2018-05",
+    "start_date": "2018-05-15",
+    "latest_date": "2026-10-15",
+    "commit_count": 122,
     "languages": [
       "C++",
       "JavaScript",
@@ -260,65 +211,13 @@
     "frontend": [
       "HTML5/CSS3/Vanilla JS"
     ],
-    "backend": [
-      "Express"
-    ],
-    "database": [],
-    "tools_infra": [
-      "Win32 API / Windows Native"
-    ],
-    "desc": "Windows がマウントできないディスクから、フォルダ構造を保って別ドライブへ救出するツールです。ソースへは書き込みません。"
-  },
-  {
-    "name": "udon-db",
-    "start_month": "2026-05",
-    "start_date": "2026-05-19",
-    "latest_date": "2026-08-26",
-    "commit_count": 145,
-    "languages": [
-      "JavaScript",
-      "Python",
-      "SQL"
-    ],
-    "frontend": [
-      "Streamlit"
-    ],
     "backend": [],
-    "database": [
-      "PostgreSQL",
-      "SQLite",
-      "Supabase (PostgreSQL BaaS)"
-    ],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)",
-      "MCP (Model Context Protocol)"
-    ],
-    "desc": "香川うどんツアーの記録を管理するデータベースプロジェクト。"
-  },
-  {
-    "name": "QuickFolderSize",
-    "start_month": "2026-05",
-    "start_date": "2026-05-29",
-    "latest_date": "2026-09-24",
-    "commit_count": 43,
-    "languages": [
-      "C++",
-      "JavaScript",
-      "Python"
-    ],
-    "frontend": [
-      "Qt 6 / QML (Desktop GUI)"
-    ],
-    "backend": [
-      "Express"
-    ],
     "database": [],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)",
-      "MCP (Model Context Protocol)",
-      "Win32 API / Windows Native"
-    ],
-    "desc": "<p align=\"center\">"
+    "tools_infra": [],
+    "desc": "PythonからC++へ完全移植し30倍高速化したPDF図面一括注釈・マーキングエンジン。",
+    "display_month": "2026-06",
+    "desc_ja": "PythonからC++へ完全移植し30倍高速化したPDF図面一括注釈・マーキングエンジン。",
+    "desc_en": "C++ high-performance PDF annotation engine ported from Python (30x faster)."
   },
   {
     "name": "suuri-chat",
@@ -339,47 +238,29 @@
     "tools_infra": [
       "LLM API (OpenAI/Claude/Gemini/Ollama)"
     ],
-    "desc": "数学者の知性と詩人の心を持つ人生相談チャットアプリ。ユーザーの悩みや想いに、数学的な視点と京都の奥ゆかしさを持つ「数織（すうり）先生」が静かに寄り添う。"
+    "desc": "Gemini / OpenAI APIストリーミング対話。数学的知性と情緒を兼ね備えた人生相談AIチャット。",
+    "display_month": "2026-06",
+    "desc_ja": "Gemini / OpenAI APIストリーミング対話。数学的知性と情緒を兼ね備えた人生相談AIチャット。",
+    "desc_en": "Streaming AI chat app with empathetic persona powered by Gemini & OpenAI APIs."
   },
   {
-    "name": "AI_mensetsu",
-    "start_month": "2026-06",
-    "start_date": "2026-06-17",
-    "latest_date": "2026-06-22",
-    "commit_count": 0,
+    "name": "note",
+    "start_month": "2026-03",
+    "start_date": "2026-03-16",
+    "latest_date": "2026-09-22",
+    "commit_count": 26,
     "languages": [],
     "frontend": [],
     "backend": [],
     "database": [],
-    "tools_infra": [],
-    "desc": ""
-  },
-  {
-    "name": "seikan_2",
-    "start_month": "2026-06",
-    "start_date": "2026-06-22",
-    "latest_date": "2026-07-17",
-    "commit_count": 3,
-    "languages": [
-      "JavaScript",
-      "Python"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [
-      "Express"
-    ],
-    "database": [
-      "PostgreSQL",
-      "SQLite"
-    ],
     "tools_infra": [
-      "Excel/VBA連携",
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "MCP (Model Context Protocol)"
     ],
-    "desc": ""
+    "desc": "技術ナレッジの蓄積と外部ブログ（note.com）への自動投稿・構成管理基盤。",
+    "display_month": "2026-06",
+    "desc_ja": "技術ナレッジの蓄積と外部ブログ（note.com）への自動投稿・構成管理基盤。",
+    "desc_en": "Technical knowledge management and automated publication pipeline."
   },
   {
     "name": "SNS Management",
@@ -407,7 +288,56 @@
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "MCP (Model Context Protocol)"
     ],
-    "desc": "作業ディレクトリ: `C:\\Users\\makta\\source\\SNS_management`"
+    "desc": "Next.js App RouterとPostgreSQLによるSNS投稿管理・アナリティクスWebダッシュボード。",
+    "display_month": "2026-06",
+    "desc_ja": "Next.js App RouterとPostgreSQLによるSNS投稿管理・アナリティクスWebダッシュボード。",
+    "desc_en": "Social media management & analytics dashboard built with Next.js & PostgreSQL."
+  },
+  {
+    "name": "seikan_2",
+    "start_month": "2026-06",
+    "start_date": "2026-06-22",
+    "latest_date": "2026-07-17",
+    "commit_count": 3,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [
+      "PostgreSQL",
+      "SQLite"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "製造業向け製缶板金加工の原価見積・工数計算管理システム（Node.js Express + SQLite）。",
+    "display_month": "2026-06",
+    "desc_ja": "製造業向け製缶板金加工の原価見積・工数計算管理システム（Node.js Express + SQLite）。",
+    "desc_en": "Manufacturing sheet-metal cost estimation system (Node.js Express + SQLite)."
+  },
+  {
+    "name": "AI_mensetsu",
+    "start_month": "2026-06",
+    "start_date": "2026-06-17",
+    "latest_date": "2026-06-22",
+    "commit_count": 0,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": "STAR法（状況・課題・行動・成果）に基づく職能評価・模擬面接支援AIエンジン。",
+    "display_month": "2026-06",
+    "desc_ja": "STAR法（状況・課題・行動・成果）に基づく職能評価・模擬面接支援AIエンジン。",
+    "desc_en": "Competency evaluation & interview simulation AI engine based on STAR methodology."
   },
   {
     "name": "powerapps",
@@ -420,28 +350,10 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "desc": ""
-  },
-  {
-    "name": "project_me",
-    "start_month": "2026-07",
-    "start_date": "2026-07-02",
-    "latest_date": "2026-09-24",
-    "commit_count": 3,
-    "languages": [
-      "JavaScript"
-    ],
-    "frontend": [],
-    "backend": [],
-    "database": [
-      "PostgreSQL",
-      "Supabase (PostgreSQL BaaS)"
-    ],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)",
-      "MCP (Model Context Protocol)"
-    ],
-    "desc": "じゅーごの**残りの人生の下調べ**。"
+    "desc": "Microsoft Power AppsおよびPower Automateによる社内ローコードDX連携資産。",
+    "display_month": "2026-06",
+    "desc_ja": "Microsoft Power AppsおよびPower Automateによる社内ローコードDX連携資産。",
+    "desc_en": "Enterprise low-code DX assets integrating Microsoft Power Apps & Automate."
   },
   {
     "name": "Auto-X",
@@ -464,7 +376,38 @@
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "Playwright (Web RPA)"
     ],
-    "desc": "> **Version**: 3.0.0"
+    "desc": "自宅QNAP NAS Docker上で24時間常時稼働する自律型X自動化・監視バッチ運用基盤（170+コミット）。",
+    "display_month": "2026-07",
+    "desc_ja": "自宅QNAP NAS Docker上で24時間常時稼働する自律型X自動化・監視バッチ運用基盤（170+コミット）。",
+    "desc_en": "24/7 autonomous X automation & monitoring system running on QNAP NAS Docker."
+  },
+  {
+    "name": "shisaku-system",
+    "start_month": "2023-10",
+    "start_date": "2023-10-20",
+    "latest_date": "2026-11-02",
+    "commit_count": 33,
+    "languages": [
+      "JavaScript",
+      "Python",
+      "SQL"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Excel/VBA連携"
+    ],
+    "desc": "属人化したExcel原価見積マクロをFastAPI＋PostgreSQLの堅牢な内製Webシステムへ刷新。",
+    "display_month": "2026-07",
+    "desc_ja": "属人化したExcel原価見積マクロをFastAPI＋PostgreSQLの堅牢な内製Webシステムへ刷新。",
+    "desc_en": "Enterprise web system replacing legacy Excel macros with FastAPI & PostgreSQL."
   },
   {
     "name": "fabric",
@@ -483,7 +426,55 @@
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "MCP (Model Context Protocol)"
     ],
-    "desc": ""
+    "desc": "Microsoft Fabric LakehouseとAIエージェントを繋ぐ自作MCP（Model Context Protocol）ツール。",
+    "display_month": "2026-07",
+    "desc_ja": "Microsoft Fabric LakehouseとAIエージェントを繋ぐ自作MCP（Model Context Protocol）ツール。",
+    "desc_en": "Custom MCP (Model Context Protocol) tool integrating with Microsoft Fabric Lakehouse."
+  },
+  {
+    "name": "project_me",
+    "start_month": "2026-07",
+    "start_date": "2026-07-02",
+    "latest_date": "2026-09-24",
+    "commit_count": 3,
+    "languages": [
+      "JavaScript"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [
+      "PostgreSQL",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "長期的な技術習得ロードマップとキャリアプランニング支援ナレッジ基盤。",
+    "display_month": "2026-07",
+    "desc_ja": "長期的な技術習得ロードマップとキャリアプランニング支援ナレッジ基盤。",
+    "desc_en": "Long-term engineering roadmap and career planning knowledge base."
+  },
+  {
+    "name": "shokaku-2026",
+    "start_month": "2024-06",
+    "start_date": "2024-06-12",
+    "latest_date": "2026-08-05",
+    "commit_count": 1,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel/VBA連携"
+    ],
+    "desc": "職能資格基準に沿った日常業務実践記録およびSTAR法事実証明ドキュメント。",
+    "display_month": "2026-07",
+    "desc_ja": "職能資格基準に沿った日常業務実践記録およびSTAR法事実証明ドキュメント。",
+    "desc_en": "Competency standard tracking & STAR behavioral demonstration framework."
   },
   {
     "name": "camp",
@@ -509,29 +500,10 @@
       "Excel/VBA連携",
       "MCP (Model Context Protocol)"
     ],
-    "desc": "`original/キャンプギヤ.xlsx`（119シート、14MB）の内容をNotionに移行する作業。"
-  },
-  {
-    "name": "QuickFileCopy",
-    "start_month": "2026-08",
-    "start_date": "2026-08-13",
-    "latest_date": "2026-09-23",
-    "commit_count": 29,
-    "languages": [
-      "C++",
-      "Python"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [
-      "Express"
-    ],
-    "database": [],
-    "tools_infra": [
-      "Win32 API / Windows Native"
-    ],
-    "desc": "QuickFileCopyはWindows 10/11向けのネイティブ高速ファイルコピーアプリです。簡潔な操作、容量とファイル件数の分かる進捗、安全な置換、Windows固有メタデータの保持を重視し、"
+    "desc": "QNAP NAS Docker + Next.js standalone + Cloudflare Access ゼロトラスト運用の自前SaaS。",
+    "display_month": "2026-08",
+    "desc_ja": "QNAP NAS Docker + Next.js standalone + Cloudflare Access ゼロトラスト運用の自前SaaS。",
+    "desc_en": "Self-hosted SaaS on QNAP NAS Docker with Cloudflare Access Zero Trust & backup."
   },
   {
     "name": "QuickDiskBench",
@@ -555,7 +527,36 @@
     "tools_infra": [
       "Win32 API / Windows Native"
     ],
-    "desc": "<p align=\"center\">"
+    "desc": "ストレージI/Oベンチマーク測定とHTML5レポート可視化ツール。",
+    "display_month": "2026-08",
+    "desc_ja": "ストレージI/Oベンチマーク測定とHTML5レポート可視化ツール。",
+    "desc_en": "Storage I/O benchmark utility with HTML5 performance visualization."
+  },
+  {
+    "name": "QuickImageView",
+    "start_month": "2014-03",
+    "start_date": "2014-03-11",
+    "latest_date": "2026-09-23",
+    "commit_count": 55,
+    "languages": [
+      "C++",
+      "Python",
+      "TypeScript"
+    ],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Qt 6 / QMLとC++17によるGPUハードウェアアクセラレーション軽量画像ビューア・編集アプリ。",
+    "display_month": "2026-08",
+    "desc_ja": "Qt 6 / QMLとC++17によるGPUハードウェアアクセラレーション軽量画像ビューア・編集アプリ。",
+    "desc_en": "Ultra-fast GPU image viewer built with Qt 6 / QML and C++17 (60fps)."
   },
   {
     "name": "Quick7Zip",
@@ -578,32 +579,87 @@
     "tools_infra": [
       "Win32 API / Windows Native"
     ],
-    "desc": "Quick7Zipは、インストール済みの7-Zipを利用するWindows向け自動最適化フロントエンドです。ストレージ種別、CPU、メモリ、ファイル数、合計サイズ、ファイル構成を分析してから、実用的な"
+    "desc": "7-Zip DLL/CLI連携により、CPU・メモリ・ストレージを自動分析して最適圧縮するフロントエンド。",
+    "display_month": "2026-08",
+    "desc_ja": "7-Zip DLL/CLI連携により、CPU・メモリ・ストレージを自動分析して最適圧縮するフロントエンド。",
+    "desc_en": "Optimized frontend for 7-Zip with automatic hardware-aware compression tuning."
   },
   {
-    "name": "ap-drill",
-    "start_month": "2026-09",
-    "start_date": "2026-09-01",
-    "latest_date": "2026-10-12",
-    "commit_count": 10,
+    "name": "QuickFileCopy",
+    "start_month": "2026-08",
+    "start_date": "2026-08-13",
+    "latest_date": "2026-09-23",
+    "commit_count": 29,
     "languages": [
-      "JavaScript",
+      "C++",
       "Python"
     ],
     "frontend": [
       "HTML5/CSS3/Vanilla JS"
     ],
     "backend": [
-      "FastAPI"
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Win32バッファ制御・マルチスレッドによる大容量ファイル超高速ファイルコピーアプリ。",
+    "display_month": "2026-08",
+    "desc_ja": "Win32バッファ制御・マルチスレッドによる大容量ファイル超高速ファイルコピーアプリ。",
+    "desc_en": "Win32 native high-speed multithreaded file copy utility with metadata preservation."
+  },
+  {
+    "name": "jugo-shoten-web",
+    "start_month": "2026-08",
+    "start_date": "2026-08-20",
+    "latest_date": "2026-10-15",
+    "commit_count": 15,
+    "languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Cloudflare Workers"
     ],
     "database": [
-      "PostgreSQL",
-      "Supabase (PostgreSQL BaaS)"
+      "Cloudflare D1 / KV"
     ],
     "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+      "Cloudflare Pages",
+      "Wrangler"
     ],
-    "desc": ""
+    "desc": "Cloudflare Workers / Pagesによるエッジサーバーレス高速配信Webサイト（Wrangler）。",
+    "display_month": "2026-08",
+    "desc_ja": "Cloudflare Workers / Pagesによるエッジサーバーレス高速配信Webサイト（Wrangler）。",
+    "desc_en": "Serverless edge-rendered Web publication platform built on Cloudflare Workers/Pages."
+  },
+  {
+    "name": "mont-simu",
+    "start_month": "2026-09",
+    "start_date": "2026-09-07",
+    "latest_date": "2026-09-23",
+    "commit_count": 205,
+    "languages": [
+      "Python"
+    ],
+    "frontend": [
+      "Qt 6 / QML (Desktop GUI)"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "飲食店オペレーション確率統計シミュレータ（OPRISM）。待ち時間・配置最適化解析。",
+    "display_month": "2026-09",
+    "desc_ja": "飲食店オペレーション確率統計シミュレータ（OPRISM）。待ち時間・配置最適化解析。",
+    "desc_en": "Stochastic operations intelligence & queue simulation software (OPRISM)."
   },
   {
     "name": "shadowing-lab",
@@ -629,7 +685,10 @@
     "tools_infra": [
       "LLM API (OpenAI/Claude/Gemini/Ollama)"
     ],
-    "desc": "英語のリンキング（連結）・リダクション（弱形）・同化の聞き取り練習用Webアプリ。"
+    "desc": "英語の音変化（リンキング・リダクション）を聞き取り特訓する音声学習Webアプリ。",
+    "display_month": "2026-09",
+    "desc_ja": "英語の音変化（リンキング・リダクション）を聞き取り特訓する音声学習Webアプリ。",
+    "desc_en": "English speech phonetics shadowing practice Web app (FastAPI + Supabase)."
   },
   {
     "name": "auto-window",
@@ -652,68 +711,36 @@
       "Win32 API / Windows Native",
       "pywinauto (Windows RPA)"
     ],
-    "desc": "Windowsアプリを自動操作するためのツール。既存の商用RPA(Power Automate Desktop / UiPath等)や、"
+    "desc": "商用RPA不要。pywinauto（デスクトップUIA）× Playwright（Web）のハイブリッド自動化基盤。",
+    "display_month": "2026-09",
+    "desc_ja": "商用RPA不要。pywinauto（デスクトップUIA）× Playwright（Web）のハイブリッド自動化基盤。",
+    "desc_en": "Hybrid automation platform combining pywinauto (Windows UIA) & Playwright (Web)."
   },
   {
-    "name": "mont-simu",
+    "name": "agent-loop-demo",
     "start_month": "2026-09",
-    "start_date": "2026-09-07",
-    "latest_date": "2026-09-23",
-    "commit_count": 205,
+    "start_date": "2026-09-15",
+    "latest_date": "2026-09-20",
+    "commit_count": 12,
     "languages": [
-      "Python"
+      "TypeScript",
+      "JavaScript"
     ],
     "frontend": [
-      "Qt 6 / QML (Desktop GUI)"
+      "Jest / CLI"
     ],
-    "backend": [],
+    "backend": [
+      "Node.js"
+    ],
     "database": [],
     "tools_infra": [
-      "Excel/VBA連携",
-      "LLM API (OpenAI/Claude/Gemini/Ollama)",
-      "MCP (Model Context Protocol)"
+      "自律AIループ (Ralph Loop)",
+      "TDD自己修復"
     ],
-    "desc": "**OPRISM**（オプリズム、Operations × Prism の造語。英語表記: *OPRISM — Stochastic Operations Intelligence*）は、飲食店オペレ"
-  },
-  {
-    "name": "QuickRightClick",
-    "start_month": "2026-09",
-    "start_date": "2026-09-07",
-    "latest_date": "2026-09-07",
-    "commit_count": 1,
-    "languages": [
-      "C++",
-      "JavaScript",
-      "Python"
-    ],
-    "frontend": [
-      "HTML5/CSS3/Vanilla JS"
-    ],
-    "backend": [],
-    "database": [],
-    "tools_infra": [
-      "Win32 API / Windows Native"
-    ],
-    "desc": "<p align=\"center\">"
-  },
-  {
-    "name": "shinsa-2026",
-    "start_month": "2026-09",
-    "start_date": "2026-09-16",
-    "latest_date": "2026-09-17",
-    "commit_count": 0,
-    "languages": [
-      "Python"
-    ],
-    "frontend": [],
-    "backend": [],
-    "database": [],
-    "tools_infra": [
-      "Excel/VBA連携",
-      "Win32 API / Windows Native",
-      "pywinauto (Windows RPA)"
-    ],
-    "desc": "生技本部昇格審査のフィードバックシート（xlsx）を集計するスクリプト。"
+    "desc": "Jestテスト失敗をAI自身が解析・コード自己修正して再検証する自律AIループ（Ralph Loop）の実証。",
+    "display_month": "2026-09",
+    "desc_ja": "Jestテスト失敗をAI自身が解析・コード自己修正して再検証する自律AIループ（Ralph Loop）の実証。",
+    "desc_en": "Autonomous self-healing AI loop (Ralph Loop) fixing code failures automatically."
   },
   {
     "name": "QuickDock",
@@ -735,7 +762,149 @@
     ],
     "database": [],
     "tools_infra": [],
-    "desc": "Windows 用の枠なしフローティングドック。ショートカットをドロップして格納し、ホバーで展開、クリックで起動する。"
+    "desc": "C# (.NET 10) とWPFによる枠なし半透明グラスモーフィズム常駐型フローティングランチャー。",
+    "display_month": "2026-09",
+    "desc_ja": "C# (.NET 10) とWPFによる枠なし半透明グラスモーフィズム常駐型フローティングランチャー。",
+    "desc_en": "Windows floating dock launcher built with C# (.NET 10) and WPF glassmorphism."
+  },
+  {
+    "name": "ap-drill",
+    "start_month": "2026-09",
+    "start_date": "2026-09-01",
+    "latest_date": "2026-10-12",
+    "commit_count": 10,
+    "languages": [
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "FastAPI"
+    ],
+    "database": [
+      "PostgreSQL",
+      "Supabase (PostgreSQL BaaS)"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "応用情報技術者試験の過去問演習Webアプリ（FastAPI + Supabase）。進捗管理と分野別演習。",
+    "display_month": "2026-09",
+    "desc_ja": "応用情報技術者試験の過去問演習Webアプリ（FastAPI + Supabase）。進捗管理と分野別演習。",
+    "desc_en": "Applied Information Technology Engineer Exam study drill Web app (FastAPI + Supabase)."
+  },
+  {
+    "name": "QuickDiskRescue",
+    "start_month": "2026-05",
+    "start_date": "2026-05-19",
+    "latest_date": "2026-09-23",
+    "commit_count": 9,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [
+      "Express"
+    ],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "マウント不能となった破損ドライブから、NTFS構造を解析して別ドライブへ直接救出するC++ツール。",
+    "display_month": "2026-09",
+    "desc_ja": "マウント不能となった破損ドライブから、NTFS構造を解析して別ドライブへ直接救出するC++ツール。",
+    "desc_en": "C++ data rescue tool recovering files from unmountable raw disk drives."
+  },
+  {
+    "name": "obsidian-claude",
+    "start_month": "2026-09",
+    "start_date": "2026-09-23",
+    "latest_date": "2026-09-23",
+    "commit_count": 8,
+    "languages": [
+      "Markdown",
+      "Python"
+    ],
+    "frontend": [
+      "Obsidian"
+    ],
+    "backend": [
+      "Claude API"
+    ],
+    "database": [
+      "ローカルVault"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
+    ],
+    "desc": "ObsidianローカルナレッジVaultとClaude APIを双方向連携させた業務セカンドブレイン基盤。",
+    "display_month": "2026-09",
+    "desc_ja": "ObsidianローカルナレッジVaultとClaude APIを双方向連携させた業務セカンドブレイン基盤。",
+    "desc_en": "Second brain knowledge management system integrating Obsidian with Claude API."
+  },
+  {
+    "name": "LLM-manage",
+    "start_month": "2026-09",
+    "start_date": "2026-09-29",
+    "latest_date": "2026-09-30",
+    "commit_count": 7,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "ローカルLLM環境および複数AIモデルの切り替え・実行管理スクリプト群。",
+    "display_month": "2026-09",
+    "desc_ja": "ローカルLLM環境および複数AIモデルの切り替え・実行管理スクリプト群。",
+    "desc_en": "Local LLM model lifecycle and prompt configuration management scripts."
+  },
+  {
+    "name": "gleam",
+    "start_month": "1970-01",
+    "start_date": "1970-01-01",
+    "latest_date": "2026-10-06",
+    "commit_count": 5,
+    "languages": [
+      "Gleam",
+      "JavaScript"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [
+      "SQLite"
+    ],
+    "tools_infra": [],
+    "desc": "Erlang BEAM仮想マシン上で動作する新世代型安全言語Gleamによる高並行死活監視CLI。",
+    "display_month": "2026-09",
+    "desc_ja": "Erlang BEAM仮想マシン上で動作する新世代型安全言語Gleamによる高並行死活監視CLI。",
+    "desc_en": "Concurrent health-check CLI built with Gleam on the Erlang BEAM virtual machine."
+  },
+  {
+    "name": "panzer-front",
+    "start_month": "2026-09",
+    "start_date": "2026-09-29",
+    "latest_date": "2026-10-20",
+    "commit_count": 2,
+    "languages": [],
+    "frontend": [],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": "GUIゲーム研究およびリアルタイムグラフィックス描画シミュレーション。",
+    "display_month": "2026-09",
+    "desc_ja": "GUIゲーム研究およびリアルタイムグラフィックス描画シミュレーション。",
+    "desc_en": "Real-time graphics rendering and tactical simulation research project."
   },
   {
     "name": "project-LLM",
@@ -755,57 +924,112 @@
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "Win32 API / Windows Native"
     ],
-    "desc": "VS Code + Continue で、ローカルLLM（自宅 Mac の Ollama・Qwen3-Coder-30B）を使うための設定と修正手順をまとめたフォルダ。"
+    "desc": "OllamaによるローカルLLM（30Bモデル）の環境構築とVS Code / Continueプロンプトハック。",
+    "display_month": "2026-09",
+    "desc_ja": "OllamaによるローカルLLM（30Bモデル）の環境構築とVS Code / Continueプロンプトハック。",
+    "desc_en": "Local LLM (30B) configuration and prompt engineering integration for VS Code."
   },
   {
-    "name": "LLM-manage",
+    "name": "QuickRightClick",
     "start_month": "2026-09",
-    "start_date": "2026-09-29",
-    "latest_date": "2026-09-30",
-    "commit_count": 7,
-    "languages": [],
+    "start_date": "2026-09-07",
+    "latest_date": "2026-09-07",
+    "commit_count": 1,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "frontend": [
+      "HTML5/CSS3/Vanilla JS"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Windowsエクスプローラーの右クリックコンテキストメニュー高速拡張C++ユーティリティ。",
+    "display_month": "2026-09",
+    "desc_ja": "Windowsエクスプローラーの右クリックコンテキストメニュー高速拡張C++ユーティリティ。",
+    "desc_en": "Windows Explorer right-click context menu native C++ extension utility."
+  },
+  {
+    "name": "shinsa-2026",
+    "start_month": "2026-09",
+    "start_date": "2026-09-16",
+    "latest_date": "2026-09-17",
+    "commit_count": 0,
+    "languages": [
+      "Python"
+    ],
     "frontend": [],
     "backend": [],
     "database": [],
     "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+      "Excel/VBA連携",
+      "Win32 API / Windows Native",
+      "pywinauto (Windows RPA)"
     ],
-    "desc": ""
+    "desc": "社内技術部門の業務プロセス・評価シート自動集計Pythonスクリプト。",
+    "display_month": "2026-09",
+    "desc_ja": "社内技術部門の業務プロセス・評価シート自動集計Pythonスクリプト。",
+    "desc_en": "Automated evaluation sheet aggregation & analytics script for technical departments."
   },
   {
-    "name": "panzer-front",
-    "start_month": "2026-09",
-    "start_date": "2026-09-29",
-    "latest_date": "2026-10-20",
-    "commit_count": 2,
-    "languages": [],
-    "frontend": [],
-    "backend": [],
-    "database": [],
-    "tools_infra": [],
-    "desc": ""
-  },
-  {
-    "name": "supplier-manage",
+    "name": "chumonsho-2seikan",
     "start_month": "2026-10",
-    "start_date": "2026-10-01",
-    "latest_date": "2026-10-05",
-    "commit_count": 2,
+    "start_date": "2026-10-12",
+    "latest_date": "2026-11-06",
+    "commit_count": 88,
     "languages": [
+      "JavaScript",
       "Python",
       "SQL"
     ],
     "frontend": [
-      "Qt 6 / QML (Desktop GUI)"
+      "HTML5/CSS3/Vanilla JS"
     ],
     "backend": [],
     "database": [
       "PostgreSQL"
     ],
     "tools_infra": [
-      "Excel/VBA連携"
+      "Excel/VBA連携",
+      "LLM API (OpenAI/Claude/Gemini/Ollama)",
+      "MCP (Model Context Protocol)"
     ],
-    "desc": ""
+    "desc": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（88+コミット）。",
+    "display_month": "2026-10",
+    "desc_ja": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（88+コミット）。",
+    "desc_en": "Automotive EDI fixed-length message parser & PostgreSQL normalizer (88+ commits)."
+  },
+  {
+    "name": "buhin-jisseki",
+    "start_month": "2026-10",
+    "start_date": "2026-10-28",
+    "latest_date": "2026-10-29",
+    "commit_count": 6,
+    "languages": [
+      "TypeScript"
+    ],
+    "frontend": [
+      "React",
+      "Vite"
+    ],
+    "backend": [
+      "FastAPI",
+      "Fastify"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "LLM API (OpenAI/Claude/Gemini/Ollama)"
+    ],
+    "desc": "社内原価実績DBを安全・最小権限で抽出するTypeScript + Fastify読取専用REST APIサーバー。",
+    "display_month": "2026-10",
+    "desc_ja": "社内原価実績DBを安全・最小権限で抽出するTypeScript + Fastify読取専用REST APIサーバー。",
+    "desc_en": "Read-only secure REST API server for procurement cost DB built with Fastify & TypeScript."
   },
   {
     "name": "bunai-server",
@@ -822,7 +1046,10 @@
     "tools_infra": [
       "Excel/VBA連携"
     ],
-    "desc": "作成: 2026-10-28 / 更新: 2026-10-28(類似情報8ファイルと、手順書の出典4ファイルを、それぞれ ZIP へ退避し、元ファイルを削除)"
+    "desc": "PowerShellによる部門専用PostgreSQLサーバーの無人自動構築・ロール権限管理・バックアップ自動化。",
+    "display_month": "2026-10",
+    "desc_ja": "PowerShellによる部門専用PostgreSQLサーバーの無人自動構築・ロール権限管理・バックアップ自動化。",
+    "desc_en": "Automated on-premise PostgreSQL server provisioning with PowerShell scripts."
   },
   {
     "name": "jinji-db",
@@ -851,32 +1078,55 @@
       "Excel/VBA連携",
       "Win32 API / Windows Native"
     ],
-    "desc": "試作部の人事リスト(`excel/試作部人事リスト 1.xlsm` の VBA が作っていたもの)を、AD から取得して PostgreSQL に蓄積し、Web で閲覧する。"
+    "desc": "社内Active Directoryから組織・社員マスタを自動巡回取得しPostgreSQLに同期するReact+FastAPI基盤。",
+    "display_month": "2026-10",
+    "desc_ja": "社内Active Directoryから組織・社員マスタを自動巡回取得しPostgreSQLに同期するReact+FastAPI基盤。",
+    "desc_en": "Enterprise Active Directory HR master synchronization system with React & FastAPI."
   },
   {
-    "name": "chumonsho-2seikan",
+    "name": "supplier-manage",
     "start_month": "2026-10",
-    "start_date": "2026-10-12",
-    "latest_date": "2026-11-06",
-    "commit_count": 88,
+    "start_date": "2026-10-01",
+    "latest_date": "2026-10-05",
+    "commit_count": 2,
     "languages": [
-      "JavaScript",
       "Python",
       "SQL"
     ],
     "frontend": [
-      "HTML5/CSS3/Vanilla JS"
+      "Qt 6 / QML (Desktop GUI)"
     ],
     "backend": [],
     "database": [
       "PostgreSQL"
     ],
     "tools_infra": [
-      "Excel/VBA連携",
-      "LLM API (OpenAI/Claude/Gemini/Ollama)",
-      "MCP (Model Context Protocol)"
+      "Excel/VBA連携"
     ],
-    "desc": "トヨタ次世代調達EDI形式（TMCPack）の固定長Shift_JISテキストファイルを自動解析（パース）し、PostgreSQLデータベースへ正規化格納するとともに、Webブラウザ上で直感的に検索・"
+    "desc": "サプライヤー取引・調達実績を管理するQt 6 / Python / PostgreSQLデスクトップ管理基盤。",
+    "display_month": "2026-10",
+    "desc_ja": "サプライヤー取引・調達実績を管理するQt 6 / Python / PostgreSQLデスクトップ管理基盤。",
+    "desc_en": "Procurement supplier management desktop system with Qt 6, Python & PostgreSQL."
+  },
+  {
+    "name": "game-tank",
+    "start_month": "2026-10",
+    "start_date": "2026-10-22",
+    "latest_date": "2026-10-22",
+    "commit_count": 1,
+    "languages": [
+      "JavaScript"
+    ],
+    "frontend": [
+      "Vite"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [],
+    "desc": "ViteとHTML5 Canvasで制作した2D戦車アクションゲーム。軽量かつスムーズな物理挙動。",
+    "display_month": "2026-10",
+    "desc_ja": "ViteとHTML5 Canvasで制作した2D戦車アクションゲーム。軽量かつスムーズな物理挙動。",
+    "desc_en": "2D tank action game built with Vite & HTML5 Canvas with smooth 60fps physics."
   },
   {
     "name": "ikusei-taikei-2026",
@@ -889,7 +1139,10 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "desc": ""
+    "desc": "技術者人材育成体系およびSTAR法キャリアシートの標準化テンプレート。",
+    "display_month": "2026-10",
+    "desc_ja": "技術者人材育成体系およびSTAR法キャリアシートの標準化テンプレート。",
+    "desc_en": "Engineering talent development framework & STAR method competency template."
   },
   {
     "name": "work",
@@ -907,48 +1160,9 @@
     "backend": [],
     "database": [],
     "tools_infra": [],
-    "desc": ""
-  },
-  {
-    "name": "game-tank",
-    "start_month": "2026-10",
-    "start_date": "2026-10-22",
-    "latest_date": "2026-10-22",
-    "commit_count": 1,
-    "languages": [
-      "JavaScript"
-    ],
-    "frontend": [
-      "Vite"
-    ],
-    "backend": [],
-    "database": [],
-    "tools_infra": [],
-    "desc": ""
-  },
-  {
-    "name": "buhin-jisseki",
-    "start_month": "2026-10",
-    "start_date": "2026-10-28",
-    "latest_date": "2026-10-29",
-    "commit_count": 6,
-    "languages": [
-      "TypeScript"
-    ],
-    "frontend": [
-      "React",
-      "Vite"
-    ],
-    "backend": [
-      "FastAPI",
-      "Fastify"
-    ],
-    "database": [
-      "PostgreSQL"
-    ],
-    "tools_infra": [
-      "LLM API (OpenAI/Claude/Gemini/Ollama)"
-    ],
-    "desc": "部品購入原価実績DB API(試作) Fastify+TypeScript+PostgreSQL"
+    "desc": "React + Vite + TypeScriptによるモダンフロントエンド試作アプリケーション。",
+    "display_month": "2026-10",
+    "desc_ja": "React + Vite + TypeScriptによるモダンフロントエンド試作アプリケーション。",
+    "desc_en": "Modern frontend prototyping application built with React, Vite & TypeScript."
   }
 ]
