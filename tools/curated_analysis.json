@@ -68,7 +68,7 @@
     "name": "udon-db",
     "start_month": "2026-05",
     "start_date": "2026-05-19",
-    "latest_date": "2026-08-26",
+    "latest_date": "2026-11-18",
     "commit_count": 145,
     "languages": [
       "JavaScript",
@@ -359,8 +359,8 @@
     "name": "Auto-X",
     "start_month": "2026-07",
     "start_date": "2026-07-23",
-    "latest_date": "2026-09-24",
-    "commit_count": 170,
+    "latest_date": "2026-11-19",
+    "commit_count": 190,
     "languages": [
       "Python",
       "SQL"
@@ -382,11 +382,11 @@
     "desc_en": "24/7 autonomous X automation & monitoring system running on QNAP NAS Docker."
   },
   {
-    "name": "shisaku-system",
+    "name": "genka-keisan",
     "start_month": "2023-10",
     "start_date": "2023-10-20",
-    "latest_date": "2026-11-02",
-    "commit_count": 33,
+    "latest_date": "2026-11-19",
+    "commit_count": 37,
     "languages": [
       "JavaScript",
       "Python",
@@ -404,10 +404,10 @@
     "tools_infra": [
       "Excel/VBA連携"
     ],
-    "desc": "属人化したExcel原価見積マクロをFastAPI＋PostgreSQLの堅牢な内製Webシステムへ刷新。",
+    "desc": "試作原価計算・見積シミュレーションエンジン（FastAPI + PostgreSQL + React）",
     "display_month": "2026-07",
-    "desc_ja": "属人化したExcel原価見積マクロをFastAPI＋PostgreSQLの堅牢な内製Webシステムへ刷新。",
-    "desc_en": "Enterprise web system replacing legacy Excel macros with FastAPI & PostgreSQL."
+    "desc_ja": "試作原価計算・見積シミュレーションエンジン（FastAPI + PostgreSQL + React）",
+    "desc_en": "Cost Calculation & Prototype Quotation Engine (FastAPI + PostgreSQL + React)"
   },
   {
     "name": "fabric",
@@ -979,8 +979,8 @@
     "name": "chumonsho-2seikan",
     "start_month": "2026-10",
     "start_date": "2026-10-12",
-    "latest_date": "2026-11-17",
-    "commit_count": 104,
+    "latest_date": "2026-11-19",
+    "commit_count": 105,
     "languages": [
       "JavaScript",
       "Python",

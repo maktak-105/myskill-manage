@@ -37,7 +37,7 @@ timeline
 | | **Vercel デプロイ・公開** | [FieldStyle2026](#FieldStyle2026)（展示会ナビPWA本番公開）, [udon-db](#udon-db)（香川うどんツアーDB本番公開） |
 | | **Cloudflare Workers / Pages** | [jugo-shoten-web](#jugo-shoten-web)（WranglerによるエッジサーバーレスWeb配信）, [line-harness](#line-harness)（Workers + D1 + R2 上のLINE公式アカウント基盤の運用ドキュメント） |
 | | **GitHub Actions** | [Auto-X](#Auto-X)（最初期のCI/CDクラウド自動化実行から自宅NAS自前インフラへの進化） |
-| **主要言語** | **Python** | [myerp](#myerp), [Auto-X](#Auto-X), [shisaku-system](#shisaku-system), [jinji-db](#jinji-db), [camp](#camp), [udon-db](#udon-db)（バックエンド・自動化・データエンジニアリングの基幹） |
+| **主要言語** | **Python** | [myerp](#myerp), [Auto-X](#Auto-X), [genka-keisan](#genka-keisan), [jinji-db](#jinji-db), [camp](#camp), [udon-db](#udon-db)（バックエンド・自動化・データエンジニアリングの基幹） |
 | | **C++** | [QuickImageView](#QuickImageView) (Qt 6), [QuickMarkPDF](#QuickMarkPDF), [QuickFolderSize](#QuickFolderSize), [QuickFileCopy](#QuickFileCopy), [QuickDiskRescue](#QuickDiskRescue)（高速I/O、Win32、メモリ・ポインタ制御） |
 | | **C# (.NET 10)** | [QuickDock](#QuickDock)（Windowsデスクトップ常駐型ドッキングランチャー、WinForms / WPF） |
 | | **TypeScript / JavaScript** | [FieldStyle2026](#FieldStyle2026), [myDB](#myDB), [suuri-chat](#suuri-chat), [SNS Management](#SNS%20Management), [jugo-shoten-web](#jugo-shoten-web), [game-tank](#game-tank) |
@@ -54,13 +54,13 @@ timeline
 | | **pywebview / WebUI** | [auto-window](#auto-window), [QuickDiskBench](#QuickDiskBench)（HTML/CSS/JSを用いた軽量デスクトップUI） |
 | | **WebView2 + Go WASM UI** | [QuickNetScan](#QuickNetScan)（Win32 WebView2ホスト上でGo製WASM UIを表示する単一EXE） |
 | | **Streamlit** | [udon-db](#udon-db)（データ探索・管理ダッシュボード） |
-| **バックエンド** | **FastAPI** | [myerp](#myerp), [shisaku-system](#shisaku-system), [ap-drill](#ap-drill), [shadowing-lab](#shadowing-lab), [chumonsho-2seikan](#chumonsho-2seikan), [jinji-db](#jinji-db) |
+| **バックエンド** | **FastAPI** | [myerp](#myerp), [genka-keisan](#genka-keisan), [ap-drill](#ap-drill), [shadowing-lab](#shadowing-lab), [chumonsho-2seikan](#chumonsho-2seikan), [jinji-db](#jinji-db) |
 | | **Fastify (Node.js / TypeScript)** | [buhin-jisseki](#buhin-jisseki)（購入部品原価実績DB 読取専用セキュアREST APIサーバー） |
 | | **Spring Boot (Java 25)** | [Spring-boot](#Spring-boot)（購入実績DB 参照専用REST API。FastAPI・Fastify実装との3系統比較） |
 | | **Rust Backend** | [myerp/erp-backend-rs](#myerp/erp-backend-rs) (Cargoベース) |
 | | **Express (Node.js)** | [QuickDiskBench](#QuickDiskBench), [seikan_2](#seikan_2) 等のローカルAPIサーバー |
 | **データベース** | **PostgreSQL (QNAP NAS Docker)** | [Auto-X](#Auto-X) (`autox_db`), [camp](#camp) (`camp_db` + 14世代ローテーションバックアップ) |
-| | **PostgreSQL (社内オンプレ)** | [bunai-server](#bunai-server) (部内専用サーバー自動構築・運用), [jinji-db](#jinji-db), [chumonsho-2seikan](#chumonsho-2seikan), [shisaku-system](#shisaku-system) |
+| | **PostgreSQL (社内オンプレ)** | [bunai-server](#bunai-server) (部内専用サーバー自動構築・運用), [jinji-db](#jinji-db), [chumonsho-2seikan](#chumonsho-2seikan), [genka-keisan](#genka-keisan) |
 | | **Supabase (PostgreSQL BaaS)** | [udon-db](#udon-db) (東京リージョン), [myDB](#myDB), [ap-drill](#ap-drill), [shadowing-lab](#shadowing-lab)（Auth/RLS/クラウド連携） |
 | | **Active Directory / LDAP** | [jinji-db](#jinji-db)（組織・人事・社員情報の自動取得・同期） |
 | | **Notion API / 突合** | [camp](#camp)（119シート・14MB Excelからのデータ移行、文字化けゼロDiff検証） |
@@ -110,7 +110,7 @@ timeline
 - **習得・活用技術**: Playwright, GitHub Actions (CI/CD自動実行), Microsoft Fabric / OneLake Lakehouse, MCP (Model Context Protocol), 大規模業務自動化
 - **主要プロジェクト**:
   - [Auto-X](#Auto-X) (170コミット): 業務プロセスのフルオートメーションを実現する大規模自動化基盤。**初期は GitHub Actions によるクラウド自動実行を採用**し、のちに自宅NASのDocker環境へ自律発展。
-  - [shisaku-system](#shisaku-system): 従来の「Excel＋VBAマクロ」による原価見積業務を、FastAPI + PostgreSQL + Web内製システムへ移行するDX基盤。
+  - [genka-keisan](#genka-keisan): 従来の「Excel＋VBAマクロ」による原価見積業務を、FastAPI + PostgreSQL + Web内製システムへ移行するDX基盤。
   - [fabric](#fabric): Microsoft Fabric / OneLake LakehouseをAIエージェントから操作するためのMCPツール開発。
   - [seikan_2](#seikan_2): 製缶・受発注業務DXシステム。
 

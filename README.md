@@ -16,8 +16,8 @@
 
 ### 📊 全体サマリー
 - **総開発プロジェクト数**: 50+ プロジェクト
-- **駆使・習得言語**: 11 言語（Python, TypeScript, JavaScript, C++, C#, Rust, Go, Java, Gleam, PowerShell, SQL）
-- **総 Git コミット数**: 1,460+ コミット
+- **駆使・習得言語**: 12 言語（Python, TypeScript, JavaScript, C++, C#, Rust, Go, Java, Gleam, PowerShell, SQL, Markdown）
+- **総 Git コミット数**: 1,490+ コミット
 - **6大中核ケイパビリティ領域**:
   1. 🏢 **業務基盤DX・基幹内製化** (Excel脱却、大手自動車調達EDI固定長パース、原価実績Fastify API、AD人事同期)
   2. 🌐 **自宅NAS・クラウド・公開Web** (QNAP NAS Docker、PostgreSQL 16、Cloudflare Tunnel/Access、Vercel/PWA)
@@ -41,8 +41,8 @@ This repository serves as a unified engineering portfolio and capability trackin
 
 ### 📊 Overall Highlights
 - **Total Projects**: 50+ Production & R&D projects
-- **Core Languages**: 11 Languages (Python, TypeScript, JavaScript, C++, C#, Rust, Go, Java, Gleam, PowerShell, SQL)
-- **Total Commits**: 1,460+ Git commits
+- **Core Languages**: 12 Languages (Python, TypeScript, JavaScript, C++, C#, Rust, Go, Java, Gleam, PowerShell, SQL, Markdown)
+- **Total Commits**: 1,490+ Git commits
 - **6 Core Engineering Capability Domains**:
   1. 🏢 **Enterprise DX & Core Systems**: Legacy Excel migration, Automotive EDI parser, Read-only cost API (Fastify), Active Directory sync.
   2. 🌐 **Self-Hosted Cloud & Public Web**: 24/7 QNAP NAS Docker, PostgreSQL 16, Cloudflare Access Zero Trust, Vercel PWA.

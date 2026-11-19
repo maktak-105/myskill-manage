@@ -1,7 +1,7 @@
 # 🚀 半年間のスキル習得＆「できるようになったこと」ケイパビリティマップ
 
 > **対象期間**: 2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）  
-> **開発規模**: 全50プロジェクト / 総コミット数 1,460+ / 11言語 / 自宅NAS・インフラ〜低レイヤ〜クラウド公開まで全方位網羅
+> **開発規模**: 全50プロジェクト / 総コミット数 1,490+ / 12言語 / 自宅NAS・インフラ〜低レイヤ〜クラウド公開まで全方位網羅
 
 ---
 
@@ -60,13 +60,13 @@ mindmap
 
 | できるようになったこと（能力・解決課題） | 活用・習得したスキル | 代表プロジェクト |
 | :--- | :--- | :--- |
-| **Excel/VBA見積業務の脱却とWeb化**<br>膨大なマクロに依存した原価見積を、ブラウザ上で誰でも入力・承認できるデータベース連動システムへ移行 | Python, FastAPI, PostgreSQL, HTML5/CSS, SQLチューニング | [shisaku-system](#shisaku-system) |
+| **Excel/VBA見積業務の脱却とWeb化**<br>膨大なマクロに依存した原価見積を、ブラウザ上で誰でも入力・承認できるデータベース連動システムへ移行 | Python, FastAPI, PostgreSQL, HTML5/CSS, SQLチューニング | [genka-keisan](#genka-keisan) |
 | **得意先ユニーク調達EDI固定長電文の自動解析**<br>Shift_JIS固定長テキスト電文を自動パースし、リレーショナルDBへ正規化格納するミッションクリティカル処理（100+コミット） | Python (バイナリ/文字コード処理), PostgreSQL, 正規表現, トランザクション管理 | [chumonsho-2seikan](#chumonsho-2seikan) |
 | **購入部品原価実績DBの安全参照REST API構築**<br>基幹サーバー上の機密実績データを、最小権限・接続数制御・ローカル限定で安全にAPI提供（Fastify/TypeScript） | Node.js, Fastify, TypeScript, PostgreSQL, REST API設計 | [buhin-jisseki](#buhin-jisseki) |
 | **Active Directory（AD）連携による人事マスタ自動同期**<br>組織・社員・役職データをADから自動取得し、常に最新の権限・人事DBを社内に提供 | Python (LDAP/AD連携), PostgreSQL, React, Vite, FastAPI | [jinji-db](#jinji-db) |
 | **数理最適化アルゴリズムによる設備負荷平準化**<br>多階層BOM（部品構成）と設備の制約条件から、混合整数線形計画法（MILP）で最適な生産計画を自動算出 | Python (PuLP/SciPy), Pandas, FastAPI, Rust (高速化エンジン) | [myerp](#myerp) |
 | **部内専用PostgreSQLサーバーの構築・自動運用**<br>PowerShellで自動セットアップし、ロール・権限管理、Power Automate連携、IT部門向け手順書まで整備 | PowerShell, PostgreSQL運用管理, セキュリティ設計, バッチ自動化 | [bunai-server](#bunai-server) |
-| **同一APIの3系統実装・比較（FastAPI / Fastify / Spring Boot）**<br>購入実績DBを参照する同一REST APIをPython・TypeScript・Java 25の3言語で実装し、DTO・金額型(BigDecimal)・DBアクセス・トランザクション・例外処理の違いを比較表に整理 | Java 25, Spring Boot 3.5, Gradle, FastAPI, Fastify, PostgreSQL, REST API設計 | [Spring-boot](#Spring-boot), [shisaku-system](#shisaku-system), [buhin-jisseki](#buhin-jisseki) |
+| **同一APIの3系統実装・比較（FastAPI / Fastify / Spring Boot）**<br>購入実績DBを参照する同一REST APIをPython・TypeScript・Java 25の3言語で実装し、DTO・金額型(BigDecimal)・DBアクセス・トランザクション・例外処理の違いを比較表に整理 | Java 25, Spring Boot 3.5, Gradle, FastAPI, Fastify, PostgreSQL, REST API設計 | [Spring-boot](#Spring-boot), [genka-keisan](#genka-keisan), [buhin-jisseki](#buhin-jisseki) |
 
 ---
 
