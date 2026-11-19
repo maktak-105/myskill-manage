@@ -17,7 +17,7 @@
 | **2026.07**<br>（大規模DX） | — | — | — | **Playwright** (ブラウザ高速自動化) | — | **GitHub Actions** (CI/CD クラウド自動実行) | **Microsoft Fabric Lakehouse** × MCP |
 | **2026.08**<br>（GPU・低レイヤ） | — | — | **Qt 6 / QML**<br>(GPUハードウェアアクセラレーション) | **7-Zip DLL / CLI SDK**<br>Win32 I/Oバッファ制御 | **Cloudflare D1** (Serverless SQL)<br>Cloudflare KV (Key-Value) | **Cloudflare Workers** (エッジサーバーレス)<br>**Cloudflare Pages**<br>Wrangler CLI | Notion API 完全突合バッチ |
 | **2026.09**<br>（先端自律AI・C#） | **C#** (.NET 10)<br>**PowerShell**<br>**Gleam** (BEAM言語)<br>Markdown | — | **WPF** (XAML)<br>**Windows Forms** (WinForms)<br>**pywebview** (HTML5デスクトップ) | **pywinauto** (Windows UI Automation)<br>**Jest** (TDDテストランナー) | ローカルVault<br>(Obsidian Markdown DB) | **.NET 10 Runtime**<br>BEAM (Erlang 仮想マシン) | **自律型AIループ** (Ralph Loop / TDD自己修復)<br>**Claude API** (セカンドブレイン連動)<br>**Ollama** (ローカルLLMハック) |
-| **2026.10〜11**<br>（自宅NAS自前クラウド・基幹DX深化） | — | **Fastify**<br>(TypeScript高速REST API) | — | **node-postgres** (pg)<br>LDAP / AD連携ライブラリ | **社内オンプレPostgreSQL**<br>(部内専用サーバー)<br>**Active Directory**<br>(組織・人事マスタディレクトリ) | **QNAP NAS** (Container Station)<br>**Docker / Docker Compose**<br>**Cloudflare Tunnel** (Named Tunnel)<br>**Cloudflare Access** (Zero Trust認証)<br>pg_dump 14世代ローテーション自動バックアップ | **STAR法 評価プロンプト設計**<br>昇格模擬面接AIエンジン |
+| **2026.10〜11**<br>（自宅NAS自前クラウド・基幹DX深化） | **Go**<br>(Goroutine並行処理)<br>**Java**<br>(JDK 25) | **Fastify**<br>(TypeScript高速REST API)<br>**Spring Boot**<br>(Java 25 / Gradle) | **WebView2**<br>(+ Go WASM UI) | **node-postgres** (pg)<br>LDAP / AD連携ライブラリ<br>**Gradle** (Kotlin DSL) | **社内オンプレPostgreSQL**<br>(部内専用サーバー)<br>**Active Directory**<br>(組織・人事マスタディレクトリ) | **QNAP NAS** (Container Station)<br>**Docker / Docker Compose**<br>**Cloudflare Tunnel** (Named Tunnel)<br>**Cloudflare Access** (Zero Trust認証)<br>pg_dump 14世代ローテーション自動バックアップ | **STAR法 評価プロンプト設計**<br>昇格模擬面接AIエンジン |
 
 ---
 
@@ -30,6 +30,7 @@ timeline
     2026-03 : Python : TypeScript : Rust : SQL
     2026-05 : C++ : JavaScript
     2026-09 : C# (.NET 10) : PowerShell : Gleam : Markdown
+    2026-11 : Go : Java (JDK 25)
 ```
 - **スクリプト・AI・データ**: Python（FastAPI, Pandas, PuLP, 自動化）
 - **モダンWebフルスタック**: TypeScript, JavaScript（React, Next.js, Fastify）
@@ -37,6 +38,8 @@ timeline
 - **Windowsネイティブ常駐**: C#（.NET 10, WPF, WinForms）
 - **インフラ・運用自動化**: PowerShell, SQL（PostgreSQL, SQLite）
 - **関数型・次世代検証**: Gleam（Erlang BEAM仮想マシン）
+- **並行処理・単一EXE配布**: Go（Goroutine、Go WASM UI、GitHub Actionsによるチェックサム付きリリース）
+- **エンタープライズJava**: Java 25 / Spring Boot 3.5（Gradle Toolchain）
 
 ---
 
@@ -50,9 +53,10 @@ timeline
     2026-08 : Qt 6 / QML (GPU Desktop)
     2026-09 : WPF (C# XAML) : WinForms : pywebview
     2026-10 : Fastify (Node.js / TS)
+    2026-11 : Spring Boot 3.5 (Java 25)
 ```
-- **Web/API**: FastAPI（型安全Python API）、Next.js（App Router SSR/SSG）、Fastify（高速Node/TS）、Express、Streamlit、Vite
-- **デスクトップGUI**: Qt 6 / QML（GPUアクセラレーション）、WPF / WinForms（.NET 10ネイティブ）、pywebview（Web技術流用デスクトップ）
+- **Web/API**: FastAPI（型安全Python API）、Next.js（App Router SSR/SSG）、Fastify（高速Node/TS）、Express、Streamlit、Vite、Spring Boot（Java 25）
+- **デスクトップGUI**: Qt 6 / QML（GPUアクセラレーション）、WPF / WinForms（.NET 10ネイティブ）、pywebview（Web技術流用デスクトップ）、WebView2 + Go WASM UI（単一EXE）
 
 ---
 
@@ -105,7 +109,7 @@ timeline
 
 ---
 
-## 3. 🎯 技術視点で振り返る「5大ブレイクスルー」
+## 3. 🎯 技術視点で振り返る「6大ブレイクスルー」
 
 1. **Web × 低レイヤの二刀流確立（5月〜6月）**:
    Next.js/ReactのWebモダンスタックを使いこなす一方で、C++によるWin32 API直接叩き・NTFS高速走査・Python処理のC++高速移植を達成。「Webしか作れない」「低レイヤしか触れない」の壁を完全に突破。
@@ -117,4 +121,6 @@ timeline
    単なるチャットボット利用を超え、Jestのテスト失敗をAIが自動修復する自律ループ（Ralph Loop）や、Obsidian+Claudeによる業務知識体系化を実現。
 5. **Fastify / TypeScript によるエンタープライズセキュアAPI（10月〜11月）**:
    基幹サーバー上の機密実績データを、最小権限・ループバック限定・接続プール制御を徹底したFastify REST APIとして安全に外出しするアーキテクチャを確立。
+6. **Go / Java 25 への言語拡張と同一APIの3系統実装比較（11月）**:
+   Goのゴルーチンで数百スレッド並行のLANスキャナー（QuickNetScan）を単一EXEで配布し、Java 25 / Spring Boot 3.5 で購入実績DB参照APIを実装。FastAPI・Fastify・Spring Boot の3系統を比較表に整理し、言語・フレームワーク選定の判断軸を獲得。
 

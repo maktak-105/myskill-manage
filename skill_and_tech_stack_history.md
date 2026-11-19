@@ -1,6 +1,6 @@
 # スキル・習得技術スタック 月別履歴＆層別マトリクス レポート
 
-本レポートは、`manage` ワークスペースおよび関連する全48+プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
+本レポートは、`manage` ワークスペースおよび関連する全50プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
 
 ---
 
@@ -15,7 +15,7 @@ timeline
     2026-07 : 業務DX＆大規模自動化 : 製造・開発部門内製化 : 大規模RPA(Auto-X/初期GitHub Actions) : MCPツール開発
     2026-08 : ネイティブ高速化深化 : C++ユーティリティ連作 : Qt6/QML画像処理 : 7-Zip連携
     2026-09 : 多様化＆自律AI・C# : C#(.NET10/WPF/WinForms) : pywinauto/Playwright : 自律AIループ(Ralph Loop) : Claudeセカンドブレイン
-    2026-10〜11 : 自宅NAS自前クラウド＆基幹DX深化 : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析(88+コミット) : 部内部品原価実績Fastify API : 部内PostgreSQLサーバー
+    2026-10〜11 : 自宅NAS自前クラウド＆基幹DX深化 : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析(100+コミット) : 部内部品原価実績Fastify API : 部内PostgreSQLサーバー : Go/Java 25へ言語拡張(QuickNetScan/Spring Boot)
 ```
 
 > [!NOTE]
@@ -35,24 +35,28 @@ timeline
 | **インフラ＆クラウド運用** | **QNAP NAS (Container Station) / Docker** | [Auto-X](#Auto-X), [camp](#camp)（PostgreSQL 16、Worker、Next.js standalone、自動バックアップコンテナ群の24時間常時稼働） |
 | | **Cloudflare Tunnel / Cloudflare Access** | [Auto-X](#Auto-X), [camp](#camp)（ポート開放不要のセキュアトンネル、個人メール認証ゼロトラストアクセス） |
 | | **Vercel デプロイ・公開** | [FieldStyle2026](#FieldStyle2026)（展示会ナビPWA本番公開）, [udon-db](#udon-db)（香川うどんツアーDB本番公開） |
-| | **Cloudflare Workers / Pages** | [jugo-shoten-web](file:///c:/Users/developer/jugo-shoten-web)（WranglerによるエッジサーバーレスWeb配信） |
+| | **Cloudflare Workers / Pages** | [jugo-shoten-web](#jugo-shoten-web)（WranglerによるエッジサーバーレスWeb配信）, [line-harness](#line-harness)（Workers + D1 + R2 上のLINE公式アカウント基盤の運用ドキュメント） |
 | | **GitHub Actions** | [Auto-X](#Auto-X)（最初期のCI/CDクラウド自動化実行から自宅NAS自前インフラへの進化） |
 | **主要言語** | **Python** | [myerp](#myerp), [Auto-X](#Auto-X), [shisaku-system](#shisaku-system), [jinji-db](#jinji-db), [camp](#camp), [udon-db](#udon-db)（バックエンド・自動化・データエンジニアリングの基幹） |
 | | **C++** | [QuickImageView](#QuickImageView) (Qt 6), [QuickMarkPDF](#QuickMarkPDF), [QuickFolderSize](#QuickFolderSize), [QuickFileCopy](#QuickFileCopy), [QuickDiskRescue](#QuickDiskRescue)（高速I/O、Win32、メモリ・ポインタ制御） |
 | | **C# (.NET 10)** | [QuickDock](#QuickDock)（Windowsデスクトップ常駐型ドッキングランチャー、WinForms / WPF） |
-| | **TypeScript / JavaScript** | [FieldStyle2026](#FieldStyle2026), [myDB](#myDB), [suuri-chat](#suuri-chat), [SNS Management](#SNS%20Management), [jugo-shoten-web](file:///c:/Users/developer/jugo-shoten-web), [game-tank](#game-tank) |
+| | **TypeScript / JavaScript** | [FieldStyle2026](#FieldStyle2026), [myDB](#myDB), [suuri-chat](#suuri-chat), [SNS Management](#SNS%20Management), [jugo-shoten-web](#jugo-shoten-web), [game-tank](#game-tank) |
 | | **Rust** | [myerp/erp-backend-rs](#myerp/erp-backend-rs)（数理最適化・計算集中型バックエンド） |
 | | **Gleam** | [gleam](#gleam)（BEAM/Erlang仮想マシン上で動作する新世代型安全言語の検証） |
+| | **Go** | [QuickNetScan](#QuickNetScan)（Goroutineによる数百スレッド並行LANスキャン、Go WASM UI、単一EXE配布） |
+| | **Java (JDK 25)** | [Spring-boot](#Spring-boot)（Spring Boot 3.5 + Gradle の参照専用REST API） |
 | | **PowerShell / Bash** | [bunai-server](#bunai-server), [Auto-X](#Auto-X) (NAS entrypoint), [project-LLM](#project-LLM) |
 | | **SQL** | PostgreSQL / SQLite 向け DDL, DML, パフォーマンスクエリ, バックアップ自動化 |
-| **フロントエンド** | **React / Next.js (App Router)** | [camp](#camp) (Next.js standalone), [myDB](#myDB), [suuri-chat](#suuri-chat), [SNS Management](#SNS%20Management), [jugo-shoten-web](file:///c:/Users/developer/jugo-shoten-web) |
+| **フロントエンド** | **React / Next.js (App Router)** | [camp](#camp) (Next.js standalone), [myDB](#myDB), [suuri-chat](#suuri-chat), [SNS Management](#SNS%20Management), [jugo-shoten-web](#jugo-shoten-web) |
 | | **Vite + React + PWA** | [FieldStyle2026](#FieldStyle2026)（PWA・最短ルートナビ・オフラインキャッシュ）, [jinji-db](#jinji-db) |
 | | **Qt 6 / QML** | [QuickImageView](#QuickImageView), [QuickFolderSize](#QuickFolderSize)（モダンデスクトップGUI、ハードウェアアクセラレーション） |
 | | **WPF / WinForms** | [QuickDock](#QuickDock)（Windowsネイティブ枠なし半透明ドックUI、ドラッグ＆ドロップ） |
 | | **pywebview / WebUI** | [auto-window](#auto-window), [QuickDiskBench](#QuickDiskBench)（HTML/CSS/JSを用いた軽量デスクトップUI） |
+| | **WebView2 + Go WASM UI** | [QuickNetScan](#QuickNetScan)（Win32 WebView2ホスト上でGo製WASM UIを表示する単一EXE） |
 | | **Streamlit** | [udon-db](#udon-db)（データ探索・管理ダッシュボード） |
 | **バックエンド** | **FastAPI** | [myerp](#myerp), [shisaku-system](#shisaku-system), [ap-drill](#ap-drill), [shadowing-lab](#shadowing-lab), [chumonsho-2seikan](#chumonsho-2seikan), [jinji-db](#jinji-db) |
 | | **Fastify (Node.js / TypeScript)** | [buhin-jisseki](#buhin-jisseki)（購入部品原価実績DB 読取専用セキュアREST APIサーバー） |
+| | **Spring Boot (Java 25)** | [Spring-boot](#Spring-boot)（購入実績DB 参照専用REST API。FastAPI・Fastify実装との3系統比較） |
 | | **Rust Backend** | [myerp/erp-backend-rs](#myerp/erp-backend-rs) (Cargoベース) |
 | | **Express (Node.js)** | [QuickDiskBench](#QuickDiskBench), [seikan_2](#seikan_2) 等のローカルAPIサーバー |
 | **データベース** | **PostgreSQL (QNAP NAS Docker)** | [Auto-X](#Auto-X) (`autox_db`), [camp](#camp) (`camp_db` + 14世代ローテーションバックアップ) |
@@ -139,17 +143,21 @@ timeline
 
 ---
 
-### 【2026年10月（現在）】自宅NAS自前クラウド・ゼロトラスト運用 ＆ EDI・社内PostgreSQL基盤
-- **習得・活用技術**: QNAP NAS (Container Station), Docker Compose, PostgreSQL 16 コンテナ運用, Cloudflare Named Tunnel, Cloudflare Access (ゼロトラスト個人認証), 14世代ローテーションバックアップ, 得意先ユニーク調達EDI電文パース, オンプレPostgreSQLサーバー構築・運用（PowerShell）, Active Directory (AD) 連携, Cloudflare Workers/Pages (Wrangler)
+### 【2026年10〜11月（現在）】自宅NAS自前クラウド・ゼロトラスト運用 ＆ EDI・社内PostgreSQL基盤 ＆ Go/Java言語拡張
+- **習得・活用技術**: QNAP NAS (Container Station), Docker Compose, PostgreSQL 16 コンテナ運用, Cloudflare Named Tunnel, Cloudflare Access (ゼロトラスト個人認証), 14世代ローテーションバックアップ, 得意先ユニーク調達EDI電文パース, オンプレPostgreSQLサーバー構築・運用（PowerShell）, Active Directory (AD) 連携, Cloudflare Workers/Pages (Wrangler), Go (Goroutine / WASM UI), Java 25 / Spring Boot 3.5 / Gradle
 - **主要プロジェクト**:
   - [Auto-X](#Auto-X): **初期のGitHub Actionsから、自宅QNAP NAS上の Docker + PostgreSQL 16 + 自動アーカイブWorker + Web UI + Cloudflare Tunnel 構成へ完全移行**。24時間常時稼働かつ外部から安全にアクセスできるプライベート自動化インフラを確立。
   - [camp](#camp): **自宅QNAP NAS上に Docker Compose で PostgreSQL 16 + Next.js standalone + Cloudflare Tunnel + Cloudflare Access（ゼロトラスト個人認証）+ 14世代自動バックアップを構築**。LAN内にもポートを開けず、完全セキュアな自前SaaS環境を運用。
   - [chumonsho-2seikan](#chumonsho-2seikan): 得意先ユニーク次世代調達EDI形式の固定長Shift_JIS電文を自動解析し、PostgreSQLへ正規化格納するミッションクリティカルなバッチ/Webシステム。
   - [bunai-server](#bunai-server): 部内専用PostgreSQLデータベースサーバーの自動構築スクリプト（PowerShell）、ロール/権限管理、Power Automate連携、IT部門向け申請手順の確立。
   - [jinji-db](#jinji-db): 従来のExcel VBA人事リストから脱却し、Active Directory (AD) から自動収集してPostgreSQLに集約、React/FastAPIで閲覧・管理する人事DB。
-  - [jugo-shoten-web](file:///c:/Users/developer/jugo-shoten-web): Cloudflare Workers / Pages (Wrangler) + Next.js によるエッジ配信基盤。
+  - [jugo-shoten-web](#jugo-shoten-web): Cloudflare Workers / Pages (Wrangler) + Next.js によるエッジ配信基盤。
   - [supplier-manage](#supplier-manage): サプライヤー・調達データ管理。
   - [ikusei-taikei-2026](#ikusei-taikei-2026): 人材育成体系・職能資格基準（STAR法）の整理。
+  - [QuickNetScan](#QuickNetScan): **Go のゴルーチンで数百スレッド並行にLAN内の生存機器を一覧化**する単一EXEのネットワークスキャナー。Win32 WebView2ホスト＋Go WASM UI、GitHub Actionsによるチェックサム付きリリース。
+  - [Spring-boot](#Spring-boot): **Java 25 / Spring Boot 3.5 / Gradle** による購入実績DB参照専用REST API。FastAPI・Fastify実装との3系統比較表を整備。
+  - [line-harness](#line-harness): OSSのLINE公式アカウント向けCRM／配信基盤を Cloudflare Workers + D1 + R2 で本番運用するための設計書・仕様書・マニュアル。
+  - [PowerApps_CodeApp](#PowerApps_CodeApp): Power Apps Code Apps（SDK）× React 19 + Vite + TypeScript によるコードファーストの業務アプリ基盤。
 
 ---
 
@@ -161,5 +169,5 @@ timeline
    - 現場のExcelマクロやEDI固定長電文の課題を、単なるWeb化にとどまらず、Active Directory連携やオンプレPostgreSQLサーバー構築まで自らやり切る実務推進力があります。
 3. **高速化・パフォーマンスへの強いこだわり**
    - Pythonでプロトタイプを作った後、パフォーマンスが求められる領域（PDF透かし、ファイルコピー、ディスク救出、画像閲覧）では迷わず **C++ (Qt 6, Win32 API)** や **Rust** を投入し、ベンチマークと高速化を徹底しています。
-4. **最新技術（AI / MCP / 自律AIループ / .NET 10 / Gleam）へのキャッチアップと即時実践力**
+4. **最新技術（AI / MCP / 自律AIループ / .NET 10 / Gleam / Go / Java 25）へのキャッチアップと即時実践力**
    - Anthropic提唱のMCP (Model Context Protocol) をいち早く導入してFabric Lakehouseと接続したり、テスト駆動で自律修正するAIエージェントループ（Ralph Loop）の構築、Obsidian連携による業務ナレッジベース化、.NET 10でのWPF/WinFormsアプリ開発など、技術の選定眼と適応力が極めて秀逸です。

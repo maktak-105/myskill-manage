@@ -19,3 +19,11 @@ python print_summary.py
 # プロジェクト再スキャン
 python curate_stack.py
 ```
+
+## 更新手順（2026-11-19 時点の運用メモ）
+
+- 公開用に `curate_stack.py` などの `base_dir` は伏せ字（`~\source\project`）になっています。実行時は **実パスへ書き換えた複製をリポジトリ外で実行**し、実パス版をコミットしないでください。
+- スクリプトの出力は `name / start_month / start_date / commit_count / languages / frontend / backend / database / tools_infra / desc` のみです。公開用の `latest_date / display_month / desc_ja / desc_en` は手キュレーション項目なので、**既存の `curated_analysis.json` にマージ**して更新します（技術スタックの自動判定は先頭40ファイルのキーワード一致のため判定がぶれます。既存プロジェクトでは `commit_count` と `latest_date`（新しくなる場合のみ）を更新し、スタック欄は手キュレーション値を維持）。
+- 新規プロジェクトの着手日は、ファイル時刻ではなく **Git 初回コミット日** を採用します（コピーでファイル時刻が実態より古くなるため）。
+- 説明文は READMEの転記ではなく **中立表現で書き起こします**（社内サーバー名・DB名・アカウントID・個人ハンドル・社内組織名を含めない）。
+- `index.html` の `rawProjects` は `json.dumps(curated_analysis.json, ensure_ascii=False)` と完全一致する埋め込みです。更新時は丸ごと再生成し、`skill_capability_map.html` は `index.html` と同一内容に保ちます。

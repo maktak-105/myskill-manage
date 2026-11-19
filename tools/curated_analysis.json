@@ -3,8 +3,8 @@
     "name": "myerp",
     "start_month": "2026-02",
     "start_date": "2026-02-25",
-    "latest_date": "2026-11-05",
-    "commit_count": 14,
+    "latest_date": "2026-11-17",
+    "commit_count": 37,
     "languages": [
       "Python",
       "Rust",
@@ -97,8 +97,8 @@
     "name": "FieldStyle2026",
     "start_month": "2026-05",
     "start_date": "2026-05-02",
-    "latest_date": "2026-11-06",
-    "commit_count": 62,
+    "latest_date": "2026-11-11",
+    "commit_count": 71,
     "languages": [
       "Python",
       "TypeScript"
@@ -223,8 +223,8 @@
     "name": "suuri-chat",
     "start_month": "2026-06",
     "start_date": "2026-06-09",
-    "latest_date": "2026-07-17",
-    "commit_count": 42,
+    "latest_date": "2026-11-18",
+    "commit_count": 43,
     "languages": [
       "TypeScript"
     ],
@@ -694,8 +694,8 @@
     "name": "auto-window",
     "start_month": "2026-09",
     "start_date": "2026-09-04",
-    "latest_date": "2026-09-08",
-    "commit_count": 13,
+    "latest_date": "2026-11-17",
+    "commit_count": 17,
     "languages": [
       "JavaScript",
       "Python"
@@ -771,8 +771,8 @@
     "name": "ap-drill",
     "start_month": "2026-09",
     "start_date": "2026-09-01",
-    "latest_date": "2026-10-12",
-    "commit_count": 10,
+    "latest_date": "2026-11-17",
+    "commit_count": 12,
     "languages": [
       "JavaScript",
       "Python"
@@ -979,8 +979,8 @@
     "name": "chumonsho-2seikan",
     "start_month": "2026-10",
     "start_date": "2026-10-12",
-    "latest_date": "2026-11-06",
-    "commit_count": 88,
+    "latest_date": "2026-11-17",
+    "commit_count": 104,
     "languages": [
       "JavaScript",
       "Python",
@@ -998,17 +998,17 @@
       "LLM API (OpenAI/Claude/Gemini/Ollama)",
       "MCP (Model Context Protocol)"
     ],
-    "desc": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（88+コミット）。",
+    "desc": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（100+コミット）。",
     "display_month": "2026-10",
-    "desc_ja": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（88+コミット）。",
-    "desc_en": "Automotive EDI fixed-length message parser & PostgreSQL normalizer (88+ commits)."
+    "desc_ja": "大手自動車調達EDI形式の固定長Shift_JIS電文を自動パース・PostgreSQL正規化（100+コミット）。",
+    "desc_en": "Automotive EDI fixed-length message parser & PostgreSQL normalizer (100+ commits)."
   },
   {
     "name": "buhin-jisseki",
     "start_month": "2026-10",
     "start_date": "2026-10-28",
-    "latest_date": "2026-10-29",
-    "commit_count": 6,
+    "latest_date": "2026-11-17",
+    "commit_count": 7,
     "languages": [
       "TypeScript"
     ],
@@ -1035,8 +1035,8 @@
     "name": "bunai-server",
     "start_month": "2026-10",
     "start_date": "2026-10-06",
-    "latest_date": "2026-11-05",
-    "commit_count": 5,
+    "latest_date": "2026-11-18",
+    "commit_count": 6,
     "languages": [],
     "frontend": [],
     "backend": [],
@@ -1055,8 +1055,8 @@
     "name": "jinji-db",
     "start_month": "2026-10",
     "start_date": "2026-10-07",
-    "latest_date": "2026-10-29",
-    "commit_count": 5,
+    "latest_date": "2026-11-18",
+    "commit_count": 7,
     "languages": [
       "Python",
       "SQL",
@@ -1145,10 +1145,10 @@
     "desc_en": "Engineering talent development framework & STAR method competency template."
   },
   {
-    "name": "work",
+    "name": "PowerApps_CodeApp",
     "start_month": "2026-10",
     "start_date": "2026-10-20",
-    "latest_date": "2026-10-29",
+    "latest_date": "2026-11-18",
     "commit_count": 0,
     "languages": [
       "TypeScript"
@@ -1159,10 +1159,85 @@
     ],
     "backend": [],
     "database": [],
-    "tools_infra": [],
-    "desc": "React + Vite + TypeScriptによるモダンフロントエンド試作アプリケーション。",
+    "tools_infra": [
+      "Power Apps Code Apps SDK"
+    ],
+    "desc": "Power Apps Code Apps（@microsoft/power-apps SDK）× React 19 + Vite + TypeScript で作る、コードファーストの業務アプリ基盤。",
     "display_month": "2026-10",
-    "desc_ja": "React + Vite + TypeScriptによるモダンフロントエンド試作アプリケーション。",
-    "desc_en": "Modern frontend prototyping application built with React, Vite & TypeScript."
+    "desc_ja": "Power Apps Code Apps（@microsoft/power-apps SDK）× React 19 + Vite + TypeScript で作る、コードファーストの業務アプリ基盤。",
+    "desc_en": "Code-first business app foundation built on Power Apps Code Apps (SDK) with React 19, Vite and TypeScript."
+  },
+  {
+    "name": "line-harness",
+    "start_month": "2026-11",
+    "start_date": "2026-11-09",
+    "latest_date": "2026-11-09",
+    "commit_count": 1,
+    "languages": [],
+    "frontend": [],
+    "backend": [
+      "Cloudflare Workers"
+    ],
+    "database": [
+      "Cloudflare D1 (SQLite)"
+    ],
+    "tools_infra": [
+      "Cloudflare R2",
+      "LINE Messaging API"
+    ],
+    "desc": "OSSのLINE公式アカウント向けCRM／配信基盤（LINE Harness）をCloudflare Workers + D1 + R2で本番運用するための設計書・仕様書・マニュアル整備。",
+    "display_month": "2026-11",
+    "desc_ja": "OSSのLINE公式アカウント向けCRM／配信基盤（LINE Harness）をCloudflare Workers + D1 + R2で本番運用するための設計書・仕様書・マニュアル整備。",
+    "desc_en": "Design, specification and operations manual for a production LINE Official Account CRM/messaging platform (OSS LINE Harness) on Cloudflare Workers, D1 and R2."
+  },
+  {
+    "name": "QuickNetScan",
+    "start_month": "2026-11",
+    "start_date": "2026-11-17",
+    "latest_date": "2026-11-18",
+    "commit_count": 4,
+    "languages": [
+      "C++",
+      "Go",
+      "JavaScript"
+    ],
+    "frontend": [
+      "WebView2 + Go WASM UI (Desktop GUI)"
+    ],
+    "backend": [],
+    "database": [],
+    "tools_infra": [
+      "GitHub Actions (CI/CD)",
+      "Win32 API / Windows Native"
+    ],
+    "desc": "Goのゴルーチンで数百スレッドを同時に走らせ、LAN内の生存機器のIP・MAC・開放ポート・応答速度を一瞬で一覧化する、単一EXEのネットワークスキャナー。",
+    "display_month": "2026-11",
+    "desc_ja": "Goのゴルーチンで数百スレッドを同時に走らせ、LAN内の生存機器のIP・MAC・開放ポート・応答速度を一瞬で一覧化する、単一EXEのネットワークスキャナー。",
+    "desc_en": "Single-EXE Windows network scanner that sweeps a LAN with hundreds of concurrent Go goroutines and lists live hosts with IP, MAC, open ports and latency."
+  },
+  {
+    "name": "Spring-boot",
+    "start_month": "2026-11",
+    "start_date": "2026-11-18",
+    "latest_date": "2026-11-19",
+    "commit_count": 3,
+    "languages": [
+      "Java",
+      "PowerShell"
+    ],
+    "frontend": [],
+    "backend": [
+      "Spring Boot"
+    ],
+    "database": [
+      "PostgreSQL"
+    ],
+    "tools_infra": [
+      "Gradle"
+    ],
+    "desc": "Spring Boot 3.5（Java 25 + Gradle）で、購入実績DBから過去の類似部品の購入価格を検索する参照専用REST API。FastAPI・Fastify実装との3系統比較も整理。",
+    "display_month": "2026-11",
+    "desc_ja": "Spring Boot 3.5（Java 25 + Gradle）で、購入実績DBから過去の類似部品の購入価格を検索する参照専用REST API。FastAPI・Fastify実装との3系統比較も整理。",
+    "desc_en": "Read-only REST API on Spring Boot 3.5 (Java 25 + Gradle) for searching past purchase prices of similar parts, benchmarked against FastAPI and Fastify implementations of the same API."
   }
 ]
