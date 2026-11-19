@@ -17,7 +17,8 @@
 | **2026.07**<br>（大規模DX） | — | — | — | **Playwright** (ブラウザ高速自動化) | — | **GitHub Actions** (CI/CD クラウド自動実行) | **Microsoft Fabric Lakehouse** × MCP |
 | **2026.08**<br>（GPU・低レイヤ） | — | — | **Qt 6 / QML**<br>(GPUハードウェアアクセラレーション) | **7-Zip DLL / CLI SDK**<br>Win32 I/Oバッファ制御 | **Cloudflare D1** (Serverless SQL)<br>Cloudflare KV (Key-Value) | **Cloudflare Workers** (エッジサーバーレス)<br>**Cloudflare Pages**<br>Wrangler CLI | Notion API 完全突合バッチ |
 | **2026.09**<br>（先端自律AI・C#） | **C#** (.NET 10)<br>**PowerShell**<br>**Gleam** (BEAM言語)<br>Markdown | — | **WPF** (XAML)<br>**Windows Forms** (WinForms)<br>**pywebview** (HTML5デスクトップ) | **pywinauto** (Windows UI Automation)<br>**Jest** (TDDテストランナー) | ローカルVault<br>(Obsidian Markdown DB) | **.NET 10 Runtime**<br>BEAM (Erlang 仮想マシン) | **自律型AIループ** (Ralph Loop / TDD自己修復)<br>**Claude API** (セカンドブレイン連動)<br>**Ollama** (ローカルLLMハック) |
-| **2026.10〜11**<br>（自宅NAS自前クラウド・基幹DX深化） | **Go**<br>(Goroutine並行処理)<br>**Java**<br>(JDK 25) | **Fastify**<br>(TypeScript高速REST API)<br>**Spring Boot**<br>(Java 25 / Gradle) | **WebView2**<br>(+ Go WASM UI) | **node-postgres** (pg)<br>LDAP / AD連携ライブラリ<br>**Gradle** (Kotlin DSL) | **社内オンプレPostgreSQL**<br>(部内専用サーバー)<br>**Active Directory**<br>(組織・人事マスタディレクトリ) | **QNAP NAS** (Container Station)<br>**Docker / Docker Compose**<br>**Cloudflare Tunnel** (Named Tunnel)<br>**Cloudflare Access** (Zero Trust認証)<br>pg_dump 14世代ローテーション自動バックアップ | **STAR法 評価プロンプト設計**<br>昇格模擬面接AIエンジン |
+| **2026.10**<br>（自宅NAS自前クラウド・基幹DX深化） | — | **Fastify**<br>(TypeScript高速REST API) | — | **node-postgres** (pg)<br>LDAP / AD連携ライブラリ<br>Power Apps Code Apps SDK | **社内オンプレPostgreSQL**<br>(部内専用サーバー)<br>**Active Directory**<br>(組織・人事マスタディレクトリ) | **QNAP NAS** (Container Station)<br>**Docker / Docker Compose**<br>**Cloudflare Tunnel** (Named Tunnel)<br>**Cloudflare Access** (Zero Trust認証)<br>pg_dump 14世代ローテーション自動バックアップ | **STAR法 評価プロンプト設計**<br>昇格模擬面接AIエンジン |
+| **2026.11**<br>（Go/Java言語拡張・エッジ展開） | **Go**<br>(Goroutine並行処理)<br>**Java**<br>(JDK 25) | **Spring Boot 3.5**<br>(Java 25 / Gradle) | **WebView2**<br>(+ Go WASM UI) | **Gradle** (Kotlin DSL) | **Cloudflare D1** (エッジSQL)<br>Cloudflare R2 (ストレージ) | **Cloudflare Workers** (エッジ本番運用) | — |
 
 ---
 
@@ -119,7 +120,7 @@ timeline
    外部の有料SaaSに依存せず、自宅QNAP NAS上に Docker + PostgreSQL 16 + Cloudflare Tunnel/Access を自力構築し、24時間常時稼働かつ安全な外部アクセス環境を確立。
 4. **自律AIループ＆セカンドブレインの実証（9月）**:
    単なるチャットボット利用を超え、Jestのテスト失敗をAIが自動修復する自律ループ（Ralph Loop）や、Obsidian+Claudeによる業務知識体系化を実現。
-5. **Fastify / TypeScript によるエンタープライズセキュアAPI（10月〜11月）**:
+5. **Fastify / TypeScript によるエンタープライズセキュアAPI（10月）**:
    基幹サーバー上の機密実績データを、最小権限・ループバック限定・接続プール制御を徹底したFastify REST APIとして安全に外出しするアーキテクチャを確立。
 6. **Go / Java 25 への言語拡張と同一APIの3系統実装比較（11月）**:
    Goのゴルーチンで数百スレッド並行のLANスキャナー（QuickNetScan）を単一EXEで配布し、Java 25 / Spring Boot 3.5 で購入実績DB参照APIを実装。FastAPI・Fastify・Spring Boot の3系統を比較表に整理し、言語・フレームワーク選定の判断軸を獲得。

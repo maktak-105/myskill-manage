@@ -15,7 +15,8 @@ timeline
     2026-07 : 業務DX＆大規模自動化 : 製造・開発部門内製化 : 大規模RPA(Auto-X/初期GitHub Actions) : MCPツール開発
     2026-08 : ネイティブ高速化深化 : C++ユーティリティ連作 : Qt6/QML画像処理 : 7-Zip連携
     2026-09 : 多様化＆自律AI・C# : C#(.NET10/WPF/WinForms) : pywinauto/Playwright : 自律AIループ(Ralph Loop) : Claudeセカンドブレイン
-    2026-10〜11 : 自宅NAS自前クラウド＆基幹DX深化 : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析(100+コミット) : 部内部品原価実績Fastify API : 部内PostgreSQLサーバー : Go/Java 25へ言語拡張(QuickNetScan/Spring Boot)
+        2026-10 : 自宅NAS自前クラウド＆基幹DX深化 : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析(105コミット) : 部内部品原価実績Fastify API : 部内PostgreSQLサーバー
+    2026-11 : Go/Java 25言語拡張＆エッジ運用 : Go (QuickNetScan/並行LANスキャン) : Java 25 / Spring Boot 3.5 (同一API 3系統比較) : line-harness (Cloudflare Workers/D1/R2) : Auto-X 190コミット
 ```
 
 > [!NOTE]
@@ -143,24 +144,27 @@ timeline
 
 ---
 
-### 【2026年10〜11月（現在）】自宅NAS自前クラウド・ゼロトラスト運用 ＆ EDI・社内PostgreSQL基盤 ＆ Go/Java言語拡張
-- **習得・活用技術**: QNAP NAS (Container Station), Docker Compose, PostgreSQL 16 コンテナ運用, Cloudflare Named Tunnel, Cloudflare Access (ゼロトラスト個人認証), 14世代ローテーションバックアップ, 得意先ユニーク調達EDI電文パース, オンプレPostgreSQLサーバー構築・運用（PowerShell）, Active Directory (AD) 連携, Cloudflare Workers/Pages (Wrangler), Go (Goroutine / WASM UI), Java 25 / Spring Boot 3.5 / Gradle
+### 【2026年10月】自宅NAS自前クラウド・ゼロトラスト運用 ＆ EDI・社内PostgreSQL基盤
+- **習得・活用技術**: QNAP NAS (Container Station), Docker Compose, PostgreSQL 16 コンテナ運用, Cloudflare Named Tunnel, Cloudflare Access (ゼロトラスト個人認証), 14世代ローテーションバックアップ, 得意先ユニーク調達EDI電文パース, オンプレPostgreSQLサーバー構築・運用（PowerShell）, Active Directory (AD) 連携, Fastify (TypeScript高速REST API), Power Apps Code Apps SDK
 - **主要プロジェクト**:
-  - [Auto-X](#Auto-X): **初期のGitHub Actionsから、自宅QNAP NAS上の Docker + PostgreSQL 16 + 自動アーカイブWorker + Web UI + Cloudflare Tunnel 構成へ完全移行**。24時間常時稼働かつ外部から安全にアクセスできるプライベート自動化インフラを確立。
-  - [camp](#camp): **自宅QNAP NAS上に Docker Compose で PostgreSQL 16 + Next.js standalone + Cloudflare Tunnel + Cloudflare Access（ゼロトラスト個人認証）+ 14世代自動バックアップを構築**。LAN内にもポートを開けず、完全セキュアな自前SaaS環境を運用。
-  - [chumonsho-2seikan](#chumonsho-2seikan): 得意先ユニーク次世代調達EDI形式の固定長Shift_JIS電文を自動解析し、PostgreSQLへ正規化格納するミッションクリティカルなバッチ/Webシステム。
-  - [bunai-server](#bunai-server): 部内専用PostgreSQLデータベースサーバーの自動構築スクリプト（PowerShell）、ロール/権限管理、Power Automate連携、IT部門向け申請手順の確立。
-  - [jinji-db](#jinji-db): 従来のExcel VBA人事リストから脱却し、Active Directory (AD) から自動収集してPostgreSQLに集約、React/FastAPIで閲覧・管理する人事DB。
-  - [jugo-shoten-web](#jugo-shoten-web): Cloudflare Workers / Pages (Wrangler) + Next.js によるエッジ配信基盤。
-  - [supplier-manage](#supplier-manage): サプライヤー・調達データ管理。
-  - [ikusei-taikei-2026](#ikusei-taikei-2026): 人材育成体系・職能資格基準（STAR法）の整理。
-  - [QuickNetScan](#QuickNetScan): **Go のゴルーチンで数百スレッド並行にLAN内の生存機器を一覧化**する単一EXEのネットワークスキャナー。Win32 WebView2ホスト＋Go WASM UI、GitHub Actionsによるチェックサム付きリリース。
-  - [Spring-boot](#Spring-boot): **Java 25 / Spring Boot 3.5 / Gradle** による購入実績DB参照専用REST API。FastAPI・Fastify実装との3系統比較表を整備。
-  - [line-harness](#line-harness): OSSのLINE公式アカウント向けCRM／配信基盤を Cloudflare Workers + D1 + R2 で本番運用するための設計書・仕様書・マニュアル。
-  - [PowerApps_CodeApp](#PowerApps_CodeApp): Power Apps Code Apps（SDK）× React 19 + Vite + TypeScript によるコードファーストの業務アプリ基盤。
+  - `Auto-X` (自宅QNAP NAS Dockerへ移行・24時間常時稼働化)
+  - `camp (campDB)` (Next.js standalone + PostgreSQL 16 コンテナ + 14世代バックアップ)
+  - `chumonsho-2seikan` (大手自動車調達EDI固定長Shift_JIS電文パース・正規化、105コミット)
+  - `buhin-jisseki` (Fastify + TypeScript による原価実績読取専用REST APIサーバー)
+  - `bunai-server` (PowerShellによる部門オンプレPostgreSQLサーバー自動構築)
+  - `jinji-db` (Active Directory組織・社員マスタ自動巡回同期基盤)
+  - `PowerApps_CodeApp` (React 19 + Vite によるコードファーストPowerApps基盤)
+  - `ikusei-taikei-2026` (STAR法キャリア標準化)
 
 ---
 
+### 【2026年11月（現在）】Go / Java 25 言語拡張 ＆ エッジLINE基盤 ＆ 3系統API比較
+- **習得・活用技術**: Go (Goroutine並行処理 / WebView2 + Go WASM UI / 単一EXE配布), Java 25 / Spring Boot 3.5 / Gradle (Kotlin DSL), Cloudflare Workers / D1 / R2 (エッジ本番運用), 同一APIの3系統実装比較（FastAPI / Fastify / Spring Boot）
+- **主要プロジェクト**:
+  - `QuickNetScan` (Go言語、数百Goroutine並行走査の単一EXE高速LANスキャナー、WebView2 UI)
+  - `Spring-boot` (Spring Boot 3.5 + Java 25 + Gradle による購入実績REST API、3系統比較整理)
+  - `line-harness` (Cloudflare Workers + D1 + R2 によるLINE公式アカウント基盤)
+  - `Auto-X` (190コミット到達、NAS自動監視・巡回の継続的機能強化)
 ## 4. 総評・スキルの強み
 
 1. **「自前プライベートクラウドからパブリッククラウド公開まで」完結できるインフラ・運用力**
