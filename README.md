@@ -6,18 +6,18 @@
 
 ## 🌐 Live Interactive Dashboard / 公開ダッシュボード
 👉 **[https://maktak-105.github.io/myskill-manage/](https://maktak-105.github.io/myskill-manage/)**  
-*(A responsive, interactive single-page dashboard featuring instant search across all 50 projects, category filtering, chronological tech matrices, and bilingual support.)*
+*(A responsive, interactive single-page dashboard featuring instant search across all 56 projects, category filtering, chronological tech matrices, and bilingual support.)*
 
 ---
 
 ## 🇯🇵 概要 (Japanese)
 
-本リポジトリは、開発者が約8ヶ月間（2026年3月〜11月）で手掛けた**全50プロジェクト**を自動走査・解析し、月別の技術スタック習得履歴、6大中核ケイパビリティ領域、および成果物マトリクスを一元管理・可視化するためのポートフォリオ基盤です。
+本リポジトリは、開発者が約8ヶ月間（2026年3月〜11月）で手掛けた**全56プロジェクト**を自動走査・解析し、月別の技術スタック習得履歴、6大中核ケイパビリティ領域、および成果物マトリクスを一元管理・可視化するためのポートフォリオ基盤です。
 
 ### 📊 全体サマリー
-- **総開発プロジェクト数**: 50+ プロジェクト
+- **総開発プロジェクト数**: 56 プロジェクト
 - **駆使・習得言語**: 12 言語（Python, TypeScript, JavaScript, C++, C#, Rust, Go, Java, Gleam, PowerShell, SQL, Markdown）
-- **総 Git コミット数**: 1,490+ コミット
+- **総 Git コミット数**: 1,600+ コミット
 - **6大中核ケイパビリティ領域**:
   1. 🏢 **業務基盤DX・基幹内製化** (Excel脱却、大手自動車調達EDI固定長パース、原価実績Fastify API、AD人事同期)
   2. 🌐 **自宅NAS・クラウド・公開Web** (QNAP NAS Docker、PostgreSQL 16、Cloudflare Tunnel/Access、Vercel/PWA)
@@ -37,12 +37,12 @@
 
 ## 🇺🇸 Overview (English)
 
-This repository serves as a unified engineering portfolio and capability tracking platform, automatically analyzing **50 projects** developed over an 8-month period (March — November 2026). It visualizes technology adoption timelines, core capability domains, and project metrics.
+This repository serves as a unified engineering portfolio and capability tracking platform, automatically analyzing **56 projects** developed over an 8-month period (March — November 2026). It visualizes technology adoption timelines, core capability domains, and project metrics.
 
 ### 📊 Overall Highlights
-- **Total Projects**: 50+ Production & R&D projects
+- **Total Projects**: 56 Production & R&D projects
 - **Core Languages**: 12 Languages (Python, TypeScript, JavaScript, C++, C#, Rust, Go, Java, Gleam, PowerShell, SQL, Markdown)
-- **Total Commits**: 1,490+ Git commits
+- **Total Commits**: 1,600+ Git commits
 - **6 Core Engineering Capability Domains**:
   1. 🏢 **Enterprise DX & Core Systems**: Legacy Excel migration, Automotive EDI parser, Read-only cost API (Fastify), Active Directory sync.
   2. 🌐 **Self-Hosted Cloud & Public Web**: 24/7 QNAP NAS Docker, PostgreSQL 16, Cloudflare Access Zero Trust, Vercel PWA.

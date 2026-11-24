@@ -1,6 +1,6 @@
 # スキル・習得技術スタック 月別履歴＆層別マトリクス レポート
 
-本レポートは、`manage` ワークスペースおよび関連する全50プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
+本レポートは、`manage` ワークスペースおよび関連する全56プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
 
 ---
 
@@ -164,6 +164,7 @@ timeline
   - `QuickNetScan` (Go言語、数百Goroutine並行走査の単一EXE高速LANスキャナー、WebView2 UI)
   - `Spring-boot` (Spring Boot 3.5 + Java 25 + Gradle による購入実績REST API、3系統比較整理)
   - `line-harness` (Cloudflare Workers + D1 + R2 によるLINE公式アカウント基盤)
+  - `dramlog-bar` (Cloudflare Workers + TypeScript によるバー向けデジタルメニュー＆記録Webアプリ)
   - `Auto-X` (190コミット到達、NAS自動監視・巡回の継続的機能強化)
 ## 4. 総評・スキルの強み
 
