@@ -18,7 +18,7 @@
 | **2026.08**<br>（GPU・低レイヤ） | — | — | **Qt 6 / QML**<br>(GPUハードウェアアクセラレーション) | **7-Zip DLL / CLI SDK**<br>Win32 I/Oバッファ制御 | **Cloudflare D1** (Serverless SQL)<br>Cloudflare KV (Key-Value) | **Cloudflare Workers** (エッジサーバーレス)<br>**Cloudflare Pages**<br>Wrangler CLI | Notion API 完全突合バッチ |
 | **2026.09**<br>（先端自律AI・C#） | **C#** (.NET 10)<br>**PowerShell**<br>**Gleam** (BEAM言語)<br>Markdown | — | **WPF** (XAML)<br>**Windows Forms** (WinForms)<br>**pywebview** (HTML5デスクトップ) | **pywinauto** (Windows UI Automation)<br>**Jest** (TDDテストランナー) | ローカルVault<br>(Obsidian Markdown DB) | **.NET 10 Runtime**<br>BEAM (Erlang 仮想マシン) | **自律型AIループ** (Ralph Loop / TDD自己修復)<br>**Claude API** (セカンドブレイン連動)<br>**Ollama** (ローカルLLMハック) |
 | **2026.10**<br>（自宅NAS自前クラウド・基幹DX深化） | — | **Fastify**<br>(TypeScript高速REST API) | — | **node-postgres** (pg)<br>LDAP / AD連携ライブラリ<br>Power Apps Code Apps SDK | **社内オンプレPostgreSQL**<br>(部内専用サーバー)<br>**Active Directory**<br>(組織・人事マスタディレクトリ) | **QNAP NAS** (Container Station)<br>**Docker / Docker Compose**<br>**Cloudflare Tunnel** (Named Tunnel)<br>**Cloudflare Access** (Zero Trust認証)<br>pg_dump 14世代ローテーション自動バックアップ | **STAR法 評価プロンプト設計**<br>昇格模擬面接AIエンジン |
-| **2026.11**<br>（Go/Java言語拡張・エッジ展開） | **Go**<br>(Goroutine並行処理)<br>**Java**<br>(JDK 25) | **Spring Boot 3.5**<br>(Java 25 / Gradle) | **WebView2**<br>(+ Go WASM UI) | **Gradle** (Kotlin DSL) | **Cloudflare D1** (エッジSQL)<br>Cloudflare R2 (ストレージ) | **Cloudflare Workers** (エッジ本番運用) | — |
+| **2026.11**<br>（Go/Java/PHP言語拡張・エッジ展開） | **Go**<br>(Goroutine並行処理)<br>**Java**<br>(JDK 25)<br>**PHP**<br>(8.4) | **Spring Boot 3.5**<br>(Java 25 / Gradle)<br>**Laravel 12**<br>(Livewire 3 / Volt) | **WebView2**<br>(+ Go WASM UI) | **Gradle** (Kotlin DSL)<br>**pgx/v5** (Go PG)<br>**Pest 3** (PHP Test) | **Cloudflare D1** (エッジSQL)<br>Cloudflare R2 (ストレージ) | **Cloudflare Workers** (エッジ本番運用) | — |
 
 ---
 
@@ -31,7 +31,7 @@ timeline
     2026-03 : Python : TypeScript : Rust : SQL
     2026-05 : C++ : JavaScript
     2026-09 : C# (.NET 10) : PowerShell : Gleam : Markdown
-    2026-11 : Go : Java (JDK 25)
+    2026-11 : Go : Java (JDK 25) : PHP (8.4)
 ```
 - **スクリプト・AI・データ**: Python（FastAPI, Pandas, PuLP, 自動化）
 - **モダンWebフルスタック**: TypeScript, JavaScript（React, Next.js, Fastify）
@@ -41,6 +41,7 @@ timeline
 - **関数型・次世代検証**: Gleam（Erlang BEAM仮想マシン）
 - **並行処理・単一EXE配布**: Go（Goroutine、Go WASM UI、GitHub Actionsによるチェックサム付きリリース）
 - **エンタープライズJava**: Java 25 / Spring Boot 3.5（Gradle Toolchain）
+- **モダンPHPフルスタック**: PHP 8.4 / Laravel 12 + Livewire 3 / Volt（RBAC・監査ログ・Laravel Sail）
 
 ---
 
@@ -54,7 +55,7 @@ timeline
     2026-08 : Qt 6 / QML (GPU Desktop)
     2026-09 : WPF (C# XAML) : WinForms : pywebview
     2026-10 : Fastify (Node.js / TS)
-    2026-11 : Spring Boot 3.5 (Java 25)
+    2026-11 : Spring Boot 3.5 (Java 25) : Laravel 12 (Livewire 3)
 ```
 - **Web/API**: FastAPI（型安全Python API）、Next.js（App Router SSR/SSG）、Fastify（高速Node/TS）、Express、Streamlit、Vite、Spring Boot（Java 25）
 - **デスクトップGUI**: Qt 6 / QML（GPUアクセラレーション）、WPF / WinForms（.NET 10ネイティブ）、pywebview（Web技術流用デスクトップ）、WebView2 + Go WASM UI（単一EXE）

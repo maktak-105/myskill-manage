@@ -1372,5 +1372,66 @@
     "display_month": "2026-11",
     "desc_ja": "Cloudflare Workers上で稼働するバー向けデジタルメニュー＆「最後の一杯」記録Webアプリ。",
     "desc_en": "Digital bar menu and tasting log web application running on Cloudflare Workers."
+  },
+  {
+    "name": "production-plan-laravel",
+    "start_month": "2026-11",
+    "start_date": "2026-11-20",
+    "latest_date": "2026-11-20",
+    "commit_count": 2,
+    "languages": [
+      "PHP",
+      "JavaScript"
+    ],
+    "frontend": [
+      "Livewire 3 / Volt",
+      "Tailwind CSS",
+      "Vite"
+    ],
+    "backend": [
+      "Laravel 12 (PHP 8.4)"
+    ],
+    "database": [
+      "PostgreSQL 16"
+    ],
+    "tools_infra": [
+      "Laravel Sail (Docker Compose)",
+      "Pest 3",
+      "RBAC / Audit Logs"
+    ],
+    "desc": "チーム共有・RBAC（権限管理）・監査ログ・セキュリティ強化を備えたLAN内生産計画Webシステム（PHP 8.4 / Laravel 12 + Livewire 3 + PostgreSQL 16）。",
+    "display_month": "2026-11",
+    "desc_ja": "チーム共有・RBAC（権限管理）・監査ログ・セキュリティ強化を備えたLAN内生産計画Webシステム（PHP 8.4 / Laravel 12 + Livewire 3 + PostgreSQL 16）。",
+    "desc_en": "LAN production planning web system with team sharing, RBAC, audit logging, and security hardening (PHP 8.4 / Laravel 12 + Livewire 3 + PostgreSQL 16)."
+  },
+  {
+    "name": "production-plan-go",
+    "start_month": "2026-11",
+    "start_date": "2026-11-20",
+    "latest_date": "2026-11-20",
+    "commit_count": 3,
+    "languages": [
+      "Go",
+      "TypeScript"
+    ],
+    "frontend": [
+      "React 19",
+      "Vite 6",
+      "Tailwind CSS"
+    ],
+    "backend": [
+      "Go (pgx/v5)"
+    ],
+    "database": [
+      "PostgreSQL 16"
+    ],
+    "tools_infra": [
+      "Single-Binary Distribution",
+      "Automated Security Monitoring"
+    ],
+    "desc": "同一PostgreSQL DBを共有する生産計画システムの Go + React 19 / TypeScript 単一バイナリ再実装。セキュリティ自動監視・お知らせバナー・管理者専用状況画面を搭載。",
+    "display_month": "2026-11",
+    "desc_ja": "同一PostgreSQL DBを共有する生産計画システムの Go + React 19 / TypeScript 単一バイナリ再実装。セキュリティ自動監視・お知らせバナー・管理者専用状況画面を搭載。",
+    "desc_en": "Single-binary Go + React 19 / TypeScript reimplementation of the production planning system sharing the same PostgreSQL DB, featuring automated security monitoring and admin status console."
   }
 ]

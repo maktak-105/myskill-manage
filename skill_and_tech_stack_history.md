@@ -1,6 +1,6 @@
 # スキル・習得技術スタック 月別履歴＆層別マトリクス レポート
 
-本レポートは、`manage` ワークスペースおよび関連する全56プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
+本レポートは、`manage` ワークスペースおよび関連する全58プロジェクト（`project`、`loop`、`obsidian-claude`、`jugo-shoten-web`等）のソースコード、設定ファイル（`docker-compose.*.yml`、`package.json`、`requirements.txt`、`Cargo.toml`、`*.csproj`、`CMakeLists.txt`、`vercel.json`、`wrangler.jsonc` 等）、Gitコミット履歴、ファイルタイムスタンプを詳細にスキャン・解析し、**2026年3月〜11月（本格開始の5月以降を中心とする約8ヶ月間）のスキル習得・開発履歴** を層別（インフラ・コンテナ、言語、フロントエンド、バックエンド、データベース、AI/RPA/低レイヤ）に体系化したものです。
 
 ---
 
@@ -16,7 +16,7 @@ timeline
     2026-08 : ネイティブ高速化深化 : C++ユーティリティ連作 : Qt6/QML画像処理 : 7-Zip連携
     2026-09 : 多様化＆自律AI・C# : C#(.NET10/WPF/WinForms) : pywinauto/Playwright : 自律AIループ(Ralph Loop) : Claudeセカンドブレイン
         2026-10 : 自宅NAS自前クラウド＆基幹DX深化 : QNAP NAS+Docker+PostgreSQL+Cloudflare Tunnel(Auto-X/camp) : EDI解析(105コミット) : 部内部品原価実績Fastify API : 部内PostgreSQLサーバー
-    2026-11 : Go/Java 25言語拡張＆エッジ運用 : Go (QuickNetScan/並行LANスキャン) : Java 25 / Spring Boot 3.5 (同一API 3系統比較) : line-harness (Cloudflare Workers/D1/R2) : Auto-X 190コミット
+    2026-11 : Go/Java 25/PHP 8.4言語拡張＆エッジ運用 : Go (QuickNetScan/生産計画単一EXE) : Java 25 / Spring Boot 3.5 : PHP 8.4 / Laravel 12 (生産計画RBAC・監査ログ) : Cloudflare Workers (line-harness/dramlog-bar)
 ```
 
 > [!NOTE]
@@ -46,6 +46,7 @@ timeline
 | | **Gleam** | [gleam](#gleam)（BEAM/Erlang仮想マシン上で動作する新世代型安全言語の検証） |
 | | **Go** | [QuickNetScan](#QuickNetScan)（Goroutineによる数百スレッド並行LANスキャン、Go WASM UI、単一EXE配布） |
 | | **Java (JDK 25)** | [Spring-boot](#Spring-boot)（Spring Boot 3.5 + Gradle の参照専用REST API） |
+| | **PHP (8.4)** | [production-plan-laravel](#production-plan-laravel)（Laravel 12 + Livewire 3 + PostgreSQL 16、RBAC・監査ログ対応生産計画Web） |
 | | **PowerShell / Bash** | [bunai-server](#bunai-server), [Auto-X](#Auto-X) (NAS entrypoint), [project-LLM](#project-LLM) |
 | | **SQL** | PostgreSQL / SQLite 向け DDL, DML, パフォーマンスクエリ, バックアップ自動化 |
 | **フロントエンド** | **React / Next.js (App Router)** | [camp](#camp) (Next.js standalone), [myDB](#myDB), [suuri-chat](#suuri-chat), [SNS Management](#SNS%20Management), [jugo-shoten-web](#jugo-shoten-web) |
@@ -158,13 +159,15 @@ timeline
 
 ---
 
-### 【2026年11月（現在）】Go / Java 25 言語拡張 ＆ エッジLINE基盤 ＆ 3系統API比較
+### 【2026年11月（現在）】Go / Java 25 / PHP 8.4 言語拡張 ＆ エッジ基盤 ＆ マルチスタック実装
 - **習得・活用技術**: Go (Goroutine並行処理 / WebView2 + Go WASM UI / 単一EXE配布), Java 25 / Spring Boot 3.5 / Gradle (Kotlin DSL), Cloudflare Workers / D1 / R2 (エッジ本番運用), 同一APIの3系統実装比較（FastAPI / Fastify / Spring Boot）
 - **主要プロジェクト**:
   - `QuickNetScan` (Go言語、数百Goroutine並行走査の単一EXE高速LANスキャナー、WebView2 UI)
   - `Spring-boot` (Spring Boot 3.5 + Java 25 + Gradle による購入実績REST API、3系統比較整理)
   - `line-harness` (Cloudflare Workers + D1 + R2 によるLINE公式アカウント基盤)
   - `dramlog-bar` (Cloudflare Workers + TypeScript によるバー向けデジタルメニュー＆記録Webアプリ)
+  - `production-plan-laravel` (PHP 8.4 / Laravel 12 + Livewire 3 によるRBAC・監査ログ対応生産計画システム)
+  - `production-plan-go` (同一PostgreSQL DBを共有する Go + React 19 単一バイナリ生産計画システム・セキュリティ自動監視搭載)
   - `Auto-X` (190コミット到達、NAS自動監視・巡回の継続的機能強化)
 ## 4. 総評・スキルの強み
 
